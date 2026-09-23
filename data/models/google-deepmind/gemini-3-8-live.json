@@ -1,0 +1,29 @@
+{
+  "id": "gemini-3-8-live",
+  "lab": "google-deepmind",
+  "name": "Gemini 3.8 Live",
+  "family": "Gemini Pro",
+  "status": "current",
+  "released": "2026-09-02",
+  "date_precision": "exact",
+  "summary": "Low-latency voice agents and real-time dialogue.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {
+    "gemini-api": "gemini-3.8-live"
+  },
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "slug": "aa-intelligence-index",
+  "name": "Artificial Analysis Intelligence Index",
+  "measures": "A composite of ten evaluations, published by an independent analyst, collapsed into one number for ranking.",
+  "unit": "index",
+  "higher_is_better": true,
+  "leaderboard_url": "https://artificialanalysis.ai/leaderboards/models",
+  "comparability_warning": "Composite indices hide which evaluation moved. Useful as a headline, weak as evidence — and the score depends on the effort level the model was run at."
+}

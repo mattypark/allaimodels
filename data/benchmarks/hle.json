@@ -1,0 +1,8 @@
+{
+  "slug": "hle",
+  "name": "Humanity's Last Exam",
+  "measures": "Expert-written questions across many fields, built specifically to be hard for models that already saturate older exams.",
+  "unit": "percent",
+  "higher_is_better": true,
+  "comparability_warning": "Tool access changes this number sharply. A score with search enabled is not the same measurement as one without."
+}

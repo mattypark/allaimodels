@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "opus-4",
+  "name": "Claude Opus 4",
+  "family": "Opus",
+  "released": "2025-05-22",
+  "status": "retired",
+  "summary": "Claude Opus 4, released 2025-05-22. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "slug": "scicode",
+  "name": "SciCode",
+  "measures": "Writing the code a working scientist would need, drawn from real problems in physics, biology and chemistry papers.",
+  "unit": "percent",
+  "higher_is_better": true
+}

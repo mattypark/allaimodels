@@ -1,0 +1,39 @@
+{
+  "id": "gemini-1-0-ultra",
+  "lab": "google-deepmind",
+  "name": "Gemini 1.0 Ultra",
+  "family": "Gemini Pro",
+  "status": "retired",
+  "released": "2024-02-08",
+  "date_precision": "exact",
+  "summary": "Google reported it as the first model to outperform human experts on the 57-subject MMLU.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [
+    {
+      "suite": "hle",
+      "metric": "MMLU (57-subject)",
+      "value": 90,
+      "unit": "percent",
+      "source_url": "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+      "source_type": "third-party",
+      "measured_on": "2024-02-08",
+      "comparable": false,
+      "harness_notes": "MMLU, not HLE — recorded here only until a dedicated MMLU suite exists. Historical figure on a now-saturated benchmark."
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gemini-3-8-flash",
+  "lab": "google-deepmind",
+  "name": "Gemini 3.8 Flash",
+  "family": "Gemini Flash",
+  "status": "current",
+  "released": "2026-09-02",
+  "date_precision": "exact",
+  "summary": "Google's current workhorse, aimed at long-horizon software engineering and autonomous agents.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {
+    "gemini-api": "gemini-3.8-flash"
+  },
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

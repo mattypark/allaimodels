@@ -1,0 +1,100 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "opus-5-5",
+  "name": "Claude Opus 5.5",
+  "family": "Opus",
+  "released": "2026-09-22",
+  "summary": "The first model in the 5.5 series. Anthropic positions it as the default for most work: it matches the far more expensive Fable on much agentic coding while costing $4 per million input tokens against Fable's $10.",
+  "api_ids": {
+    "claude-api": "claude-opus-5-5",
+    "bedrock": "anthropic.claude-opus-5-5",
+    "vertex": "claude-opus-5-5",
+    "foundry": "claude-opus-5-5"
+  },
+  "context": {
+    "input_tokens": 1000000,
+    "output_tokens": 128000,
+    "tokenizer_note": "1M tokens is roughly 555k words on the tokenizer introduced with Opus 4.7. Models before it fit about 750k words in the same window, so raw context numbers are not comparable across that boundary."
+  },
+  "pricing": {
+    "input_per_mtok": 4,
+    "output_per_mtok": 20,
+    "currency": "USD",
+    "notes": "Batch API requests are 50% off. Cache reads cost 10% of base input, except 2.5% on Fable 5.1 and Mythos 5.1 and 5% on Opus 5.5 — so effective price depends heavily on cache strategy."
+  },
+  "knowledge_cutoff": "Jun 2026",
+  "retirement_not_before": "2027-09-22",
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+  },
+  "benchmarks": [
+    {
+      "suite": "swe-bench-pro",
+      "metric": "resolved",
+      "value": 89.9,
+      "unit": "percent",
+      "source_url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+      "source_type": "third-party",
+      "measured_on": "2026-09-22",
+      "comparable": false,
+      "harness_notes": "Reported from Anthropic's launch table via press coverage. Not yet traced to the first-party model card, and scaffold details are unstated."
+    },
+    {
+      "suite": "terminal-bench",
+      "metric": "resolved (v4.0)",
+      "value": 66.4,
+      "unit": "percent",
+      "source_url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+      "source_type": "third-party",
+      "measured_on": "2026-09-22",
+      "comparable": false,
+      "harness_notes": "Terminal-Bench 4.0. Not comparable with any 2.0 figure."
+    },
+    {
+      "suite": "aa-intelligence-index",
+      "metric": "index",
+      "value": 58,
+      "unit": "index",
+      "source_url": "https://artificialanalysis.ai/leaderboards/models",
+      "source_type": "third-party",
+      "measured_on": "2026-09-22",
+      "comparable": true,
+      "harness_notes": "Run at max effort. Effort level changes this score."
+    },
+    {
+      "suite": "hle",
+      "metric": "accuracy",
+      "value": 61.4,
+      "unit": "percent",
+      "source_url": "https://artificialanalysis.ai/leaderboards/models",
+      "source_type": "third-party",
+      "measured_on": "2026-09-22",
+      "comparable": true
+    },
+    {
+      "suite": "scicode",
+      "metric": "accuracy",
+      "value": 66.9,
+      "unit": "percent",
+      "source_url": "https://artificialanalysis.ai/leaderboards/models",
+      "source_type": "third-party",
+      "measured_on": "2026-09-22",
+      "comparable": true
+    }
+  ],
+  "status": "current",
+  "sources": [
+    "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

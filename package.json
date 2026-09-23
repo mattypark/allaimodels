@@ -2,7 +2,8 @@
   "name": "allaimodels",
   "version": "0.1.0",
   "private": true,
-  "description": "Every AI lab, every model, every benchmark — with the source for every number.",
+  "type": "module",
+  "description": "Every AI lab, every model, every benchmark \u2014 with the source for every number.",
   "scripts": {
     "dev": "next dev -p 3020",
     "build": "next build",

@@ -1,0 +1,8 @@
+{
+  "slug": "lmarena-elo",
+  "name": "LMArena Elo",
+  "measures": "Head-to-head human preference votes between anonymised models, scored like chess ratings.",
+  "unit": "elo",
+  "higher_is_better": true,
+  "comparability_warning": "Measures what people prefer reading, which correlates with formatting and tone as much as correctness. Preliminary ratings from few votes move a lot."
+}

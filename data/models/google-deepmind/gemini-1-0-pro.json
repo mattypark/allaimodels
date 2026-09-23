@@ -1,0 +1,27 @@
+{
+  "id": "gemini-1-0-pro",
+  "lab": "google-deepmind",
+  "name": "Gemini 1.0 Pro",
+  "family": "Gemini Pro",
+  "status": "retired",
+  "released": "2023-12-13",
+  "date_precision": "exact",
+  "summary": "Gemini 1.0 Pro. Specs beyond the release date are not yet sourced.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

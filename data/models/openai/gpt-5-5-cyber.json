@@ -1,0 +1,25 @@
+{
+  "id": "gpt-5-5-cyber",
+  "lab": "openai",
+  "name": "GPT-5.5-Cyber",
+  "family": "GPT-5",
+  "status": "current",
+  "released": "2026-05-07",
+  "summary": "Limited preview. OpenAI scored it at 71.4% (±8.0) on AI Security Institute cyber tasks.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/GPT-5.5"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "opus-5",
+  "name": "Claude Opus 5",
+  "family": "Opus",
+  "released": "2026-07-24",
+  "status": "legacy",
+  "summary": "Claude Opus 5, released 2026-07-24. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

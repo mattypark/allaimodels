@@ -1,0 +1,58 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "fable-5-1",
+  "name": "Claude Fable 5.1",
+  "family": "Fable",
+  "released": "2026-09-01",
+  "summary": "Anthropic's reasoning flagship, aimed at long-horizon agentic work and the cases where Opus at high effort still falls short. Thinking is adaptive and always on, and it is the most expensive model in the lineup by some distance.",
+  "api_ids": {
+    "claude-api": "claude-fable-5-1",
+    "bedrock": "anthropic.claude-fable-5-1",
+    "vertex": "claude-fable-5-1",
+    "foundry": "claude-fable-5-1"
+  },
+  "context": {
+    "input_tokens": 1000000,
+    "output_tokens": 128000,
+    "tokenizer_note": "1M tokens is roughly 555k words on the tokenizer introduced with Opus 4.7. Models before it fit about 750k words in the same window, so raw context numbers are not comparable across that boundary."
+  },
+  "pricing": {
+    "input_per_mtok": 10,
+    "output_per_mtok": 50,
+    "currency": "USD",
+    "notes": "Batch API requests are 50% off. Cache reads cost 10% of base input, except 2.5% on Fable 5.1 and Mythos 5.1 and 5% on Opus 5.5 — so effective price depends heavily on cache strategy."
+  },
+  "knowledge_cutoff": "Jun 2026",
+  "retirement_not_before": "2027-09-01",
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/fable-5-1/overview"
+  },
+  "benchmarks": [
+    {
+      "suite": "lmarena-elo",
+      "metric": "elo",
+      "value": 1762,
+      "unit": "elo",
+      "source_url": "https://en.wikipedia.org/wiki/Arena_(AI_platform)",
+      "source_type": "third-party",
+      "measured_on": "2026-09-01",
+      "comparable": true,
+      "harness_notes": "Reported as 73 points above Fable 5 on entry."
+    }
+  ],
+  "status": "current",
+  "sources": [
+    "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

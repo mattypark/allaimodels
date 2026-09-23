@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "fable-5",
+  "name": "Claude Fable 5",
+  "family": "Fable",
+  "released": "2026-06-09",
+  "status": "legacy",
+  "summary": "Claude Fable 5, released 2026-06-09. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

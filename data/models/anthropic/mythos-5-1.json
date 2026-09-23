@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "mythos-5-1",
+  "name": "Claude Mythos 5.1",
+  "family": "Mythos",
+  "released": "2026-09-01",
+  "status": "preview",
+  "summary": "Limited availability. Anthropic's Opus 5.5 containment evaluation uses Mythos 5.1 as one of its two baselines.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

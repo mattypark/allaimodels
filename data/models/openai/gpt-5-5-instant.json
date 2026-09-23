@@ -1,0 +1,25 @@
+{
+  "id": "gpt-5-5-instant",
+  "lab": "openai",
+  "name": "GPT-5.5 Instant",
+  "family": "GPT-5",
+  "status": "current",
+  "released": "2026-05-05",
+  "summary": "Free-tier variant of GPT-5.5.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/GPT-5.5"
+  ]
+}

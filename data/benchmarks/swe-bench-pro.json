@@ -1,0 +1,8 @@
+{
+  "slug": "swe-bench-pro",
+  "name": "SWE-bench Pro",
+  "measures": "Whether a model can resolve a real GitHub issue in a real repository so that the project's own hidden tests pass.",
+  "unit": "percent",
+  "higher_is_better": true,
+  "comparability_warning": "The single least comparable number in AI. Scores move enormously with the agent scaffold around the model, how many attempts it gets, whether it can run tests, and how much thinking budget it is given. Two labs reporting the same percentage are frequently not running the same experiment."
+}

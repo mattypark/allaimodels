@@ -1,0 +1,36 @@
+{
+  "slug": "anthropic",
+  "name": "Anthropic",
+  "tier": 1,
+  "founded": "2021",
+  "hq": "San Francisco, California",
+  "summary": "Founded by a group who left OpenAI in 2021, Anthropic builds the Claude family and publishes more of its safety work than most of its peers. Its docs are the most complete of any frontier lab: model IDs, context windows, pricing, knowledge cutoffs and retirement dates all sit in one public table — which is why this site's Anthropic data is the best sourced here.",
+  "founders": [
+    { "name": "Dario Amodei", "role": "Chief Executive Officer", "bio": "Former VP of Research at OpenAI, where he led the teams behind GPT-2 and GPT-3." },
+    { "name": "Daniela Amodei", "role": "President", "bio": "Former VP of Operations at OpenAI; previously at Stripe." },
+    { "name": "Jared Kaplan", "role": "Chief Science Officer", "bio": "Theoretical physicist whose work on neural scaling laws shaped how frontier models are sized and trained." },
+    { "name": "Chris Olah", "role": "Co-founder", "bio": "Interpretability researcher; founded the Distill journal and much of the circuits research agenda." },
+    { "name": "Tom Brown", "role": "Co-founder", "bio": "Lead author on the GPT-3 paper before co-founding Anthropic." },
+    { "name": "Jack Clark", "role": "Co-founder, Policy", "bio": "Former Policy Director at OpenAI; writes the Import AI newsletter." },
+    { "name": "Sam McCandlish", "role": "Co-founder", "bio": "Physicist; co-authored the scaling-laws work underpinning modern pretraining." }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#f0eee6",
+    "ink": "#141413",
+    "muted": "#6b6862",
+    "accent": "#d97757",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://www.anthropic.com",
+    "docs": "https://platform.claude.com/docs",
+    "news": "https://www.anthropic.com/news",
+    "github": "https://github.com/anthropics",
+    "huggingface": "https://huggingface.co/Anthropic"
+  },
+  "sources": [
+    "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

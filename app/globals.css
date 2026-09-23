@@ -1,0 +1,221 @@
+@import 'tailwindcss';
+
+/* ===========================================================================
+   Tokens
+
+   One accent, one ink, one ground, one paper. Every lab overrides the same
+   six custom properties and nothing else — which is why a lab can repaint the
+   entire page without a single component knowing which lab it is.
+
+   Default palette is Claude's, because that is what Matthew uses.
+   =========================================================================== */
+
+:root {
+  --bg: #f0eee6;
+  --paper: #faf9f5;
+  --ink: #141413;
+  --muted: #6b6862;
+  --accent: #d97757;
+  --accent-ink: #ffffff;
+  --line: rgb(20 20 19 / 0.12);
+  --void: #0d0d0c;
+  --void-ink: #f5f3ee;
+
+  --font-display: var(--font-newsreader);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+
+  /* Motion. One easing family so everything feels like one hand made it. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur: 420ms;
+  --dur-slow: 900ms;
+
+  /* Type scale — 1.26 ratio, clamped so 375px never overflows. */
+  --step--1: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.55rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.6rem);
+  --step-3: clamp(2.2rem, 1.6rem + 3vw, 4.4rem);
+  --step-4: clamp(2.9rem, 1.6rem + 6.4vw, 8rem);
+
+  --gutter: clamp(1rem, 0.6rem + 2vw, 3.5rem);
+  --rhythm: clamp(3.5rem, 2rem + 7vw, 9rem);
+
+  color-scheme: light;
+}
+
+/* System default: dark OS preference wins unless the viewer chose light. */
+:root:not([data-theme='light']) {
+  @media (prefers-color-scheme: dark) {
+    --bg: #0d0d0c;
+    --paper: #171715;
+    --ink: #f5f3ee;
+    --muted: #96938c;
+    --line: rgb(245 243 238 / 0.14);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0d0d0c;
+  --paper: #171715;
+  --ink: #f5f3ee;
+  --muted: #96938c;
+  --line: rgb(245 243 238 / 0.14);
+  color-scheme: dark;
+}
+
+/* ===========================================================================
+   Lab themes
+
+   Applied by [data-lab] on any container. Nested labs work, so a lab card on
+   the index can preview its own palette inside the default page.
+   =========================================================================== */
+
+[data-lab] {
+  background: var(--bg);
+  color: var(--ink);
+  transition:
+    background-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===========================================================================
+   Base
+   =========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip link — checklist item, and the only way a keyboard user escapes a
+   pinned horizontal timeline. */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.75rem 1.25rem;
+  font-size: var(--step--1);
+}
+.skip:focus {
+  left: var(--gutter);
+  top: 0.75rem;
+}
+
+/* ===========================================================================
+   Primitives
+   =========================================================================== */
+
+.shell {
+  width: 100%;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* The one hot control, lifted from the reference site. */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.85rem 1.4rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), filter var(--dur-fast) var(--ease-out);
+}
+.cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+/* Founder portraits arrive from a dozen sources at a dozen qualities. One
+   duotone treatment makes them look like one commissioned shoot. */
+.portrait {
+  filter: grayscale(1) contrast(1.08);
+  transition: filter var(--dur) var(--ease-out);
+}
+.portrait:hover {
+  filter: grayscale(0.55) contrast(1.02);
+}

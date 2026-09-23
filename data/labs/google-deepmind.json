@@ -1,0 +1,31 @@
+{
+  "slug": "google-deepmind",
+  "name": "Google DeepMind",
+  "tier": 1,
+  "founded": "2010",
+  "hq": "London, United Kingdom",
+  "summary": "DeepMind won Go before it won language. Merged with Google Brain in 2023, it now ships the Gemini family alongside the field's widest spread of specialist models — video in Veo, music in Lyria, images in Nano Banana — and the longest context windows in production.",
+  "founders": [
+    { "name": "Demis Hassabis", "role": "Chief Executive Officer", "bio": "Chess prodigy turned neuroscientist turned games developer; shared the 2024 Nobel Prize in Chemistry for AlphaFold." },
+    { "name": "Shane Legg", "role": "Co-founder, Chief AGI Scientist", "bio": "Coined the term 'artificial general intelligence' in its modern usage and has published long-standing timeline forecasts." },
+    { "name": "Mustafa Suleyman", "role": "Co-founder", "bio": "Led applied work and policy at DeepMind; later founded Inflection AI and now runs Microsoft AI." }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#1f1f1f",
+    "muted": "#5f6368",
+    "accent": "#4285f4",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://deepmind.google",
+    "docs": "https://ai.google.dev/gemini-api/docs",
+    "news": "https://blog.google/technology/google-deepmind/",
+    "github": "https://github.com/google-deepmind"
+  },
+  "sources": [
+    "https://ai.google.dev/gemini-api/docs/models",
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+  ]
+}

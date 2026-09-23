@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "mythos-5",
+  "name": "Claude Mythos 5",
+  "family": "Mythos",
+  "released": "2026-06-09",
+  "status": "preview",
+  "summary": "Limited-availability Mythos release, shipped the same day as Fable 5.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

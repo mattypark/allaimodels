@@ -1,0 +1,27 @@
+{
+  "id": "gemini-2-0-flash",
+  "lab": "google-deepmind",
+  "name": "Gemini 2.0 Flash",
+  "family": "Gemini Flash",
+  "status": "legacy",
+  "released": "2025-01-30",
+  "date_precision": "exact",
+  "summary": "Gemini 2.0 Flash. Specs beyond the release date are not yet sourced.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

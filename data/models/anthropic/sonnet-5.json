@@ -1,0 +1,46 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "sonnet-5",
+  "name": "Claude Sonnet 5",
+  "family": "Sonnet",
+  "released": "2026-06-30",
+  "summary": "The balance point of the lineup — a million tokens of context at a fifth of Fable's price, which makes it the default for high-volume work that still needs frontier-adjacent quality.",
+  "api_ids": {
+    "claude-api": "claude-sonnet-5",
+    "bedrock": "anthropic.claude-sonnet-5",
+    "vertex": "claude-sonnet-5",
+    "foundry": "claude-sonnet-5"
+  },
+  "context": {
+    "input_tokens": 1000000,
+    "output_tokens": 128000,
+    "tokenizer_note": "1M tokens is roughly 555k words on the tokenizer introduced with Opus 4.7. Models before it fit about 750k words in the same window, so raw context numbers are not comparable across that boundary."
+  },
+  "pricing": {
+    "input_per_mtok": 2,
+    "output_per_mtok": 10,
+    "currency": "USD",
+    "notes": "Batch API requests are 50% off. Cache reads cost 10% of base input, except 2.5% on Fable 5.1 and Mythos 5.1 and 5% on Opus 5.5 — so effective price depends heavily on cache strategy."
+  },
+  "knowledge_cutoff": "Jan 2026",
+  "retirement_not_before": "2027-06-30",
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/sonnet-5/overview"
+  },
+  "status": "current",
+  "benchmarks": [],
+  "sources": [
+    "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

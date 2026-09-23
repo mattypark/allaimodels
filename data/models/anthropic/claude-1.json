@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "claude-1",
+  "name": "Claude",
+  "family": "Claude",
+  "released": "2023-03-14",
+  "status": "retired",
+  "summary": "Claude, released 2023-03-14. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

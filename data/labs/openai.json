@@ -1,0 +1,30 @@
+{
+  "slug": "openai",
+  "name": "OpenAI",
+  "tier": 1,
+  "founded": "2015",
+  "hq": "San Francisco, California",
+  "summary": "The lab that made large language models a consumer product. GPT-3 set the template the whole field still follows, and ChatGPT turned it into a habit. OpenAI publishes benchmark numbers freely but keeps architecture and training details closed, and its pricing page blocks automated readers — so the data here leans harder on third-party sources than Anthropic's does.",
+  "founders": [
+    { "name": "Sam Altman", "role": "Chief Executive Officer", "bio": "Former president of Y Combinator; co-founded OpenAI in 2015 and has led it through the shift from research lab to product company." },
+    { "name": "Ilya Sutskever", "role": "Co-founder, former Chief Scientist", "bio": "Co-author of AlexNet and a central figure in the deep learning revolution; departed in 2024." },
+    { "name": "Greg Brockman", "role": "Co-founder, President", "bio": "Former CTO of Stripe; OpenAI's first employee and longtime engineering lead." },
+    { "name": "Wojciech Zaremba", "role": "Co-founder", "bio": "Led the Codex work that became GitHub Copilot and the modern code-model line." },
+    { "name": "John Schulman", "role": "Co-founder", "bio": "Invented PPO, the reinforcement learning algorithm behind RLHF and instruction tuning." }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#0d0d0d",
+    "muted": "#6e6e80",
+    "accent": "#10a37f",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://openai.com",
+    "docs": "https://platform.openai.com/docs",
+    "news": "https://openai.com/news",
+    "github": "https://github.com/openai"
+  },
+  "sources": ["https://en.wikipedia.org/wiki/GPT-5.5"]
+}

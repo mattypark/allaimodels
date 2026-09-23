@@ -52,6 +52,20 @@ export const Model = z.object({
   family: z.string().optional(), // "Opus", "Mythos", "Gemini Flash"
   status: ModelStatus,
   released: isoDate,
+
+  /**
+   * How much to trust `released`.
+   *
+   * 'exact'    — the lab's own announced release date.
+   * 'observed' — we have no release date; this is the day we first saw the
+   *              model listed. The UI must say so rather than imply a launch.
+   *
+   * Without this flag the honest answer ("we don't know when this shipped")
+   * has nowhere to live, and an undated model silently acquires a fake
+   * birthday the timeline then sorts by.
+   */
+  date_precision: z.enum(['exact', 'observed']).default('exact'),
+
   summary: z.string(),
 
   /** Platform -> exact API identifier. A model has many names; record them all. */

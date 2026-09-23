@@ -1,0 +1,27 @@
+{
+  "id": "gemini-2-5-pro",
+  "lab": "google-deepmind",
+  "name": "Gemini 2.5 Pro",
+  "family": "Gemini Pro",
+  "status": "legacy",
+  "released": "2025-03-25",
+  "date_precision": "exact",
+  "summary": "Topped the LMArena leaderboard on release.",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gemini_(language_model)",
+    "https://ai.google.dev/gemini-api/docs/models"
+  ]
+}

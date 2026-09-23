@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "opus-4-8",
+  "name": "Claude Opus 4.8",
+  "family": "Opus",
+  "released": "2026-05-28",
+  "status": "legacy",
+  "summary": "Claude Opus 4.8, released 2026-05-28. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}

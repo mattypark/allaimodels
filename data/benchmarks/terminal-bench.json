@@ -1,0 +1,8 @@
+{
+  "slug": "terminal-bench",
+  "name": "Terminal-Bench",
+  "measures": "End-to-end tasks performed in a real terminal — install this, debug that, make the build pass.",
+  "unit": "percent",
+  "higher_is_better": true,
+  "comparability_warning": "Version numbers matter: Terminal-Bench 2.0 and 4.0 are different task sets, and a score on one says nothing about the other."
+}

@@ -1,0 +1,25 @@
+{
+  "lab": "anthropic",
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "id": "claude-3-7-sonnet",
+  "name": "Claude 3.7 Sonnet",
+  "family": "Sonnet",
+  "released": "2025-02-24",
+  "status": "retired",
+  "summary": "Claude 3.7 Sonnet, released 2025-02-24. Specs beyond the release date are not yet sourced.",
+  "api_ids": {},
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Claude_(language_model)"
+  ]
+}
