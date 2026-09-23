@@ -1,0 +1,39 @@
+{
+  "id": "qwen3-5-397b-a17b",
+  "lab": "qwen",
+  "name": "Qwen3.5 397B A17B",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2026-02-16",
+  "date_precision": "observed",
+  "summary": "Qwen3.5 397B A17B, listed 2026-02-16 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3.5-397b-a17b"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3.5-397b-a17b"
+  ],
+  "context": {
+    "input_tokens": 262144,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3.5-397b-a17b, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.55,
+    "output_per_mtok": 3.5,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3.5-397b-a17b, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

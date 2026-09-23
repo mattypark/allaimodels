@@ -1,0 +1,38 @@
+{
+  "id": "mistral-small-3-2-24b-instruct",
+  "lab": "mistral",
+  "name": "Mistral Small 3.2 24B",
+  "family": "Mistral",
+  "status": "current",
+  "released": "2025-06-20",
+  "date_precision": "observed",
+  "summary": "Mistral Small 3.2 24B, listed 2025-06-20 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "mistralai/mistral-small-3.2-24b-instruct"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct"
+  ],
+  "context": {
+    "input_tokens": 256000,
+    "tokenizer_note": "Context as served by OpenRouter for mistralai/mistral-small-3.2-24b-instruct, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.0938,
+    "output_per_mtok": 0.25,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as mistralai/mistral-small-3.2-24b-instruct, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

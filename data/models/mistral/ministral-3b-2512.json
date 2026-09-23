@@ -1,0 +1,38 @@
+{
+  "id": "ministral-3b-2512",
+  "lab": "mistral",
+  "name": "Ministral 3 3B 2512",
+  "family": "Ministral",
+  "status": "current",
+  "released": "2025-12-02",
+  "date_precision": "observed",
+  "summary": "Ministral 3 3B 2512, listed 2025-12-02 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "mistralai/ministral-3b-2512"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/mistralai/ministral-3b-2512"
+  ],
+  "context": {
+    "input_tokens": 131072,
+    "tokenizer_note": "Context as served by OpenRouter for mistralai/ministral-3b-2512, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.1,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as mistralai/ministral-3b-2512, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

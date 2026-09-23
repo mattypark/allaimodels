@@ -1,0 +1,33 @@
+{
+  "id": "lyria-3-clip-preview",
+  "lab": "google-deepmind",
+  "name": "Lyria 3 Clip Preview",
+  "family": "Lyria",
+  "status": "current",
+  "released": "2026-03-30",
+  "date_precision": "observed",
+  "summary": "Lyria 3 Clip Preview, listed 2026-03-30 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "google/lyria-3-clip-preview"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text",
+      "audio"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/google/lyria-3-clip-preview"
+  ],
+  "context": {
+    "input_tokens": 1048576,
+    "tokenizer_note": "Context as served by OpenRouter for google/lyria-3-clip-preview, read 2026-09-23."
+  }
+}

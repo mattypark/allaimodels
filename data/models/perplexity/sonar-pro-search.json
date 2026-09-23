@@ -1,0 +1,38 @@
+{
+  "id": "sonar-pro-search",
+  "lab": "perplexity",
+  "name": "Sonar Pro Search",
+  "family": "Sonar",
+  "status": "current",
+  "released": "2025-10-30",
+  "date_precision": "observed",
+  "summary": "Sonar Pro Search, listed 2025-10-30 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "perplexity/sonar-pro-search"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/perplexity/sonar-pro-search"
+  ],
+  "context": {
+    "input_tokens": 200000,
+    "tokenizer_note": "Context as served by OpenRouter for perplexity/sonar-pro-search, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 3,
+    "output_per_mtok": 15,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as perplexity/sonar-pro-search, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

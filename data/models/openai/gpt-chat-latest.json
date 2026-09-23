@@ -1,0 +1,38 @@
+{
+  "id": "gpt-chat-latest",
+  "lab": "openai",
+  "name": "GPT Chat Latest",
+  "family": "GPT",
+  "status": "current",
+  "released": "2026-05-05",
+  "date_precision": "observed",
+  "summary": "GPT Chat Latest, listed 2026-05-05 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-chat-latest"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-chat-latest"
+  ],
+  "context": {
+    "input_tokens": 400000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-chat-latest, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 5,
+    "output_per_mtok": 30,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-chat-latest, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

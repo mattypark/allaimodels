@@ -1,0 +1,34 @@
+{
+  "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
+  "lab": "nvidia",
+  "name": "Nemotron 3 Nano Omni (free)",
+  "family": "Nemotron",
+  "status": "current",
+  "released": "2026-04-28",
+  "date_precision": "observed",
+  "summary": "Nemotron 3 Nano Omni (free), listed 2026-04-28 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "audio",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+  ],
+  "context": {
+    "input_tokens": 256000,
+    "tokenizer_note": "Context as served by OpenRouter for nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free, read 2026-09-23."
+  }
+}

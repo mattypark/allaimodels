@@ -1,0 +1,37 @@
+{
+  "id": "gpt-oss-120b",
+  "lab": "openai",
+  "name": "gpt-oss-120b",
+  "family": "gpt",
+  "status": "current",
+  "released": "2025-08-05",
+  "date_precision": "observed",
+  "summary": "gpt-oss-120b, listed 2025-08-05 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-oss-120b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-oss-120b"
+  ],
+  "context": {
+    "input_tokens": 131072,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-oss-120b, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.15,
+    "output_per_mtok": 0.6,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-oss-120b, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

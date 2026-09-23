@@ -1,0 +1,38 @@
+{
+  "id": "o3-pro",
+  "lab": "openai",
+  "name": "o3 Pro",
+  "family": "Pro",
+  "status": "current",
+  "released": "2025-06-10",
+  "date_precision": "observed",
+  "summary": "o3 Pro, listed 2025-06-10 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/o3-pro"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/o3-pro"
+  ],
+  "context": {
+    "input_tokens": 200000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/o3-pro, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 20,
+    "output_per_mtok": 80,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/o3-pro, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

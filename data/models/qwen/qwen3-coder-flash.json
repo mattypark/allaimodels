@@ -1,0 +1,37 @@
+{
+  "id": "qwen3-coder-flash",
+  "lab": "qwen",
+  "name": "Qwen3 Coder Flash",
+  "family": "Coder",
+  "status": "current",
+  "released": "2025-09-17",
+  "date_precision": "observed",
+  "summary": "Qwen3 Coder Flash, listed 2025-09-17 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3-coder-flash"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3-coder-flash"
+  ],
+  "context": {
+    "input_tokens": 1000000,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3-coder-flash, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.195,
+    "output_per_mtok": 0.975,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3-coder-flash, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

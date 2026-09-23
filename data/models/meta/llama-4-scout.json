@@ -1,0 +1,38 @@
+{
+  "id": "llama-4-scout",
+  "lab": "meta",
+  "name": "Llama 4 Scout",
+  "family": "Llama",
+  "status": "current",
+  "released": "2025-04-05",
+  "date_precision": "observed",
+  "summary": "Llama 4 Scout, listed 2025-04-05 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "meta-llama/llama-4-scout"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/meta-llama/llama-4-scout"
+  ],
+  "context": {
+    "input_tokens": 1310720,
+    "tokenizer_note": "Context as served by OpenRouter for meta-llama/llama-4-scout, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.3,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as meta-llama/llama-4-scout, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

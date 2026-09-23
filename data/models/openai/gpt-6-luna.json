@@ -1,0 +1,38 @@
+{
+  "id": "gpt-6-luna",
+  "lab": "openai",
+  "name": "GPT-6 Luna",
+  "family": "GPT",
+  "status": "current",
+  "released": "2026-09-22",
+  "date_precision": "observed",
+  "summary": "GPT-6 Luna, listed 2026-09-22 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-6-luna"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-6-luna"
+  ],
+  "context": {
+    "input_tokens": 1050000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-6-luna, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.5,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-6-luna, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

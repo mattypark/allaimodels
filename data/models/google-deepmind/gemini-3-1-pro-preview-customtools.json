@@ -1,0 +1,40 @@
+{
+  "id": "gemini-3-1-pro-preview-customtools",
+  "lab": "google-deepmind",
+  "name": "Gemini 3.1 Pro Preview Custom Tools",
+  "family": "Gemini",
+  "status": "current",
+  "released": "2026-02-25",
+  "date_precision": "observed",
+  "summary": "Gemini 3.1 Pro Preview Custom Tools, listed 2026-02-25 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "google/gemini-3.1-pro-preview-customtools"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "audio",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/google/gemini-3.1-pro-preview-customtools"
+  ],
+  "context": {
+    "input_tokens": 1048576,
+    "tokenizer_note": "Context as served by OpenRouter for google/gemini-3.1-pro-preview-customtools, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2,
+    "output_per_mtok": 12,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as google/gemini-3.1-pro-preview-customtools, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

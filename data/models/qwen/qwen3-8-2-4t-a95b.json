@@ -1,0 +1,37 @@
+{
+  "id": "qwen3-8-2-4t-a95b",
+  "lab": "qwen",
+  "name": "Qwen3.8 2.4T A95B",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2026-08-12",
+  "date_precision": "observed",
+  "summary": "Qwen3.8 2.4T A95B, listed 2026-08-12 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3.8-2.4t-a95b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3.8-2.4t-a95b"
+  ],
+  "context": {
+    "input_tokens": 1048576,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3.8-2.4t-a95b, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2,
+    "output_per_mtok": 6,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3.8-2.4t-a95b, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

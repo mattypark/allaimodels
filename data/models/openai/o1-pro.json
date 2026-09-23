@@ -1,0 +1,38 @@
+{
+  "id": "o1-pro",
+  "lab": "openai",
+  "name": "o1-pro",
+  "family": "pro",
+  "status": "legacy",
+  "released": "2025-03-19",
+  "date_precision": "observed",
+  "summary": "o1-pro, listed 2025-03-19 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/o1-pro"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/o1-pro"
+  ],
+  "context": {
+    "input_tokens": 200000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/o1-pro, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 150,
+    "output_per_mtok": 600,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/o1-pro, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

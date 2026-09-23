@@ -1,0 +1,37 @@
+{
+  "id": "deepseek-chat-v3-1",
+  "lab": "deepseek",
+  "name": "DeepSeek V3.1",
+  "family": "DeepSeek",
+  "status": "current",
+  "released": "2025-08-21",
+  "date_precision": "observed",
+  "summary": "DeepSeek V3.1, listed 2025-08-21 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "deepseek/deepseek-chat-v3.1"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/deepseek/deepseek-chat-v3.1"
+  ],
+  "context": {
+    "input_tokens": 163840,
+    "tokenizer_note": "Context as served by OpenRouter for deepseek/deepseek-chat-v3.1, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.25,
+    "output_per_mtok": 0.95,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as deepseek/deepseek-chat-v3.1, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gpt-5-image-mini",
+  "lab": "openai",
+  "name": "GPT-5 Image Mini",
+  "family": "GPT",
+  "status": "current",
+  "released": "2025-10-16",
+  "date_precision": "observed",
+  "summary": "GPT-5 Image Mini, listed 2025-10-16 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-5-image-mini"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "image",
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-5-image-mini"
+  ],
+  "context": {
+    "input_tokens": 400000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-5-image-mini, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2.5,
+    "output_per_mtok": 2,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-5-image-mini, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

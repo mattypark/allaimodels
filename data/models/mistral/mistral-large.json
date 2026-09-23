@@ -1,0 +1,37 @@
+{
+  "id": "mistral-large",
+  "lab": "mistral",
+  "name": "mistral-large",
+  "family": "mistral",
+  "status": "legacy",
+  "released": "2024-02-26",
+  "date_precision": "observed",
+  "summary": "mistral-large, listed 2024-02-26 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "mistralai/mistral-large"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/mistralai/mistral-large"
+  ],
+  "context": {
+    "input_tokens": 128000,
+    "tokenizer_note": "Context as served by OpenRouter for mistralai/mistral-large, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2,
+    "output_per_mtok": 6,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as mistralai/mistral-large, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

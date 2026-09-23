@@ -1,0 +1,37 @@
+{
+  "id": "wizardlm-2-8x22b",
+  "lab": "microsoft",
+  "name": "wizardlm-2-8x22b",
+  "family": "wizardlm",
+  "status": "legacy",
+  "released": "2024-04-16",
+  "date_precision": "observed",
+  "summary": "wizardlm-2-8x22b, listed 2024-04-16 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "microsoft/wizardlm-2-8x22b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/microsoft/wizardlm-2-8x22b"
+  ],
+  "context": {
+    "input_tokens": 65535,
+    "tokenizer_note": "Context as served by OpenRouter for microsoft/wizardlm-2-8x22b, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.62,
+    "output_per_mtok": 0.62,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as microsoft/wizardlm-2-8x22b, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

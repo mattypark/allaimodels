@@ -1,0 +1,37 @@
+{
+  "id": "gpt-4",
+  "lab": "openai",
+  "name": "GPT-4",
+  "family": "GPT",
+  "status": "legacy",
+  "released": "2023-05-28",
+  "date_precision": "observed",
+  "summary": "GPT-4, listed 2023-05-28 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-4"
+  ],
+  "context": {
+    "input_tokens": 8191,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-4, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 30,
+    "output_per_mtok": 60,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-4, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "o3-mini-high",
+  "lab": "openai",
+  "name": "o3 Mini High",
+  "family": "Mini",
+  "status": "legacy",
+  "released": "2025-02-12",
+  "date_precision": "observed",
+  "summary": "o3 Mini High, listed 2025-02-12 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/o3-mini-high"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/o3-mini-high"
+  ],
+  "context": {
+    "input_tokens": 200000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/o3-mini-high, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 1.1,
+    "output_per_mtok": 4.4,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/o3-mini-high, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

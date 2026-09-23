@@ -24,6 +24,17 @@
   },
   "benchmarks": [],
   "sources": [
-    "https://huggingface.co/deepseek-ai/DeepSeek-V3.2"
-  ]
+    "https://huggingface.co/deepseek-ai/DeepSeek-V3.2",
+    "https://openrouter.ai/deepseek/deepseek-v3.2"
+  ],
+  "pricing": {
+    "input_per_mtok": 0.269,
+    "output_per_mtok": 0.4,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as deepseek/deepseek-v3.2, read 2026-09-23. This is a reseller's price, not the lab's own page, and an open-weight model has no list price from its lab."
+  },
+  "context": {
+    "input_tokens": 163840,
+    "tokenizer_note": "Context as served by OpenRouter for deepseek/deepseek-v3.2, read 2026-09-23."
+  }
 }

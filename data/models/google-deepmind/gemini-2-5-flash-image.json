@@ -1,0 +1,39 @@
+{
+  "id": "gemini-2-5-flash-image",
+  "lab": "google-deepmind",
+  "name": "Nano Banana (Gemini 2.5 Flash Image)",
+  "family": "Nano",
+  "status": "current",
+  "released": "2025-10-07",
+  "date_precision": "observed",
+  "summary": "Nano Banana (Gemini 2.5 Flash Image), listed 2025-10-07 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "google/gemini-2.5-flash-image"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "image",
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/google/gemini-2.5-flash-image"
+  ],
+  "context": {
+    "input_tokens": 32768,
+    "tokenizer_note": "Context as served by OpenRouter for google/gemini-2.5-flash-image, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.3,
+    "output_per_mtok": 2.5,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as google/gemini-2.5-flash-image, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

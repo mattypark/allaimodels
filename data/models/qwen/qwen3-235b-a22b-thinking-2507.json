@@ -1,0 +1,37 @@
+{
+  "id": "qwen3-235b-a22b-thinking-2507",
+  "lab": "qwen",
+  "name": "Qwen3 235B A22B Thinking 2507",
+  "family": "Thinking",
+  "status": "current",
+  "released": "2025-07-25",
+  "date_precision": "observed",
+  "summary": "Qwen3 235B A22B Thinking 2507, listed 2025-07-25 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3-235b-a22b-thinking-2507"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3-235b-a22b-thinking-2507"
+  ],
+  "context": {
+    "input_tokens": 131072,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3-235b-a22b-thinking-2507, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.23,
+    "output_per_mtok": 2.3,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3-235b-a22b-thinking-2507, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

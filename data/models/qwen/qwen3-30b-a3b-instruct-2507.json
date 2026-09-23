@@ -1,0 +1,37 @@
+{
+  "id": "qwen3-30b-a3b-instruct-2507",
+  "lab": "qwen",
+  "name": "Qwen3 30B A3B Instruct 2507",
+  "family": "Instruct",
+  "status": "current",
+  "released": "2025-07-29",
+  "date_precision": "observed",
+  "summary": "Qwen3 30B A3B Instruct 2507, listed 2025-07-29 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3-30b-a3b-instruct-2507"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3-30b-a3b-instruct-2507"
+  ],
+  "context": {
+    "input_tokens": 262144,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3-30b-a3b-instruct-2507, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.0481,
+    "output_per_mtok": 0.193,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3-30b-a3b-instruct-2507, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

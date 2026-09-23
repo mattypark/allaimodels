@@ -1,0 +1,37 @@
+{
+  "id": "command-r-plus-08-2024",
+  "lab": "cohere",
+  "name": "Command R+ (08-2024)",
+  "family": "Command",
+  "status": "legacy",
+  "released": "2024-08-30",
+  "date_precision": "observed",
+  "summary": "Command R+ (08-2024), listed 2024-08-30 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "cohere/command-r-plus-08-2024"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/cohere/command-r-plus-08-2024"
+  ],
+  "context": {
+    "input_tokens": 128000,
+    "tokenizer_note": "Context as served by OpenRouter for cohere/command-r-plus-08-2024, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2.5,
+    "output_per_mtok": 10,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as cohere/command-r-plus-08-2024, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

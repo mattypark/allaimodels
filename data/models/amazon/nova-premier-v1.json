@@ -1,0 +1,38 @@
+{
+  "id": "nova-premier-v1",
+  "lab": "amazon",
+  "name": "Nova Premier 1.0",
+  "family": "Nova",
+  "status": "current",
+  "released": "2025-10-31",
+  "date_precision": "observed",
+  "summary": "Nova Premier 1.0, listed 2025-10-31 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "amazon/nova-premier-v1"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/amazon/nova-premier-v1"
+  ],
+  "context": {
+    "input_tokens": 1000000,
+    "tokenizer_note": "Context as served by OpenRouter for amazon/nova-premier-v1, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 2.5,
+    "output_per_mtok": 12.5,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as amazon/nova-premier-v1, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

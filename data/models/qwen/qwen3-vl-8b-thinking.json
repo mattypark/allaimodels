@@ -1,0 +1,38 @@
+{
+  "id": "qwen3-vl-8b-thinking",
+  "lab": "qwen",
+  "name": "Qwen3 VL 8B Thinking",
+  "family": "VL",
+  "status": "current",
+  "released": "2025-10-14",
+  "date_precision": "observed",
+  "summary": "Qwen3 VL 8B Thinking, listed 2025-10-14 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "qwen/qwen3-vl-8b-thinking"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/qwen/qwen3-vl-8b-thinking"
+  ],
+  "context": {
+    "input_tokens": 131072,
+    "tokenizer_note": "Context as served by OpenRouter for qwen/qwen3-vl-8b-thinking, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.18,
+    "output_per_mtok": 2.1,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as qwen/qwen3-vl-8b-thinking, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "north-mini-code",
+  "lab": "cohere",
+  "name": "North Mini Code (free)",
+  "family": "North",
+  "status": "current",
+  "released": "2026-06-17",
+  "date_precision": "observed",
+  "summary": "North Mini Code (free), listed 2026-06-17 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "cohere/north-mini-code:free"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/cohere/north-mini-code:free"
+  ],
+  "context": {
+    "input_tokens": 256000,
+    "tokenizer_note": "Context as served by OpenRouter for cohere/north-mini-code:free, read 2026-09-23."
+  }
+}

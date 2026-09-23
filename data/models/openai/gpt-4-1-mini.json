@@ -1,0 +1,38 @@
+{
+  "id": "gpt-4-1-mini",
+  "lab": "openai",
+  "name": "GPT-4.1 Mini",
+  "family": "GPT",
+  "status": "current",
+  "released": "2025-04-14",
+  "date_precision": "observed",
+  "summary": "GPT-4.1 Mini, listed 2025-04-14 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/gpt-4.1-mini"
+  },
+  "modalities": {
+    "input": [
+      "image",
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/gpt-4.1-mini"
+  ],
+  "context": {
+    "input_tokens": 1047576,
+    "tokenizer_note": "Context as served by OpenRouter for openai/gpt-4.1-mini, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.4,
+    "output_per_mtok": 1.6,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/gpt-4.1-mini, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

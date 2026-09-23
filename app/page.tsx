@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import LabCard from '@/components/LabCard';
+import CostBoard, { type CostRow } from '@/components/CostBoard';
 import { getLabs, getModels, datedModels, getSuites } from '@/lib/data';
 
 export default function Home() {
@@ -36,6 +37,44 @@ export default function Home() {
   }));
 
   const benchmarkCount = models.reduce((n, m) => n + m.benchmarks.length, 0);
+
+  // Cost rankings. Blended price is a million tokens in plus a million out —
+  // the simplest definition that can be stated in one sentence, so the ranking
+  // does not hide a weighting inside a number.
+  const costRows: CostRow[] = models
+    .filter((m) => m.pricing)
+    .map((m) => {
+      const blended = m.pricing!.input_per_mtok + m.pricing!.output_per_mtok;
+      return {
+        id: m.id,
+        lab: m.lab,
+        labName: nameFor.get(m.lab) ?? m.lab,
+        name: m.name,
+        accent: accentFor.get(m.lab) ?? '#d97757',
+        blended,
+        inputPerMtok: m.pricing!.input_per_mtok,
+        outputPerMtok: m.pricing!.output_per_mtok,
+        context: m.context?.input_tokens,
+        perDollar: m.context && blended > 0 ? m.context.input_tokens / blended : undefined,
+        source: m.sources[0],
+      };
+    });
+
+  // A model served free carries a real price of zero, which would take every
+  // top slot and say nothing about cost. Ranked separately from the paid ones.
+  const cheapest = costRows
+    .filter((r) => r.blended > 0)
+    .sort((a, b) => a.blended - b.blended)
+    .slice(0, 6);
+
+  const roomiest = costRows
+    .filter((r) => r.perDollar)
+    .sort((a, b) => (b.perDollar ?? 0) - (a.perDollar ?? 0))
+    .slice(0, 6);
+
+  const comparable = models.filter((m) =>
+    m.benchmarks.some((b) => b.comparable),
+  ).length;
 
   // The three most recent releases per stat, named under each number. A count
   // on its own reads as marketing; three real names make it checkable.
@@ -78,6 +117,14 @@ export default function Home() {
         modelCount={models.length}
         sourceCount={sources.size}
         latest={models[0]?.released ?? ''}
+      />
+
+      <CostBoard
+        cheapest={cheapest}
+        roomiest={roomiest}
+        priced={costRows.length}
+        total={models.length}
+        scored={comparable}
       />
 
       <section className="section shell">

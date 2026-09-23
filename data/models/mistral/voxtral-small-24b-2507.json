@@ -1,0 +1,38 @@
+{
+  "id": "voxtral-small-24b-2507",
+  "lab": "mistral",
+  "name": "Voxtral Small 24B 2507",
+  "family": "Voxtral",
+  "status": "current",
+  "released": "2025-10-30",
+  "date_precision": "observed",
+  "summary": "Voxtral Small 24B 2507, listed 2025-10-30 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "mistralai/voxtral-small-24b-2507"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "audio"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/mistralai/voxtral-small-24b-2507"
+  ],
+  "context": {
+    "input_tokens": 32768,
+    "tokenizer_note": "Context as served by OpenRouter for mistralai/voxtral-small-24b-2507, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.3,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as mistralai/voxtral-small-24b-2507, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

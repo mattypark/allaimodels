@@ -1,0 +1,37 @@
+{
+  "id": "minimax-m1",
+  "lab": "minimax",
+  "name": "MiniMax M1",
+  "family": "MiniMax",
+  "status": "current",
+  "released": "2025-06-17",
+  "date_precision": "observed",
+  "summary": "MiniMax M1, listed 2025-06-17 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "minimax/minimax-m1"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/minimax/minimax-m1"
+  ],
+  "context": {
+    "input_tokens": 1000000,
+    "tokenizer_note": "Context as served by OpenRouter for minimax/minimax-m1, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 0.4,
+    "output_per_mtok": 2.2,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as minimax/minimax-m1, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}

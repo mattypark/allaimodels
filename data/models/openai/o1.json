@@ -1,0 +1,38 @@
+{
+  "id": "o1",
+  "lab": "openai",
+  "name": "o1",
+  "family": "o1",
+  "status": "legacy",
+  "released": "2024-12-17",
+  "date_precision": "observed",
+  "summary": "o1, listed 2024-12-17 on OpenRouter. The date is when it appeared there, not when the lab announced it.",
+  "api_ids": {
+    "openrouter": "openai/o1"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": false,
+  "links": {},
+  "benchmarks": [],
+  "sources": [
+    "https://openrouter.ai/openai/o1"
+  ],
+  "context": {
+    "input_tokens": 200000,
+    "tokenizer_note": "Context as served by OpenRouter for openai/o1, read 2026-09-23."
+  },
+  "pricing": {
+    "input_per_mtok": 15,
+    "output_per_mtok": 60,
+    "currency": "USD",
+    "notes": "Listed by OpenRouter as openai/o1, read 2026-09-23. This is a reseller's price, not the lab's own page."
+  }
+}
