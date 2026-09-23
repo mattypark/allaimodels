@@ -11,7 +11,8 @@
     "lint": "next lint",
     "validate": "node --experimental-strip-types scripts/validate.ts",
     "scrape": "node --experimental-strip-types scripts/scrape/run.ts",
-    "scrape:dry": "node --experimental-strip-types scripts/scrape/run.ts --dry-run"
+    "scrape:dry": "node --experimental-strip-types scripts/scrape/run.ts --dry-run",
+    "logos": "node --experimental-strip-types scripts/logos/fetch.ts"
   },
   "dependencies": {
     "animejs": "^4.0.2",

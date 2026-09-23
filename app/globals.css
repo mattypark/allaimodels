@@ -1521,3 +1521,31 @@ li[data-comparable='false'] .bench__fill {
 .hero .ghost:hover {
   color: var(--void-ink);
 }
+
+
+/* ===========================================================================
+   Lab marks
+
+   One shape for every lab, real logo or initials. Sized by the caller, tinted
+   by whatever colour it inherits, so the same component works in a table cell,
+   a nav pill and a 200px logo wall without a second asset.
+   =========================================================================== */
+
+.mark {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+}
+
+.mark--monogram {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 0.25em;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  /* The border already carries the shape; a full-strength fill would make a
+     lab without a logo shout louder than the labs that have one. */
+  opacity: 0.72;
+}

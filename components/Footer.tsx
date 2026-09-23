@@ -27,8 +27,11 @@ export default function Footer() {
       <div className="shell legal">
         <p>
           Model names, logos and trademarks belong to their respective owners and are
-          used here to identify the models described. Portraits are credited to their
-          sources on each lab page.
+          used here to identify the models described. Each mark records the page it was
+          fetched from and its licence in{' '}
+          <code className="mono">data/logos.json</code>; a lab with no freely licensed
+          mark is shown as initials rather than someone else&rsquo;s logo. Portraits are
+          credited to their sources on each lab page.
         </p>
         <p className="mono">Data refreshed weekly by pull request</p>
       </div>
