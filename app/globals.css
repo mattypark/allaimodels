@@ -219,3 +219,239 @@ img {
 .portrait:hover {
   filter: grayscale(0.55) contrast(1.02);
 }
+
+/* ===========================================================================
+   Footer
+   =========================================================================== */
+
+footer {
+  background: var(--void);
+  color: var(--void-ink);
+  padding-block: var(--rhythm) 2.5rem;
+  margin-block-start: var(--rhythm);
+}
+
+footer .inner {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 48rem) {
+  footer .inner {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+}
+
+footer .claim {
+  margin-block-start: 0.9rem;
+  max-width: 44ch;
+  font-size: var(--step-0);
+  color: rgb(245 243 238 / 0.72);
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+footer nav a {
+  font-size: var(--step-0);
+  color: rgb(245 243 238 / 0.72);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+footer nav a:hover {
+  color: var(--void-ink);
+}
+
+footer .legal {
+  margin-block-start: 3.5rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid rgb(245 243 238 / 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--step--1);
+  color: rgb(245 243 238 / 0.5);
+}
+footer .legal p {
+  max-width: 62ch;
+}
+
+/* ===========================================================================
+   Lab cards
+
+   Each card paints itself from the lab's own six tokens. No per-lab CSS.
+   =========================================================================== */
+
+.lab-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 46rem) {
+  .lab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 72rem) {
+  .lab-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: clamp(1.4rem, 1rem + 1.4vw, 2.4rem);
+  min-height: 19rem;
+  position: relative;
+  isolation: isolate;
+  transition:
+    background-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out);
+}
+
+/* The theme is latent until you reach for it: the card sits in the page's
+   palette and fades into the lab's own on hover or keyboard focus. */
+.lab-card {
+  background: var(--paper);
+  color: var(--ink);
+}
+.lab-card:hover,
+.lab-card:focus-visible {
+  background: var(--bg);
+}
+
+.lab-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lab-card__count {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.lab-card h3 {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: var(--step-2);
+  margin-block-start: auto;
+}
+
+.lab-card__summary {
+  color: var(--muted);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lab-card__foot {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 0.9rem;
+  border-block-start: 1px solid var(--line);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.lab-card__go {
+  color: var(--accent);
+  font-size: 1.1rem;
+  transition: transform var(--dur) var(--ease-out);
+}
+.lab-card:hover .lab-card__go {
+  transform: translateX(0.3rem);
+}
+
+/* ===========================================================================
+   Sections
+   =========================================================================== */
+
+.section {
+  padding-block: var(--rhythm);
+}
+
+.section__head {
+  display: grid;
+  gap: 1rem;
+  margin-block-end: clamp(1.8rem, 1rem + 3vw, 3.5rem);
+  max-width: 62rem;
+}
+
+.section__head h2 {
+  font-size: var(--step-3);
+}
+
+.section__head p {
+  color: var(--muted);
+  font-size: var(--step-1);
+  line-height: 1.45;
+  max-width: 54ch;
+}
+
+/* ===========================================================================
+   Principles list
+   =========================================================================== */
+
+.principles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 56rem) {
+  .principles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.principles li {
+  background: var(--bg);
+  padding: clamp(1.4rem, 1rem + 1.4vw, 2.4rem);
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.principles .mono {
+  color: var(--accent);
+  font-size: 0.68rem;
+}
+
+.principles h3 {
+  font-size: var(--step-1);
+  line-height: 1.1;
+}
+
+.principles p {
+  color: var(--muted);
+  font-size: var(--step--1);
+  line-height: 1.6;
+}

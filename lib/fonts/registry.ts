@@ -31,25 +31,26 @@ import {
  * downloads the one lab they actually open rather than all thirteen.
  */
 
-const base = { subsets: ['latin'] as const, display: 'swap' as const };
-const lab = { ...base, preload: false };
+// next/font requires a literal object at every call site — the loader reads
+// these at build time and cannot evaluate a spread or a shared constant. So
+// each declaration is written out in full. Only the base stack preloads.
 
 // ── Base system — the global rule's stack, and the only preloaded faces ──
-export const inter = Inter({ ...base, variable: '--font-inter' });
-export const jetbrains = JetBrains_Mono({ ...base, variable: '--font-jetbrains' });
-export const newsreader = Newsreader({ ...base, variable: '--font-newsreader' });
+export const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+export const jetbrains = JetBrains_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-jetbrains' });
+export const newsreader = Newsreader({ subsets: ['latin'], display: 'swap', variable: '--font-newsreader' });
 
-// ── Lab display faces ──
-export const interTight = Inter_Tight({ ...lab, variable: '--font-inter-tight' });
-export const plexMono = IBM_Plex_Mono({ ...lab, weight: ['400', '600'], variable: '--font-plex-mono' });
-export const instrument = Instrument_Sans({ ...lab, variable: '--font-instrument' });
-export const archivo = Archivo({ ...lab, variable: '--font-archivo' });
-export const spaceGrotesk = Space_Grotesk({ ...lab, variable: '--font-space-grotesk' });
-export const spaceMono = Space_Mono({ ...lab, weight: ['400', '700'], variable: '--font-space-mono' });
-export const outfit = Outfit({ ...lab, variable: '--font-outfit' });
-export const manrope = Manrope({ ...lab, variable: '--font-manrope' });
-export const jakarta = Plus_Jakarta_Sans({ ...lab, variable: '--font-jakarta' });
-export const figtree = Figtree({ ...lab, variable: '--font-figtree' });
+// ── Lab display faces: preload:false, so one lab's face downloads, not thirteen ──
+export const interTight = Inter_Tight({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-inter-tight' });
+export const plexMono = IBM_Plex_Mono({ subsets: ['latin'], display: 'swap', preload: false, weight: ['400', '600'], variable: '--font-plex-mono' });
+export const instrument = Instrument_Sans({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-instrument' });
+export const archivo = Archivo({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-archivo' });
+export const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-space-grotesk' });
+export const spaceMono = Space_Mono({ subsets: ['latin'], display: 'swap', preload: false, weight: ['400', '700'], variable: '--font-space-mono' });
+export const outfit = Outfit({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-outfit' });
+export const manrope = Manrope({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-manrope' });
+export const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-jakarta' });
+export const figtree = Figtree({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-figtree' });
 
 /** Every font variable, for the <html> className. */
 export const allFontVariables = [
