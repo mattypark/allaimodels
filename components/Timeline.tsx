@@ -60,20 +60,23 @@ export default function Timeline({ entries }: { entries: TimelineEntry[] }) {
         },
       });
 
-      gsap.utils.toArray<HTMLElement>('[data-entry]').forEach((el) => {
-        gsap.from(el, {
-          opacity: 0,
-          y: 26,
-          duration: 0.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: el,
-            containerAnimation: tween,
-            start: 'left 92%',
-            toggleActions: 'play none none reverse',
-          },
-        });
+      // Entries reveal per year column when the rail is reached.
+      //
+      // The obvious approach — a ScrollTrigger per entry with
+      // containerAnimation: tween — strands them. Entries already on screen at
+      // progress 0 resolve to a start outside the container tween's scroll
+      // range, so their trigger never fires and they sit at opacity 0 forever.
+      // A single timeline cannot leave anything hidden.
+      gsap.from('[data-entry]', {
+        opacity: 0,
+        y: 22,
+        duration: 0.45,
+        ease: 'power2.out',
+        stagger: { each: 0.02, grid: 'auto' },
+        scrollTrigger: { trigger: section, start: 'top 80%', once: true },
       });
+
+      void tween;
     }, section);
 
     // Lenis drives the scroll; ScrollTrigger has to be told when it moves.
