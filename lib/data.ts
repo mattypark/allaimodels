@@ -44,8 +44,16 @@ export function getModels(): TModel[] {
       }
     }
   }
-  // Newest first everywhere; the timeline reverses it itself.
-  modelCache = out.sort((a, b) => b.released.localeCompare(a.released));
+  // Newest first — but an 'observed' date is the day we noticed the model, which
+  // is always recent and would otherwise outrank every genuine release. Models
+  // with a real announced date sort first; observed ones follow, alphabetically.
+  modelCache = out.sort((a, b) => {
+    const aExact = a.date_precision === 'exact';
+    const bExact = b.date_precision === 'exact';
+    if (aExact !== bExact) return aExact ? -1 : 1;
+    if (!aExact) return a.name.localeCompare(b.name);
+    return b.released.localeCompare(a.released);
+  });
   return modelCache;
 }
 

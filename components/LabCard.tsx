@@ -21,6 +21,13 @@ export default function LabCard({ lab, models }: { lab: LabData; models: ModelDa
     '--muted': lab.brand.muted,
     '--accent': lab.brand.accent,
     '--accent-ink': lab.brand.accent_ink,
+    // --paper and --line must be derived from the lab's own bg and ink, not
+    // inherited. A lab theme that sets only six tokens leaves these two coming
+    // from the root palette, so under a dark OS preference a light lab gets
+    // dark paper behind dark ink — invisible text. Deriving them keeps a lab's
+    // palette internally consistent whatever the viewer's system is set to.
+    '--paper': `color-mix(in srgb, ${lab.brand.bg} 94%, ${lab.brand.ink})`,
+    '--line': `color-mix(in srgb, ${lab.brand.ink} 14%, transparent)`,
     '--font-display': fonts.display,
     '--font-mono': fonts.mono,
   } as CSSProperties;

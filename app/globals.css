@@ -1176,9 +1176,11 @@ li[data-comparable='false'] .bench__fill {
   color: var(--muted);
   letter-spacing: 0.04em;
 }
+/* Greyed, but never below AA. The dotted underline carries the signal so the
+   colour does not have to drop to an unreadable contrast to say "be careful". */
 .cmp__val[data-comparable='false'] {
   color: var(--muted);
-  opacity: 0.6;
+  opacity: 0.85;
   cursor: help;
   text-decoration: underline dotted;
   text-underline-offset: 0.25em;
@@ -1306,4 +1308,113 @@ li[data-comparable='false'] .bench__fill {
 .suites__models a:hover {
   color: var(--ink);
   border-color: var(--muted);
+}
+
+/* ===========================================================================
+   Nav
+
+   These live here rather than in a styled-jsx block because the tabs are
+   next/link components: styled-jsx only tags host elements it can see in JSX,
+   so a scoped rule never reaches the <a> that Link renders.
+   =========================================================================== */
+
+.nav-wrap {
+  position: fixed;
+  inset-block-start: calc(env(safe-area-inset-top, 0px) + 0.9rem);
+  inset-inline: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--gutter);
+  pointer-events: none;
+}
+
+.capsule {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 2rem);
+  width: 100%;
+  max-width: 62rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgb(245 243 238 / 0.82);
+  border: 1px solid rgb(255 255 255 / 0.5);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 0.16);
+  backdrop-filter: blur(20px) saturate(1.6);
+  color: #141413;
+  transition:
+    background-color var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+.nav-wrap[data-lifted='true'] .capsule {
+  background: rgb(245 243 238 / 0.94);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.1);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wordmark .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #d97757;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.tabs a {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.tabs a:hover {
+  background: rgb(20 20 19 / 0.07);
+}
+.tabs a[aria-current='page'] {
+  background: rgb(20 20 19 / 0.1);
+}
+
+.nav-cta {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 40rem) {
+  .nav-cta {
+    display: none;
+  }
+  .capsule {
+    padding-inline: 0.9rem 0.4rem;
+  }
+  .tabs a {
+    padding-inline: 0.55rem;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 24rem) {
+  .wordmark .name {
+    display: none;
+  }
 }

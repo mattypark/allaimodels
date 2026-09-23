@@ -14,9 +14,14 @@ type Props = {
 const MAX = 5;
 
 export default function Compare({ models, suites, accents, labNames }: Props) {
-  const [picked, setPicked] = useState<string[]>(
-    models.slice(0, 3).map((m) => `${m.lab}/${m.id}`),
-  );
+  // Open on models that actually have something to compare. Defaulting to
+  // "the three newest" once landed on three models with no benchmarks at all,
+  // which makes the table look broken on first paint.
+  const [picked, setPicked] = useState<string[]>(() => {
+    const withData = models.filter((m) => m.benchmarks.length > 0);
+    const rest = models.filter((m) => m.benchmarks.length === 0);
+    return [...withData, ...rest].slice(0, 3).map((m) => `${m.lab}/${m.id}`);
+  });
 
   const chosen = picked
     .map((k) => models.find((m) => `${m.lab}/${m.id}` === k))
