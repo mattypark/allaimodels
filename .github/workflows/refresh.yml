@@ -1,0 +1,77 @@
+name: Weekly data refresh
+
+# Monday morning, plus a manual button. Never on push — a refresh should be
+# driven by the outside world changing, not by us editing code.
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scrape sources
+        id: scrape
+        # Exit 78 means every source agreed with what is already on disk.
+        # That is a success, not a failure, so it is translated here.
+        run: |
+          set +e
+          npm run scrape
+          code=$?
+          set -e
+          if [ "$code" -eq 78 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          elif [ "$code" -eq 0 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Scraper crashed with exit $code" >&2
+            exit "$code"
+          fi
+
+      # The gate runs before the pull request, never after. A refresh that
+      # produced invalid data must fail here rather than open a PR that breaks
+      # the build for whoever reviews it.
+      - name: Validate scraped data
+        if: steps.scrape.outputs.changed == 'true'
+        run: npm run validate
+
+      - name: Confirm the site still builds
+        if: steps.scrape.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Open pull request
+        if: steps.scrape.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data/refresh
+          base: main
+          title: "Data refresh — ${{ github.run_started_at }}"
+          body-path: refresh-report.md
+          commit-message: |
+            Weekly data refresh
+
+            Scraped values that disagreed with the live source pages. Sources
+            that failed left their data untouched; see the pull request body.
+          author: Matthew Park <matthew.parkk0@gmail.com>
+          committer: Matthew Park <matthew.parkk0@gmail.com>
+          add-paths: data/**
+          delete-branch: true
+          labels: data
+
+      - name: Report when nothing moved
+        if: steps.scrape.outputs.changed == 'false'
+        run: echo "No source disagreed with the committed data. Nothing to review."

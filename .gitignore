@@ -10,3 +10,4 @@ dist/
 .vercel
 public/fonts/licensed/
 .cache/
+refresh-report.md
