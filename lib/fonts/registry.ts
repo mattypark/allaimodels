@@ -80,6 +80,20 @@ export const LAB_FONTS: Record<string, Slot> = {
   qwen:        { display: 'var(--font-manrope)',        mono: 'var(--font-jetbrains)',    standsInFor: 'Alibaba Sans' },
   microsoft:   { display: 'var(--font-jakarta)',        mono: 'var(--font-jetbrains)',    standsInFor: 'Segoe UI Variable' },
   amazon:      { display: 'var(--font-figtree)',        mono: 'var(--font-jetbrains)',    standsInFor: 'Amazon Ember' },
+
+  // The nine labs added in the roster expansion. These reuse faces already
+  // declared above rather than pulling in nine more: a slot is a pairing of
+  // display and mono, so reusing a display with a different mono still gives a
+  // lab its own voice, and the page weight does not move.
+  nvidia:      { display: 'var(--font-archivo)',        mono: 'var(--font-jetbrains)',    standsInFor: 'NVIDIA Sans' },
+  cohere:      { display: 'var(--font-figtree)',        mono: 'var(--font-plex-mono)',    standsInFor: 'CohereText' },
+  ai2:         { display: 'var(--font-instrument)',     mono: 'var(--font-jetbrains)',    standsInFor: 'Manrope' },
+  moonshot:    { display: 'var(--font-space-grotesk)',  mono: 'var(--font-plex-mono)',    standsInFor: 'Kimi Sans' },
+  zhipu:       { display: 'var(--font-manrope)',        mono: 'var(--font-jetbrains)',    standsInFor: 'Z.ai Sans' },
+  minimax:     { display: 'var(--font-outfit)',         mono: 'var(--font-jetbrains)',    standsInFor: 'MiniMax Sans' },
+  perplexity:  { display: 'var(--font-jakarta)',        mono: 'var(--font-plex-mono)',    standsInFor: 'FK Grotesk' },
+  inflection:  { display: 'var(--font-figtree)',        mono: 'var(--font-jetbrains)',    standsInFor: 'Inflection Sans' },
+  baidu:       { display: 'var(--font-manrope)',        mono: 'var(--font-plex-mono)',    standsInFor: 'Baidu Sans' },
 };
 
 export const DEFAULT_FONTS: Slot = LAB_FONTS.anthropic;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import VideoFacade from './VideoFacade';
 import BenchmarkBars from './BenchmarkBars';
@@ -34,13 +34,37 @@ export default function ModelList({
   suites: SuiteData[];
 }) {
   const [open, setOpen] = useState<string | null>(models[0]?.id ?? null);
+  const list = useRef<HTMLUListElement>(null);
+
+  /**
+   * Arriving from a globe dot: ?model=<id> opens that row and scrolls to it,
+   * so a click on the sphere lands on the thing that was clicked rather than
+   * on the top of a long list.
+   *
+   * Read from location rather than useSearchParams, which opts the whole route
+   * out of static prerendering unless it is wrapped in Suspense. Every lab page
+   * is otherwise fully static, and one query parameter is not worth losing that.
+   */
+  useEffect(() => {
+    const asked = new URLSearchParams(window.location.search).get('model');
+    if (!asked || !models.some((m) => m.id === asked)) return;
+
+    setOpen(asked);
+    // Waits a frame so the row is laid out before it is scrolled to.
+    const frame = requestAnimationFrame(() => {
+      list.current
+        ?.querySelector(`[data-model="${CSS.escape(asked)}"]`)
+        ?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [models]);
 
   return (
-    <ul className="models">
+    <ul className="models" ref={list}>
       {models.map((m) => {
         const isOpen = open === m.id;
         return (
-          <li key={m.id} data-status={m.status}>
+          <li key={m.id} data-model={m.id} data-status={m.status}>
             <h3>
               <button
                 type="button"

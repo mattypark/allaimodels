@@ -1461,7 +1461,7 @@ li[data-comparable='false'] .bench__fill {
   flex: 1 1 auto;
   /* Reserved, not content-driven. The canvas sizes itself from this box, so a
      box that grew with its contents would resize the canvas on every frame. */
-  min-height: clamp(20rem, 48svh, 34rem);
+  min-height: clamp(24rem, 58svh, 42rem);
   margin-block-end: clamp(1.25rem, 3vw, 2.25rem);
 }
 
@@ -1682,4 +1682,30 @@ li[data-comparable='false'] .bench__fill {
   /* The border already carries the shape; a full-strength fill would make a
      lab without a logo shout louder than the labs that have one. */
   opacity: 0.72;
+}
+
+
+/* ── Lab card: mark first, prose gone ──────────────────────────────────── */
+
+.lab-card__mark {
+  /* Pushes the name and the latest line apart so the card's height is set by
+     the mark rather than by however long a lab's name happens to be. */
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  margin-block: 1.4rem 0.6rem;
+  color: var(--accent);
+}
+
+/* A wordmark like Meta's or NVIDIA's is far wider than it is tall, so a fixed
+   size would render one lab enormous and another tiny. Cap the width and let
+   the viewBox decide the rest. */
+.lab-card__mark .mark {
+  width: auto;
+  max-width: 9rem;
+  height: 2.6rem;
+}
+
+.lab-card__mark .mark--monogram {
+  width: 2.6rem;
 }

@@ -26,6 +26,7 @@ export default function Home() {
   const nameFor = new Map(labs.map((l) => [l.slug, l.name]));
 
   const points = models.map((m) => ({
+    id: m.id,
     name: m.name,
     lab: m.lab,
     labName: nameFor.get(m.lab) ?? m.lab,

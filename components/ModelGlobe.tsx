@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export type GlobePoint = {
+  id: string;
   name: string;
   lab: string;
   labName: string;
@@ -31,9 +33,18 @@ export type GlobePoint = {
  * the thing a single brand-coloured highlight cannot do.
  */
 
-const LENS_RADIUS = 170;
+const LENS_RADIUS = 180;
 const DOT = 2.8;
-const DOT_LENS = 5;
+const DOT_LENS = 5.6;
+/**
+ * How far a dot is pushed away from the cursor at the centre of the lens.
+ *
+ * This is the bulge. Without it the lens only recolours, which reads as a
+ * spotlight shone on a flat picture; pushing the dots outward makes the
+ * surface look like it is being lifted under the pointer. Kept small — past
+ * about 20px the sphere tears rather than swells.
+ */
+const BULGE = 15;
 const SPIN = 0.00022; // radians per ms — one turn is about eight minutes
 
 type Placed = GlobePoint & { x: number; y: number; z: number };
@@ -93,6 +104,11 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
   const wrap = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const [hovered, setHovered] = useState<GlobePoint | null>(null);
+  const router = useRouter();
+
+  // Read by the click handler without re-running the render effect, which
+  // would otherwise tear down and rebuild the canvas on every hover.
+  const under = useRef<GlobePoint | null>(null);
 
   useEffect(() => {
     const host = wrap.current;
@@ -136,7 +152,7 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
 
       const cx = w / 2;
       const cy = h / 2;
-      const r = Math.min(w, h) * 0.42;
+      const r = Math.min(w, h) * 0.5;
       ctx!.clearRect(0, 0, w, h);
 
       const cos = Math.cos(angle);
@@ -149,8 +165,8 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
         // sphere keeps the silhouette crisp, which is what makes the rim read.
         const x = p.x * cos - p.z * sin;
         const z = p.x * sin + p.z * cos;
-        const sx = cx + x * r;
-        const sy = cy + p.y * r;
+        let sx = cx + x * r;
+        let sy = cy + p.y * r;
 
         // Depth drives base alpha, so the far hemisphere reads as behind.
         const depth = (z + 1) / 2;
@@ -159,11 +175,24 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
         let colour = inkRgb;
 
         if (pointer.on) {
-          const d = Math.hypot(sx - pointer.x, sy - pointer.y);
+          const dx = sx - pointer.x;
+          const dy = sy - pointer.y;
+          const d = Math.hypot(dx, dy);
           if (d < LENS_RADIUS) {
             const k = 1 - d / LENS_RADIUS;
             // Cubic falloff: a linear one leaves a visible disc edge.
             const e = k * k * k;
+
+            // The bulge. Push each dot away from the cursor along its own
+            // radius, strongest at the centre, so the surface swells rather
+            // than the highlight simply sliding over it. Guarded at d ~ 0,
+            // where the direction is undefined.
+            if (d > 0.5) {
+              const push = (BULGE * e) / d;
+              sx += dx * push;
+              sy += dy * push;
+            }
+
             alpha = Math.min(1, alpha + e * 0.85);
             size = DOT + (DOT_LENS - DOT) * e;
             const a = accents.get(p.lab) ?? inkRgb;
@@ -187,6 +216,8 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
 
       if (best !== nearest) {
         nearest = best;
+        under.current = best;
+        cv!.style.cursor = best ? 'pointer' : '';
         setHovered(best);
       }
 
@@ -207,6 +238,11 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
       pointer.y = -9999;
     }
 
+    function onClick() {
+      const hit = under.current;
+      if (hit) router.push(`/labs/${hit.lab}?model=${encodeURIComponent(hit.id)}`);
+    }
+
     function onVisibility() {
       if (document.hidden) {
         cancelAnimationFrame(raf);
@@ -221,6 +257,7 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
     ro.observe(host);
     host.addEventListener('pointermove', onMove);
     host.addEventListener('pointerleave', onLeave);
+    host.addEventListener('click', onClick);
     document.addEventListener('visibilitychange', onVisibility);
     raf = requestAnimationFrame(frame);
 
@@ -229,9 +266,10 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
       ro.disconnect();
       host.removeEventListener('pointermove', onMove);
       host.removeEventListener('pointerleave', onLeave);
+      host.removeEventListener('click', onClick);
       document.removeEventListener('visibilitychange', onVisibility);
     };
-  }, [points]);
+  }, [points, router]);
 
   return (
     <div className="globe" ref={wrap}>
@@ -248,7 +286,7 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
           <>
             <span className="globe__read-name">{hovered.name}</span>
             <span className="globe__read-meta">
-              {hovered.labName} · {hovered.released}
+              {hovered.labName} · {hovered.released} · click to open
             </span>
           </>
         ) : null}
