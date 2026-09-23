@@ -144,3 +144,83 @@ Filled in per lab as each one's site is actually opened and read. A row here wit
 | `docs/refs/openai-astra-chartcard.jpg` | The tab capsule, the transparent chart card over the starfield, the shape legend, the effort curves |
 
 Read the frames before rebuilding a chart. Descriptions drift; the frames do not.
+
+---
+
+## vclense.ch/ycglobe — the dotted globe, the lens, the gate, the tour
+
+Matthew's second reference, and the one that changes the home page. Four separate ideas on
+one site. Read by driving it, not by looking at it: the hover was performed and the frames
+compared before and after.
+
+### Ground
+
+| Thing | Value |
+| --- | --- |
+| Page background | `rgb(255, 247, 240)` — warm cream, very close to our own `--bg: #f0eee6` |
+| Face | `Inter, system-ui, sans-serif` |
+| Accent | A saturated orange, used for the lens, the primary button and every number |
+| Stack | `maplibre-gl@5` for the real map inside the app; the landing globe is a **plain 2D canvas**, full viewport, no WebGL |
+
+### The globe, and what the lens actually does
+
+The landing globe is **not** a 3D scene and not SVG. It is one full-bleed `<canvas>` 2D
+context, a point cloud arranged on a sphere and projected flat, drawn as **small squares,
+not circles** — roughly 2–4px, axis-aligned, which is what gives it the pixel-dust texture
+rather than a bubble texture.
+
+The hover is a **lens**, hence the company name. Hovering did not push the dots around.
+Comparing the two frames, within roughly a 150px radius of the cursor each dot gets:
+
+1. **colour** lerped from near-black toward the accent orange,
+2. **alpha** raised,
+3. **size** raised a step,
+
+all weighted by `1 - distance / radius` so the effect is densest under the cursor and dies
+smoothly at the rim. It reads as liquid because the falloff is smooth and the underlying
+sphere keeps rotating underneath it — the highlight is a field over moving points, not a
+deformation of them. There is also a light outward displacement near the very centre.
+
+That is directly reusable and it is *better* on our data than on theirs: every dot here is a
+model that already has a lab accent, so the lens can reveal each lab's own colour instead of
+one brand orange. Sweeping the cursor across the sphere would light up Anthropic coral in
+one region and OpenAI green in another.
+
+Cost: one canvas, one rAF loop, `O(n)` per frame over ~400 points — cheaper than the
+three.js scatter already on `/compare`.
+
+### Floating stat cards
+
+Four cards float around the globe, not in a rail: white, heavily rounded, soft shadow,
+placed asymmetrically at roughly the four diagonals. Each is a big accent number, a small
+uppercase mono label, and then **a short rotating list of real examples underneath**
+(`6,100+ / YC COMPANIES / Airbnb, Stripe, DoorDash`). The examples are what make the number
+feel true rather than marketing.
+
+Ours map one-for-one: models indexed, labs covered, benchmark results with a source, cited
+sources — each with three real names cycling under it.
+
+### The gate
+
+Under the globe: product name, one-line claim, a freshness line
+(`Data verified daily · last refresh Sep 17`), then a full-width accent **Continue as
+guest** button, and below it an email field beside a **Get updates** button.
+
+Guest is the primary path and is not gated behind the email. Worth copying exactly — the
+freshness line especially, because this site's entire pitch is that its numbers carry a date.
+
+### The onboarding tour
+
+On entering the app, a coach-mark tour runs: the page dims and blurs behind, a small white
+rounded card appears anchored near the thing it describes, containing a brand lockup, a bold
+title, a sentence, then a row of `Skip` · progress dots · a filled accent `Next`. Five steps.
+The card moves to the region it is describing — over the globe for step 1, over the filter
+rail for step 2.
+
+### The app layout, for later
+
+Left filter rail (search, then collapsible facet groups each with counts and a `+ N more`),
+globe centre, right column of small leaderboard cards with inline bar fills, a bottom strip
+of entity chips each carrying its logo, and an "Ask" panel that searches by meaning. The
+counts beside every facet are the detail worth stealing — they turn a filter list into a
+second dataset view.
