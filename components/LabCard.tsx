@@ -26,7 +26,7 @@ export default function LabCard({ lab, models }: { lab: LabData; models: ModelDa
     // from the root palette, so under a dark OS preference a light lab gets
     // dark paper behind dark ink — invisible text. Deriving them keeps a lab's
     // palette internally consistent whatever the viewer's system is set to.
-    '--paper': `color-mix(in srgb, ${lab.brand.bg} 94%, ${lab.brand.ink})`,
+    '--paper': `color-mix(in srgb, ${lab.brand.bg} 96%, ${lab.brand.ink})`,
     '--line': `color-mix(in srgb, ${lab.brand.ink} 14%, transparent)`,
     '--font-display': fonts.display,
     '--font-mono': fonts.mono,

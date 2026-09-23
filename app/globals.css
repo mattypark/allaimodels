@@ -17,6 +17,14 @@
   --muted: #6b6862;
   --accent: #d97757;
   --accent-ink: #ffffff;
+  /* Solid-fill controls only.
+     White on any lab's brand accent fails WCAG AA for small text — Claude
+     coral lands at 3.12:1, OpenAI green at 3.20, Google blue at 3.56, all
+     against a 4.5:1 requirement. Darkening by 35% clears AA for every accent
+     in the registry, including Amazon's orange, which is the worst case. The
+     bright accent stays for dots, bars, rules and links, where it sits on the
+     page background rather than under white text. */
+  --accent-strong: color-mix(in srgb, var(--accent) 65%, #000);
   --line: rgb(20 20 19 / 0.12);
   --void: #0d0d0c;
   --void-ink: #f5f3ee;
@@ -38,7 +46,7 @@
   --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.55rem);
   --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.6rem);
   --step-3: clamp(2.2rem, 1.6rem + 3vw, 4.4rem);
-  --step-4: clamp(2.9rem, 1.6rem + 6.4vw, 8rem);
+  --step-4: clamp(2.4rem, 1.3rem + 6.2vw, 8rem);
 
   --gutter: clamp(1rem, 0.6rem + 2vw, 3.5rem);
   --rhythm: clamp(3.5rem, 2rem + 7vw, 9rem);
@@ -75,6 +83,9 @@
    =========================================================================== */
 
 [data-lab] {
+  /* Recomputed here: a custom property resolves var() against the element it
+     is declared on, so the :root definition would keep the default accent. */
+  --accent-strong: color-mix(in srgb, var(--accent) 65%, #000);
   background: var(--bg);
   color: var(--ink);
   transition:
@@ -194,7 +205,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--accent);
+  background: var(--accent-strong);
   color: var(--accent-ink);
   padding: 0.85rem 1.4rem;
   font-family: var(--font-mono), ui-monospace, monospace;
@@ -1417,4 +1428,96 @@ li[data-comparable='false'] .bench__fill {
   .wordmark .name {
     display: none;
   }
+}
+
+/* ===========================================================================
+   Hero
+
+   These are in the stylesheet, not styled-jsx, for the same reason the nav's
+   are. A client component's styled-jsx block is injected at hydration, so the
+   browser's first paint has no hero height at all and everything below it
+   jumps once the styles land. That single element was the site's entire CLS.
+   =========================================================================== */
+
+.hero {
+  position: relative;
+  background: var(--void);
+  color: var(--void-ink);
+  /* Viewport-driven, never content-driven: while the content was taller than
+     this, any reflow inside the hero — a webfont swapping, a line rewrapping —
+     moved the whole page below it. */
+  min-height: min(92svh, 54rem);
+  display: flex;
+  align-items: flex-end;
+  padding-block: calc(var(--rhythm) + 1rem) 3.5rem;
+  overflow: hidden;
+}
+
+.hero .spine {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  /* Kept clear of the calls to action — a release dot crossing a link reads as
+     a rendering fault rather than a chart. */
+  height: 34%;
+  width: 100%;
+  color: var(--accent);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .content .eyebrow {
+  color: rgb(245 243 238 / 0.55);
+}
+
+.hero h1 {
+  margin-block: 1.2rem 1.6rem;
+  font-size: var(--step-4);
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+}
+
+.hero .mask {
+  display: block;
+  overflow: hidden;
+  padding-block-end: 0.06em;
+}
+
+/* The headline is three authored lines. If the fallback serif is wider than
+   Newsreader, a wrapped fourth line changes the block's height after the swap. */
+.hero .mask > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero .sub {
+  max-width: 52ch;
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: rgb(245 243 238 / 0.74);
+}
+
+.hero .actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.6rem;
+  margin-block-start: 2.2rem;
+}
+
+.hero .ghost {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(245 243 238 / 0.7);
+  border-block-end: 1px solid rgb(245 243 238 / 0.3);
+  padding-block-end: 0.3rem;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.hero .ghost:hover {
+  color: var(--void-ink);
 }
