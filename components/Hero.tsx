@@ -3,8 +3,9 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
+import ModelGlobe, { type GlobePoint } from './ModelGlobe';
 
-type Point = { x: number; y: number; lab: string; name: string; released: string };
+export type HeroStat = { value: number; label: string; examples: string[] };
 
 /**
  * The hero background is the dataset.
@@ -12,19 +13,27 @@ type Point = { x: number; y: number; lab: string; name: string; released: string
  * The reference site fills this space with film stills of its students. We have
  * no licensed photography and no business inventing any, so the hero renders
  * the thing the site is actually about: every dated model release, placed on a
- * time axis and raised by how recent it is. It costs one inline SVG, it can
- * never be stock, and it is accurate by construction.
+ * sphere by release date and lab. It can never be stock, and it is accurate by
+ * construction — if a model is missing from the data it is missing from here.
+ *
+ * Four stat cards float around it rather than sitting in a row, each naming
+ * three real examples under its number so the count can be checked rather than
+ * believed.
  */
 export default function Hero({
   points,
+  stats,
   labCount,
   modelCount,
   sourceCount,
+  latest,
 }: {
-  points: Point[];
+  points: GlobePoint[];
+  stats: HeroStat[];
   labCount: number;
   modelCount: number;
   sourceCount: number;
+  latest: string;
 }) {
   const root = useRef<HTMLDivElement>(null);
 
@@ -36,19 +45,20 @@ export default function Hero({
     const ctx = gsap.context(() => {
       if (reduced) {
         gsap.set('[data-anim]', { opacity: 1, y: 0 });
-        gsap.set('[data-dot]', { opacity: 1, scale: 1 });
+        gsap.set('[data-stat]', { opacity: 1, y: 0, scale: 1 });
         return;
       }
 
       gsap
         .timeline({ defaults: { ease: 'power3.out' } })
-        .from('[data-anim="line"]', { yPercent: 115, duration: 1.1, stagger: 0.09 })
+        .from('[data-anim="globe"]', { opacity: 0, scale: 0.92, duration: 1.4 })
+        .from('[data-anim="line"]', { yPercent: 115, duration: 1.1, stagger: 0.09 }, '-=0.9')
         .from('[data-anim="sub"]', { opacity: 0, y: 18, duration: 0.8 }, '-=0.5')
         .from('[data-anim="cta"]', { opacity: 0, y: 14, duration: 0.7 }, '-=0.55')
         .from(
-          '[data-dot]',
-          { opacity: 0, scale: 0, duration: 0.5, stagger: { each: 0.012, from: 'start' } },
-          '-=1.1',
+          '[data-stat]',
+          { opacity: 0, y: 16, scale: 0.94, duration: 0.7, stagger: 0.08 },
+          '-=0.9',
         );
     }, el);
 
@@ -57,20 +67,25 @@ export default function Hero({
 
   return (
     <div className="hero" ref={root}>
-      <svg className="spine" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
-        <line x1="0" y1="250" x2="1000" y2="250" stroke="currentColor" strokeOpacity="0.16" />
-        {points.map((p) => (
-          <circle
-            key={`${p.lab}-${p.name}`}
-            data-dot
-            cx={p.x}
-            cy={p.y}
-            r={2.4}
-            fill="currentColor"
-            fillOpacity={0.55}
-          />
+      <div className="hero__stage">
+        <div className="hero__globe" data-anim="globe">
+          <ModelGlobe points={points} />
+        </div>
+
+        {stats.map((s, i) => (
+          <figure className={`stat stat--${i + 1}`} key={s.label} data-stat>
+            <span className="stat__value">{s.value.toLocaleString()}</span>
+            <figcaption className="stat__label">{s.label}</figcaption>
+            {s.examples.length > 0 && (
+              <ul className="stat__eg">
+                {s.examples.map((e) => (
+                  <li key={e}>{e}</li>
+                ))}
+              </ul>
+            )}
+          </figure>
         ))}
-      </svg>
+      </div>
 
       <div className="shell content">
         <p className="eyebrow" data-anim="sub">
@@ -89,6 +104,12 @@ export default function Hero({
           it can honestly be compared with anyone else&rsquo;s.
         </p>
 
+        {latest && (
+          <p className="hero__fresh mono" data-anim="sub">
+            Refreshed weekly by pull request · newest release indexed {latest}
+          </p>
+        )}
+
         <div className="actions" data-anim="cta">
           <Link href="/labs" className="cta">
             Browse the labs
@@ -98,7 +119,6 @@ export default function Hero({
           </Link>
         </div>
       </div>
-
     </div>
   );
 }

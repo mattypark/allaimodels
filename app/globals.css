@@ -1448,25 +1448,148 @@ li[data-comparable='false'] .bench__fill {
      moved the whole page below it. */
   min-height: min(92svh, 54rem);
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: stretch;
   padding-block: calc(var(--rhythm) + 1rem) 3.5rem;
   overflow: hidden;
 }
 
-.hero .spine {
+/* ── The globe, and the four numbers floating around it ─────────────────── */
+
+.hero__stage {
+  position: relative;
+  flex: 1 1 auto;
+  /* Reserved, not content-driven. The canvas sizes itself from this box, so a
+     box that grew with its contents would resize the canvas on every frame. */
+  min-height: clamp(20rem, 48svh, 34rem);
+  margin-block-end: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.hero__globe,
+.globe {
+  position: absolute;
+  inset: 0;
+}
+
+.globe canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* What the lens is currently over, as text. The canvas is aria-hidden, so
+   without this the hover carries no information to a screen reader. */
+.globe__read {
   position: absolute;
   inset-inline: 0;
   inset-block-end: 0;
-  /* Kept clear of the calls to action — a release dot crossing a link reads as
-     a rendering fault rather than a chart. */
-  height: 34%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  min-height: 2.6rem;
+  text-align: center;
+  pointer-events: none;
+}
+.globe__read-name {
+  font-size: var(--step-0);
+  font-weight: 500;
+}
+.globe__read-meta {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(245 243 238 / 0.5);
+}
+
+.stat {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgb(245 243 238 / 0.1);
+  border-radius: 0.9rem;
+  background: rgb(245 243 238 / 0.04);
+  /* No blur: a backdrop-filter over a canvas that repaints every frame forces
+     the whole stage to recomposite, and the globe drops frames on a laptop. */
+  backdrop-filter: none;
+  pointer-events: none;
+}
+
+.stat__value {
+  display: block;
+  font-size: var(--step-2);
+  font-weight: 600;
+  letter-spacing: -0.03em;
   color: var(--accent);
+  line-height: 1;
+}
+
+.stat__label {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(245 243 238 / 0.62);
+  margin-block-start: 0.35rem;
+}
+
+.stat__eg {
+  margin-block-start: 0.55rem;
+  padding-block-start: 0.5rem;
+  border-block-start: 1px solid rgb(245 243 238 / 0.08);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgb(245 243 238 / 0.42);
+}
+
+/* Asymmetric on purpose — four corners of a rectangle would read as a table,
+   and the point is that the numbers orbit the thing they describe. */
+.stat { max-width: 15rem; }
+.stat--1 { inset-block-start: 2%;  inset-inline-start: 0; }
+.stat--2 { inset-block-start: 4%;  inset-inline-end: 0; }
+.stat--3 { inset-block-end: 2%;    inset-inline-start: 4%; }
+.stat--4 { inset-block-end: 0;     inset-inline-end: 4%; }
+
+/* Under ~60rem the floating cards would land on top of the globe. They become
+   a two-up grid beneath it, and the examples drop so the grid stays short. */
+@media (max-width: 60rem) {
+  .hero__stage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    min-height: 0;
+  }
+
+  .hero__globe {
+    position: relative;
+    inset: auto;
+    grid-column: 1 / -1;
+    height: clamp(14rem, 44vw, 22rem);
+  }
+
+  .stat {
+    position: static;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .stat__eg {
+    display: none;
+  }
 }
 
 .hero .content {
   position: relative;
   z-index: 1;
+}
+
+.hero__fresh {
+  margin-block-start: 1.1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(245 243 238 / 0.45);
 }
 
 .hero .content .eyebrow {

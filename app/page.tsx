@@ -16,31 +16,66 @@ export default function Home() {
     m.benchmarks.forEach((b) => sources.add(b.source_url));
   }
 
-  // Map releases onto the hero spine: x by date, y raised by recency.
-  const first = new Date(dated[0]?.released ?? '2023-01-01').getTime();
-  const last = new Date(dated.at(-1)?.released ?? Date.now()).getTime();
-  const span = Math.max(last - first, 1);
+  // Place every dated release on the hero globe. Latitude is the release date,
+  // longitude is the lab, so the lens reveals one lab at a time in its colour.
+  const times = dated.map((m) => new Date(m.released).getTime());
+  const first = Math.min(...times);
+  const span = Math.max(Math.max(...times) - first, 1);
+  const accentFor = new Map(labs.map((l) => [l.slug, l.brand.accent]));
+  const nameFor = new Map(labs.map((l) => [l.slug, l.name]));
 
-  const points = dated.map((m) => {
-    const t = (new Date(m.released).getTime() - first) / span;
-    return {
-      x: 20 + t * 960,
-      y: 250 - Math.pow(t, 1.7) * 190,
-      lab: m.lab,
-      name: m.name,
-      released: m.released,
-    };
-  });
+  const points = dated.map((m) => ({
+    name: m.name,
+    lab: m.lab,
+    labName: nameFor.get(m.lab) ?? m.lab,
+    released: m.released,
+    t: (new Date(m.released).getTime() - first) / span,
+    accent: accentFor.get(m.lab) ?? '#d97757',
+  }));
 
   const benchmarkCount = models.reduce((n, m) => n + m.benchmarks.length, 0);
+
+  // The three most recent releases per stat, named under each number. A count
+  // on its own reads as marketing; three real names make it checkable.
+  const newest = dated.slice(0, 3).map((m) => m.name);
+  const biggestLabs = [...labs]
+    .map((l) => ({ name: l.name, n: models.filter((m) => m.lab === l.slug).length }))
+    .sort((a, b) => b.n - a.n)
+    .slice(0, 3)
+    .map((l) => l.name);
+  const scoredSuites = [
+    ...new Set(models.flatMap((m) => m.benchmarks.map((b) => b.suite))),
+  ]
+    .map((slug) => suites.find((s) => s.slug === slug)?.name)
+    .filter((n): n is string => Boolean(n))
+    .slice(0, 3);
+  const sourceHosts = [...sources]
+    .map((u) => {
+      try {
+        return new URL(u).hostname.replace(/^www\./, '');
+      } catch {
+        return null;
+      }
+    })
+    .filter((h): h is string => Boolean(h));
+  const topHosts = [...new Set(sourceHosts)].slice(0, 3);
+
+  const stats = [
+    { value: models.length, label: 'models indexed', examples: newest },
+    { value: labs.length, label: 'labs covered', examples: biggestLabs },
+    { value: benchmarkCount, label: 'sourced results', examples: scoredSuites },
+    { value: sources.size, label: 'cited pages', examples: topHosts },
+  ];
 
   return (
     <>
       <Hero
         points={points}
+        stats={stats}
         labCount={labs.length}
         modelCount={models.length}
         sourceCount={sources.size}
+        latest={dated[0]?.released ?? ''}
       />
 
       <section className="section shell">
@@ -48,9 +83,8 @@ export default function Home() {
           <p className="eyebrow">The labs</p>
           <h2>Who is actually building the frontier.</h2>
           <p>
-            Ten labs get the full treatment — every model, every benchmark, the founders
-            and the launch videos. Hover a card and the page shows you that lab&rsquo;s own
-            colours and type before you even open it.
+            {labs.length} labs, every model each one shipped, and the source behind every
+            figure. Hover a card and the page takes that lab&rsquo;s own colours and type.
           </p>
         </div>
 
