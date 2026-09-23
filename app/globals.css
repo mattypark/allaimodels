@@ -455,3 +455,418 @@ footer .legal p {
   font-size: var(--step--1);
   line-height: 1.6;
 }
+
+/* ===========================================================================
+   Benchmarks
+   =========================================================================== */
+
+.bench-empty {
+  color: var(--muted);
+  font-size: var(--step--1);
+  max-width: 52ch;
+}
+
+.bench {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.bench > li[data-comparable='false'] {
+  opacity: 0.72;
+}
+
+.bench__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.8rem;
+}
+
+.bench__name {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: var(--step-1);
+  letter-spacing: -0.02em;
+}
+
+.bench__metric {
+  color: var(--muted);
+  font-size: 0.64rem;
+}
+
+.bench__value {
+  margin-inline-start: auto;
+  font-family: var(--font-mono), monospace;
+  font-size: var(--step-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.bench__track {
+  margin-block-start: 0.6rem;
+  height: 0.4rem;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.bench__fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+li[data-comparable='false'] .bench__fill {
+  /* Hatched, so an incomparable number never reads as a clean measurement. */
+  background: repeating-linear-gradient(
+    135deg,
+    var(--accent) 0 3px,
+    transparent 3px 7px
+  );
+}
+
+.bench__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin-block-start: 0.6rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.bench__meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-block-end: 1px solid transparent;
+}
+.bench__meta a:hover {
+  border-block-end-color: var(--muted);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.16rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.chip--official { color: var(--accent); }
+.chip--third-party { color: var(--muted); }
+.chip--community { color: var(--muted); opacity: 0.8; }
+
+.bench__warn {
+  margin-block-start: 0.6rem;
+  padding-inline-start: 0.8rem;
+  border-inline-start: 2px solid var(--accent);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* ===========================================================================
+   Model list
+   =========================================================================== */
+
+.models {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-block-start: 1px solid var(--line);
+}
+
+.models > li {
+  border-block-end: 1px solid var(--line);
+}
+
+.models h3 {
+  margin: 0;
+  font-family: inherit;
+}
+
+.models h3 > button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem 1.2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1.15rem 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: start;
+  font: inherit;
+}
+
+.models__status {
+  flex: 0 0 5.5rem;
+  font-size: 0.6rem;
+  color: var(--muted);
+}
+.models > li[data-status='current'] .models__status {
+  color: var(--accent);
+}
+
+.models__name {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: var(--step-1);
+  letter-spacing: -0.02em;
+}
+
+.models__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-inline-start: auto;
+  font-size: 0.66rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.models__chevron {
+  color: var(--muted);
+  transition: transform var(--dur) var(--ease-out);
+}
+.models__chevron[data-open='true'] {
+  transform: rotate(180deg);
+}
+
+.models__panel {
+  display: grid;
+  gap: clamp(1.5rem, 1rem + 3vw, 3rem);
+  padding-block: 0.5rem 2.6rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 60rem) {
+  .models__panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.models__summary {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  max-width: 48ch;
+  margin-block-end: 1.6rem;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: minmax(6rem, auto) minmax(0, 1fr);
+  gap: 0.75rem 1.4rem;
+  margin: 0;
+  font-size: var(--step--1);
+}
+
+.specs dt {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-block-start: 0.15rem;
+}
+
+.specs dd {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.specs__note {
+  display: block;
+  margin-block-start: 0.4rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  max-width: 54ch;
+}
+
+.ids {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.ids li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+.ids span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 6.5rem;
+}
+.ids code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.76rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+.models__sources {
+  margin-block-start: 1.6rem;
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+.models__sources a {
+  border-block-end: 1px solid var(--line);
+}
+.models__sources a:hover {
+  border-block-end-color: var(--muted);
+}
+
+.models__aside {
+  display: grid;
+  gap: 1.8rem;
+  align-content: start;
+}
+
+.models__novideo {
+  border: 1px dashed var(--line);
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.models__novideo p:last-child {
+  color: var(--muted);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  max-width: 44ch;
+}
+
+/* ===========================================================================
+   Lab page
+   =========================================================================== */
+
+/* Clears the fixed capsule nav on every inner page. */
+.page-top {
+  padding-block-start: clamp(7rem, 5rem + 8vw, 11rem);
+}
+
+.lab-page {
+  min-height: 100svh;
+}
+
+.lab-head h1 {
+  font-size: var(--step-4);
+  margin-block: 1rem 1.4rem;
+}
+
+.lab-head__summary {
+  max-width: 58ch;
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.lab-head__type {
+  margin-block-start: 1.6rem;
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+.lab-head__type a,
+.lab-head .eyebrow a {
+  border-block-end: 1px solid var(--line);
+}
+
+.lab-head__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.8rem 0 0;
+  padding: 0;
+}
+.lab-head__links a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.lab-head__links a:hover {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+
+/* ── Founders ── */
+
+.founders {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2.2rem 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+}
+
+.founders li {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.founders img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-block-end: 0.7rem;
+}
+
+.founders__initials {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  margin-block-end: 0.7rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-size: var(--step-2);
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.founders h3 {
+  font-size: var(--step-1);
+}
+
+.founders__role {
+  font-size: 0.6rem;
+  color: var(--accent);
+}
+
+.founders__bio {
+  font-size: var(--step--1);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.founders__credit {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.58rem;
+  color: var(--muted);
+  opacity: 0.75;
+}
+.founders__credit a {
+  border-block-end: 1px solid var(--line);
+}
