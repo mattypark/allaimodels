@@ -1,0 +1,47 @@
+{
+  "slug": "perplexity",
+  "name": "Perplexity",
+  "tier": 3,
+  "founded": "2022",
+  "hq": "San Francisco, California",
+  "summary": "An answer engine first and a lab second, but it does train and release its own models — the Sonar line, and open post-trained variants of other labs' weights. Every answer it gives carries citations, which is the one idea this site and that product share.",
+  "founders": [
+    {
+      "name": "Aravind Srinivas",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Former research scientist at OpenAI; founded Perplexity in 2022."
+    },
+    {
+      "name": "Denis Yarats",
+      "role": "Co-founder, Chief Technology Officer",
+      "bio": "Previously a research scientist at Meta AI."
+    },
+    {
+      "name": "Johnny Ho",
+      "role": "Co-founder",
+      "bio": "Leads Perplexity's search and indexing systems."
+    },
+    {
+      "name": "Andy Konwinski",
+      "role": "Co-founder",
+      "bio": "Co-founded Databricks before Perplexity."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#20808d",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://www.perplexity.ai",
+    "docs": "https://docs.perplexity.ai",
+    "github": "https://github.com/perplexity-ai",
+    "huggingface": "https://huggingface.co/perplexity-ai"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Perplexity_AI"
+  ]
+}

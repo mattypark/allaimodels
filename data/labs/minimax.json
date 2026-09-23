@@ -1,0 +1,32 @@
+{
+  "slug": "minimax",
+  "name": "MiniMax",
+  "tier": 2,
+  "founded": "2021",
+  "hq": "Shanghai, China",
+  "summary": "Ships across text, speech, music and video from one house, which almost nobody outside the largest labs does. Its text models lean on linear-attention variants to push context length rather than on more parameters.",
+  "founders": [
+    {
+      "name": "Yan Junjie",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Former vice-president at SenseTime; founded MiniMax in 2021."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#e9412a",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://www.minimax.io",
+    "docs": "https://platform.minimax.io/docs",
+    "github": "https://github.com/MiniMax-AI",
+    "huggingface": "https://huggingface.co/MiniMaxAI"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/MiniMax_(company)"
+  ]
+}

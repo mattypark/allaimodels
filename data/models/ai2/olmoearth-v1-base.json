@@ -1,0 +1,29 @@
+{
+  "id": "olmoearth-v1-base",
+  "lab": "ai2",
+  "name": "OlmoEarth-v1-Base",
+  "family": "OlmoEarth",
+  "status": "current",
+  "released": "2025-10-23",
+  "date_precision": "observed",
+  "summary": "OlmoEarth-v1-Base, published 2025-10-23 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/OlmoEarth-v1-Base"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/OlmoEarth-v1-Base"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/OlmoEarth-v1-Base"
+  ]
+}

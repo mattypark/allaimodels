@@ -1,0 +1,30 @@
+{
+  "id": "glm-4-1v-9b-thinking",
+  "lab": "zhipu",
+  "name": "GLM-4.1V-9B-Thinking",
+  "family": "GLM",
+  "status": "current",
+  "released": "2025-06-28",
+  "date_precision": "observed",
+  "summary": "GLM-4.1V-9B-Thinking, published 2025-06-28 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/GLM-4.1V-9B-Thinking"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking"
+  ]
+}

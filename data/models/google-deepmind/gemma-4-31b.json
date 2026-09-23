@@ -1,0 +1,30 @@
+{
+  "id": "gemma-4-31b",
+  "lab": "google-deepmind",
+  "name": "gemma-4-31B",
+  "family": "gemma",
+  "status": "current",
+  "released": "2026-03-12",
+  "date_precision": "observed",
+  "summary": "gemma-4-31B, published 2026-03-12 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/gemma-4-31B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/gemma-4-31B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/gemma-4-31B"
+  ]
+}

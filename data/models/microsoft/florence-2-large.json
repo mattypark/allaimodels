@@ -1,0 +1,30 @@
+{
+  "id": "florence-2-large",
+  "lab": "microsoft",
+  "name": "Florence-2-large",
+  "family": "Florence",
+  "status": "legacy",
+  "released": "2024-06-15",
+  "date_precision": "observed",
+  "summary": "Florence-2-large, published 2024-06-15 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/Florence-2-large"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/Florence-2-large"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/Florence-2-large"
+  ]
+}

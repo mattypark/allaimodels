@@ -1,0 +1,29 @@
+{
+  "id": "layoutlmv3-large",
+  "lab": "microsoft",
+  "name": "layoutlmv3-large",
+  "family": "large",
+  "status": "legacy",
+  "released": "2022-04-18",
+  "date_precision": "observed",
+  "summary": "layoutlmv3-large, published 2022-04-18 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/layoutlmv3-large"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/layoutlmv3-large"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/layoutlmv3-large"
+  ]
+}

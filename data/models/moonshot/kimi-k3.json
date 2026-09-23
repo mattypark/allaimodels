@@ -1,0 +1,30 @@
+{
+  "id": "kimi-k3",
+  "lab": "moonshot",
+  "name": "Kimi-K3",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2026-06-13",
+  "date_precision": "observed",
+  "summary": "Kimi-K3, published 2026-06-13 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Kimi-K3"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Kimi-K3"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Kimi-K3"
+  ]
+}

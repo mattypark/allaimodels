@@ -1,0 +1,29 @@
+{
+  "id": "devstral-small-2507",
+  "lab": "mistral",
+  "name": "Devstral-Small-2507",
+  "family": "Devstral",
+  "status": "current",
+  "released": "2025-07-04",
+  "date_precision": "observed",
+  "summary": "Devstral-Small-2507, published 2025-07-04 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Devstral-Small-2507"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Devstral-Small-2507"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Devstral-Small-2507"
+  ]
+}

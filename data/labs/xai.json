@@ -1,0 +1,32 @@
+{
+  "slug": "xai",
+  "name": "xAI",
+  "tier": 1,
+  "founded": "2023",
+  "hq": "Palo Alto, California",
+  "summary": "Built a frontier training cluster faster than anyone expected and put the resulting models straight into X. Publishes benchmark numbers in launch posts and very little else, so almost everything here is sourced to an announcement rather than to documentation.",
+  "founders": [
+    {
+      "name": "Elon Musk",
+      "role": "Founder",
+      "bio": "Co-founded OpenAI in 2015, left its board in 2018, and started xAI in 2023."
+    }
+  ],
+  "brand": {
+    "scheme": "dark",
+    "bg": "#000000",
+    "ink": "#f2f2f0",
+    "muted": "#8f8f8a",
+    "accent": "#e8e8e8",
+    "accent_ink": "#000000"
+  },
+  "links": {
+    "website": "https://x.ai",
+    "docs": "https://docs.x.ai",
+    "news": "https://x.ai/news",
+    "huggingface": "https://huggingface.co/xai-org"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/XAI_(company)"
+  ]
+}

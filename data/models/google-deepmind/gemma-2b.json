@@ -1,0 +1,29 @@
+{
+  "id": "gemma-2b",
+  "lab": "google-deepmind",
+  "name": "gemma-2b",
+  "family": "gemma",
+  "status": "legacy",
+  "released": "2024-02-08",
+  "date_precision": "observed",
+  "summary": "gemma-2b, published 2024-02-08 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/gemma-2b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/gemma-2b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/gemma-2b"
+  ]
+}

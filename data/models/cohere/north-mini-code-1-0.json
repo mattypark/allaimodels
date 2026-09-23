@@ -1,0 +1,29 @@
+{
+  "id": "north-mini-code-1-0",
+  "lab": "cohere",
+  "name": "North-Mini-Code-1.0",
+  "family": "North",
+  "status": "current",
+  "released": "2026-06-05",
+  "date_precision": "observed",
+  "summary": "North-Mini-Code-1.0, published 2026-06-05 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/North-Mini-Code-1.0"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/North-Mini-Code-1.0"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "qwen3-5-27b",
+  "lab": "qwen",
+  "name": "Qwen3.5-27B",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2026-02-24",
+  "date_precision": "observed",
+  "summary": "Qwen3.5-27B, published 2026-02-24 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen3.5-27B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen3.5-27B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3.5-27B"
+  ]
+}

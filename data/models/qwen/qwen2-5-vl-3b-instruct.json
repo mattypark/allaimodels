@@ -1,0 +1,30 @@
+{
+  "id": "qwen2-5-vl-3b-instruct",
+  "lab": "qwen",
+  "name": "Qwen2.5-VL-3B-Instruct",
+  "family": "VL",
+  "status": "legacy",
+  "released": "2025-01-26",
+  "date_precision": "observed",
+  "summary": "Qwen2.5-VL-3B-Instruct, published 2025-01-26 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen2.5-VL-3B-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct"
+  ]
+}

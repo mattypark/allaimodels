@@ -1,0 +1,30 @@
+{
+  "id": "olmocr-7b-0225-preview",
+  "lab": "ai2",
+  "name": "olmOCR-7B-0225-preview",
+  "family": "olmOCR",
+  "status": "legacy",
+  "released": "2025-01-15",
+  "date_precision": "observed",
+  "summary": "olmOCR-7B-0225-preview, published 2025-01-15 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/olmOCR-7B-0225-preview"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/olmOCR-7B-0225-preview"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/olmOCR-7B-0225-preview"
+  ]
+}

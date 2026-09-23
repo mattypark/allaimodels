@@ -1,0 +1,29 @@
+{
+  "id": "glm-edge-1-5b-chat",
+  "lab": "zhipu",
+  "name": "glm-edge-1.5b-chat",
+  "family": "glm",
+  "status": "legacy",
+  "released": "2024-11-20",
+  "date_precision": "observed",
+  "summary": "glm-edge-1.5b-chat, published 2024-11-20 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/glm-edge-1.5b-chat"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/glm-edge-1.5b-chat"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/glm-edge-1.5b-chat"
+  ]
+}

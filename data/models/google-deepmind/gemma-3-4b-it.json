@@ -1,0 +1,30 @@
+{
+  "id": "gemma-3-4b-it",
+  "lab": "google-deepmind",
+  "name": "gemma-3-4b-it",
+  "family": "gemma",
+  "status": "legacy",
+  "released": "2025-02-20",
+  "date_precision": "observed",
+  "summary": "gemma-3-4b-it, published 2025-02-20 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/gemma-3-4b-it"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/gemma-3-4b-it"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/gemma-3-4b-it"
+  ]
+}

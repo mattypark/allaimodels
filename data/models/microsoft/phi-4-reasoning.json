@@ -1,0 +1,29 @@
+{
+  "id": "phi-4-reasoning",
+  "lab": "microsoft",
+  "name": "Phi-4-reasoning",
+  "family": "Phi",
+  "status": "current",
+  "released": "2025-04-09",
+  "date_precision": "observed",
+  "summary": "Phi-4-reasoning, published 2025-04-09 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/Phi-4-reasoning"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/Phi-4-reasoning"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/Phi-4-reasoning"
+  ]
+}

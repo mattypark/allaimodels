@@ -1,0 +1,29 @@
+{
+  "id": "longformer-base-4096",
+  "lab": "ai2",
+  "name": "longformer-base-4096",
+  "family": "longformer",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "longformer-base-4096, published 2022-03-02 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/longformer-base-4096"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/longformer-base-4096"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/longformer-base-4096"
+  ]
+}

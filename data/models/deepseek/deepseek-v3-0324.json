@@ -1,0 +1,29 @@
+{
+  "id": "deepseek-v3-0324",
+  "lab": "deepseek",
+  "name": "DeepSeek-V3-0324",
+  "family": "DeepSeek",
+  "status": "legacy",
+  "released": "2025-03-24",
+  "date_precision": "observed",
+  "summary": "DeepSeek-V3-0324, published 2025-03-24 by deepseek-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "deepseek-ai/DeepSeek-V3-0324"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "phi-3-5-moe-instruct",
+  "lab": "microsoft",
+  "name": "Phi-3.5-MoE-instruct",
+  "family": "Phi",
+  "status": "legacy",
+  "released": "2024-08-17",
+  "date_precision": "observed",
+  "summary": "Phi-3.5-MoE-instruct, published 2024-08-17 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/Phi-3.5-MoE-instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/Phi-3.5-MoE-instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/Phi-3.5-MoE-instruct"
+  ]
+}

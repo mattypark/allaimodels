@@ -1,0 +1,29 @@
+{
+  "id": "grok-1",
+  "lab": "xai",
+  "name": "grok-1",
+  "family": "grok",
+  "status": "legacy",
+  "released": "2024-03-17",
+  "date_precision": "observed",
+  "summary": "grok-1, published 2024-03-17 by xai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "xai-org/grok-1"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/xai-org/grok-1"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/xai-org/grok-1"
+  ]
+}

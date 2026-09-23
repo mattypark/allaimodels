@@ -1,0 +1,32 @@
+{
+  "slug": "deepseek",
+  "name": "DeepSeek",
+  "tier": 1,
+  "founded": "2023",
+  "hq": "Hangzhou, China",
+  "summary": "Spun out of a quantitative hedge fund, and the lab that proved a frontier-class reasoning model could be trained for a fraction of the assumed cost and then given away. Publishes unusually detailed training papers alongside the weights, which makes its numbers easier to check than most.",
+  "founders": [
+    {
+      "name": "Liang Wenfeng",
+      "role": "Founder",
+      "bio": "Co-founder of the quant fund High-Flyer; funded DeepSeek from its GPU cluster and kept the weights open."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#4d6bfe",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://www.deepseek.com",
+    "docs": "https://api-docs.deepseek.com",
+    "github": "https://github.com/deepseek-ai",
+    "huggingface": "https://huggingface.co/deepseek-ai"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/DeepSeek"
+  ]
+}

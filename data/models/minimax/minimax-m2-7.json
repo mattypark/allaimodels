@@ -1,0 +1,29 @@
+{
+  "id": "minimax-m2-7",
+  "lab": "minimax",
+  "name": "MiniMax-M2.7",
+  "family": "MiniMax",
+  "status": "current",
+  "released": "2026-04-09",
+  "date_precision": "observed",
+  "summary": "MiniMax-M2.7, published 2026-04-09 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/MiniMax-M2.7"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
+  ]
+}

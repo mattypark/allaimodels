@@ -1,0 +1,29 @@
+{
+  "id": "glm-4-voice-tokenizer",
+  "lab": "zhipu",
+  "name": "glm-4-voice-tokenizer",
+  "family": "glm",
+  "status": "legacy",
+  "released": "2024-10-24",
+  "date_precision": "observed",
+  "summary": "glm-4-voice-tokenizer, published 2024-10-24 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/glm-4-voice-tokenizer"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/glm-4-voice-tokenizer"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/glm-4-voice-tokenizer"
+  ]
+}

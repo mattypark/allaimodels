@@ -1,0 +1,30 @@
+{
+  "id": "deepseek-ocr",
+  "lab": "deepseek",
+  "name": "DeepSeek-OCR",
+  "family": "DeepSeek",
+  "status": "current",
+  "released": "2025-10-17",
+  "date_precision": "observed",
+  "summary": "DeepSeek-OCR, published 2025-10-17 by deepseek-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "deepseek-ai/DeepSeek-OCR"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/deepseek-ai/DeepSeek-OCR"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-OCR"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gemma-4-26b-a4b-nvfp4",
+  "lab": "nvidia",
+  "name": "Gemma-4-26B-A4B-NVFP4",
+  "family": "Gemma",
+  "status": "current",
+  "released": "2026-05-01",
+  "date_precision": "observed",
+  "summary": "Gemma-4-26B-A4B-NVFP4, published 2026-05-01 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Gemma-4-26B-A4B-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Gemma-4-26B-A4B-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Gemma-4-26B-A4B-NVFP4"
+  ]
+}

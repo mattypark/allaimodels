@@ -1,0 +1,29 @@
+{
+  "id": "qwen-72b",
+  "lab": "qwen",
+  "name": "Qwen-72B",
+  "family": "Qwen",
+  "status": "legacy",
+  "released": "2023-11-26",
+  "date_precision": "observed",
+  "summary": "Qwen-72B, published 2023-11-26 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen-72B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen-72B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen-72B"
+  ]
+}

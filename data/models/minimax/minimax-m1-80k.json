@@ -1,0 +1,29 @@
+{
+  "id": "minimax-m1-80k",
+  "lab": "minimax",
+  "name": "MiniMax-M1-80k",
+  "family": "MiniMax",
+  "status": "current",
+  "released": "2025-06-13",
+  "date_precision": "observed",
+  "summary": "MiniMax-M1-80k, published 2025-06-13 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/MiniMax-M1-80k"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k"
+  ]
+}

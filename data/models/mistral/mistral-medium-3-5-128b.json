@@ -1,0 +1,29 @@
+{
+  "id": "mistral-medium-3-5-128b",
+  "lab": "mistral",
+  "name": "Mistral-Medium-3.5-128B",
+  "family": "Mistral",
+  "status": "current",
+  "released": "2026-03-31",
+  "date_precision": "observed",
+  "summary": "Mistral-Medium-3.5-128B, published 2026-03-31 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Mistral-Medium-3.5-128B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "scibert-scivocab-uncased",
+  "lab": "ai2",
+  "name": "scibert_scivocab_uncased",
+  "family": "scibert",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "scibert_scivocab_uncased, published 2022-03-02 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/scibert_scivocab_uncased"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/scibert_scivocab_uncased"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/scibert_scivocab_uncased"
+  ]
+}

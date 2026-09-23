@@ -1,0 +1,32 @@
+{
+  "slug": "qwen",
+  "name": "Qwen",
+  "tier": 1,
+  "founded": "2023",
+  "hq": "Hangzhou, China",
+  "summary": "Alibaba Cloud's model family, and the most prolific release schedule in the field by a wide margin — base, instruct, coder, math, vision and audio variants at half a dozen sizes each. Nearly all of it is open weights, which is why so much of the fine-tuned long tail starts here.",
+  "founders": [
+    {
+      "name": "Alibaba Cloud",
+      "role": "Parent organisation",
+      "bio": "Alibaba's cloud arm; the Qwen team sits inside it and ships under the Tongyi brand in China."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#615ced",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://qwen.ai",
+    "docs": "https://qwen.readthedocs.io",
+    "github": "https://github.com/QwenLM",
+    "huggingface": "https://huggingface.co/Qwen"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Qwen"
+  ]
+}

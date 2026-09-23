@@ -1,0 +1,29 @@
+{
+  "id": "electra-small-discriminator",
+  "lab": "google-deepmind",
+  "name": "electra-small-discriminator",
+  "family": "electra",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "electra-small-discriminator, published 2022-03-02 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/electra-small-discriminator"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/electra-small-discriminator"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/electra-small-discriminator"
+  ]
+}

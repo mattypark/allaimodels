@@ -1546,11 +1546,22 @@ li[data-comparable='false'] .bench__fill {
 
 /* Asymmetric on purpose — four corners of a rectangle would read as a table,
    and the point is that the numbers orbit the thing they describe. */
-.stat { max-width: 15rem; }
-.stat--1 { inset-block-start: 2%;  inset-inline-start: 0; }
-.stat--2 { inset-block-start: 4%;  inset-inline-end: 0; }
-.stat--3 { inset-block-end: 2%;    inset-inline-start: 4%; }
-.stat--4 { inset-block-end: 0;     inset-inline-end: 4%; }
+.stat { max-width: 13.5rem; }
+
+/* Pulled in off the page edges so the four numbers orbit the globe instead of
+   pinning the corners of the viewport. The inline offsets are percentages of
+   the stage, so they close in as the window narrows rather than colliding. */
+.stat--1 { inset-block-start: 4%;  inset-inline-start: 14%; }
+.stat--2 { inset-block-start: 8%;  inset-inline-end: 14%; }
+.stat--3 { inset-block-end: 6%;    inset-inline-start: 18%; }
+.stat--4 { inset-block-end: 2%;    inset-inline-end: 18%; }
+
+@media (max-width: 82rem) {
+  .stat--1 { inset-inline-start: 4%; }
+  .stat--2 { inset-inline-end: 4%; }
+  .stat--3 { inset-inline-start: 6%; }
+  .stat--4 { inset-inline-end: 6%; }
+}
 
 /* Under ~60rem the floating cards would land on top of the globe. They become
    a two-up grid beneath it, and the examples drop so the grid stays short. */
@@ -1597,8 +1608,8 @@ li[data-comparable='false'] .bench__fill {
 }
 
 .hero h1 {
-  margin-block: 1.2rem 1.6rem;
-  font-size: var(--step-4);
+  margin-block: 1rem 0.8rem;
+  font-size: var(--step-3);
   letter-spacing: -0.045em;
   line-height: 0.92;
 }

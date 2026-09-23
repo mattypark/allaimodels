@@ -1,0 +1,29 @@
+{
+  "id": "deepseek-v2-lite",
+  "lab": "deepseek",
+  "name": "DeepSeek-V2-Lite",
+  "family": "DeepSeek",
+  "status": "legacy",
+  "released": "2024-05-15",
+  "date_precision": "observed",
+  "summary": "DeepSeek-V2-Lite, published 2024-05-15 by deepseek-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "deepseek-ai/DeepSeek-V2-Lite"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "ai2",
+  "name": "Allen Institute for AI",
+  "tier": 2,
+  "founded": "2014",
+  "hq": "Seattle, Washington",
+  "summary": "A non-profit, and the only lab here that releases the training data alongside the weights. OLMo and Molmo exist to be reproduced rather than to win, which makes Ai2 the reference point for what \"open\" is supposed to mean in this field.",
+  "founders": [
+    {
+      "name": "Paul Allen",
+      "role": "Founder",
+      "bio": "Co-founder of Microsoft; endowed the institute in 2014 to do AI research outside the commercial race."
+    },
+    {
+      "name": "Oren Etzioni",
+      "role": "Founding Chief Executive Officer",
+      "bio": "Set the institute's open-by-default publication stance."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#0fcb8c",
+    "accent_ink": "#111111"
+  },
+  "links": {
+    "website": "https://allenai.org",
+    "docs": "https://allenai.org/olmo",
+    "github": "https://github.com/allenai",
+    "huggingface": "https://huggingface.co/allenai"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Allen_Institute_for_AI"
+  ]
+}

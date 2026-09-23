@@ -1,0 +1,29 @@
+{
+  "id": "mistral-small-3-2-24b-instruct-2506",
+  "lab": "mistral",
+  "name": "Mistral-Small-3.2-24B-Instruct-2506",
+  "family": "Mistral",
+  "status": "current",
+  "released": "2025-06-19",
+  "date_precision": "observed",
+  "summary": "Mistral-Small-3.2-24B-Instruct-2506, published 2025-06-19 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+  ]
+}

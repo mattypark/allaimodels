@@ -1,0 +1,29 @@
+{
+  "id": "chatglm2-6b",
+  "lab": "zhipu",
+  "name": "chatglm2-6b",
+  "family": "chatglm2",
+  "status": "legacy",
+  "released": "2023-06-24",
+  "date_precision": "observed",
+  "summary": "chatglm2-6b, published 2023-06-24 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/chatglm2-6b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/chatglm2-6b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/chatglm2-6b"
+  ]
+}

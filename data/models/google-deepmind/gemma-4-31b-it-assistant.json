@@ -1,0 +1,31 @@
+{
+  "id": "gemma-4-31b-it-assistant",
+  "lab": "google-deepmind",
+  "name": "gemma-4-31B-it-assistant",
+  "family": "gemma",
+  "status": "current",
+  "released": "2026-04-23",
+  "date_precision": "observed",
+  "summary": "gemma-4-31B-it-assistant, published 2026-04-23 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/gemma-4-31B-it-assistant"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "audio"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/gemma-4-31B-it-assistant"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/gemma-4-31B-it-assistant"
+  ]
+}

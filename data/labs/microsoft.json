@@ -1,0 +1,32 @@
+{
+  "slug": "microsoft",
+  "name": "Microsoft AI",
+  "tier": 2,
+  "founded": "2024",
+  "hq": "Redmond, Washington",
+  "summary": "Two things under one name: Microsoft Research, which has published the small Phi models for years, and the Microsoft AI division formed in 2024 to build first-party frontier models rather than only resell OpenAI's. The Phi line is the part with open weights and reproducible numbers.",
+  "founders": [
+    {
+      "name": "Mustafa Suleyman",
+      "role": "Chief Executive Officer, Microsoft AI",
+      "bio": "Co-founded DeepMind and then Inflection AI; joined Microsoft in 2024 with most of Inflection's team."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#0078d4",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://www.microsoft.com/en-us/ai",
+    "docs": "https://learn.microsoft.com/azure/ai-services/",
+    "github": "https://github.com/microsoft",
+    "huggingface": "https://huggingface.co/microsoft"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Microsoft_AI"
+  ]
+}

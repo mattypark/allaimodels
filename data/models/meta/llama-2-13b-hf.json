@@ -1,0 +1,29 @@
+{
+  "id": "llama-2-13b-hf",
+  "lab": "meta",
+  "name": "Llama-2-13b-hf",
+  "family": "Llama",
+  "status": "legacy",
+  "released": "2023-07-13",
+  "date_precision": "observed",
+  "summary": "Llama-2-13b-hf, published 2023-07-13 by meta-llama on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "meta-llama/Llama-2-13b-hf"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/meta-llama/Llama-2-13b-hf"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/meta-llama/Llama-2-13b-hf"
+  ]
+}

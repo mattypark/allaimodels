@@ -1,0 +1,29 @@
+{
+  "id": "llama-3-3-70b-instruct-nvfp4",
+  "lab": "nvidia",
+  "name": "Llama-3.3-70B-Instruct-NVFP4",
+  "family": "Llama",
+  "status": "legacy",
+  "released": "2025-01-16",
+  "date_precision": "observed",
+  "summary": "Llama-3.3-70B-Instruct-NVFP4, published 2025-01-16 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Llama-3.3-70B-Instruct-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Llama-3.3-70B-Instruct-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Llama-3.3-70B-Instruct-NVFP4"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "cosmos-reason2-2b",
+  "lab": "nvidia",
+  "name": "Cosmos-Reason2-2B",
+  "family": "Cosmos",
+  "status": "current",
+  "released": "2025-12-12",
+  "date_precision": "observed",
+  "summary": "Cosmos-Reason2-2B, published 2025-12-12 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Cosmos-Reason2-2B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Cosmos-Reason2-2B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Cosmos-Reason2-2B"
+  ]
+}

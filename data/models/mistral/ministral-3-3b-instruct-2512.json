@@ -1,0 +1,29 @@
+{
+  "id": "ministral-3-3b-instruct-2512",
+  "lab": "mistral",
+  "name": "Ministral-3-3B-Instruct-2512",
+  "family": "Ministral",
+  "status": "current",
+  "released": "2025-10-31",
+  "date_precision": "observed",
+  "summary": "Ministral-3-3B-Instruct-2512, published 2025-10-31 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Ministral-3-3B-Instruct-2512"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "glm-4-5v",
+  "lab": "zhipu",
+  "name": "GLM-4.5V",
+  "family": "GLM",
+  "status": "current",
+  "released": "2025-08-10",
+  "date_precision": "observed",
+  "summary": "GLM-4.5V, published 2025-08-10 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/GLM-4.5V"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/GLM-4.5V"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/GLM-4.5V"
+  ]
+}

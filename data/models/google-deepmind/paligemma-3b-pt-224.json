@@ -1,0 +1,30 @@
+{
+  "id": "paligemma-3b-pt-224",
+  "lab": "google-deepmind",
+  "name": "paligemma-3b-pt-224",
+  "family": "paligemma",
+  "status": "legacy",
+  "released": "2024-05-12",
+  "date_precision": "observed",
+  "summary": "paligemma-3b-pt-224, published 2024-05-12 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/paligemma-3b-pt-224"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/paligemma-3b-pt-224"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/paligemma-3b-pt-224"
+  ]
+}

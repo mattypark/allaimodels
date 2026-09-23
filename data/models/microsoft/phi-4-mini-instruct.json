@@ -1,0 +1,29 @@
+{
+  "id": "phi-4-mini-instruct",
+  "lab": "microsoft",
+  "name": "Phi-4-mini-instruct",
+  "family": "Phi",
+  "status": "legacy",
+  "released": "2025-02-19",
+  "date_precision": "observed",
+  "summary": "Phi-4-mini-instruct, published 2025-02-19 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/Phi-4-mini-instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+  ]
+}

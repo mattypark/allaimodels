@@ -1,0 +1,29 @@
+{
+  "id": "bitnet-b1-58-2b-4t",
+  "lab": "microsoft",
+  "name": "bitnet-b1.58-2B-4T",
+  "family": "bitnet",
+  "status": "current",
+  "released": "2025-04-15",
+  "date_precision": "observed",
+  "summary": "bitnet-b1.58-2B-4T, published 2025-04-15 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/bitnet-b1.58-2B-4T"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/bitnet-b1.58-2B-4T"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/bitnet-b1.58-2B-4T"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "diffusiongemma-26b-a4b-it",
+  "lab": "google-deepmind",
+  "name": "diffusiongemma-26B-A4B-it",
+  "family": "diffusiongemma",
+  "status": "current",
+  "released": "2026-06-09",
+  "date_precision": "observed",
+  "summary": "diffusiongemma-26B-A4B-it, published 2026-06-09 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/diffusiongemma-26B-A4B-it"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/diffusiongemma-26B-A4B-it"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/diffusiongemma-26B-A4B-it"
+  ]
+}

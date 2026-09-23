@@ -1,0 +1,31 @@
+{
+  "id": "nemotron-3-nano-omni-30b-a3b-reasoning-bf16",
+  "lab": "nvidia",
+  "name": "Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+  "family": "Nemotron",
+  "status": "current",
+  "released": "2026-04-20",
+  "date_precision": "observed",
+  "summary": "Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16, published 2026-04-20 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "audio"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
+  ]
+}

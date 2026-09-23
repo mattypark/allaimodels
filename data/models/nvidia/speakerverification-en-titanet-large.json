@@ -1,0 +1,29 @@
+{
+  "id": "speakerverification-en-titanet-large",
+  "lab": "nvidia",
+  "name": "speakerverification_en_titanet_large",
+  "family": "speakerverification",
+  "status": "legacy",
+  "released": "2022-07-15",
+  "date_precision": "observed",
+  "summary": "speakerverification_en_titanet_large, published 2022-07-15 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/speakerverification_en_titanet_large"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/speakerverification_en_titanet_large"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/speakerverification_en_titanet_large"
+  ]
+}

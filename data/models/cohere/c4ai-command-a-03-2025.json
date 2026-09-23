@@ -1,0 +1,29 @@
+{
+  "id": "c4ai-command-a-03-2025",
+  "lab": "cohere",
+  "name": "c4ai-command-a-03-2025",
+  "family": "command",
+  "status": "legacy",
+  "released": "2025-03-11",
+  "date_precision": "observed",
+  "summary": "c4ai-command-a-03-2025, published 2025-03-11 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/c4ai-command-a-03-2025"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025"
+  ]
+}

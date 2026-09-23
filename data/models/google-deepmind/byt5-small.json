@@ -1,0 +1,29 @@
+{
+  "id": "byt5-small",
+  "lab": "google-deepmind",
+  "name": "byt5-small",
+  "family": "small",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "byt5-small, published 2022-03-02 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/byt5-small"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/byt5-small"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/byt5-small"
+  ]
+}

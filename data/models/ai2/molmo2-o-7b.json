@@ -1,0 +1,30 @@
+{
+  "id": "molmo2-o-7b",
+  "lab": "ai2",
+  "name": "Molmo2-O-7B",
+  "family": "O",
+  "status": "current",
+  "released": "2025-12-14",
+  "date_precision": "observed",
+  "summary": "Molmo2-O-7B, published 2025-12-14 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Molmo2-O-7B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Molmo2-O-7B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Molmo2-O-7B"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "cosmos3-edge",
+  "lab": "nvidia",
+  "name": "Cosmos3-Edge",
+  "family": "Edge",
+  "status": "current",
+  "released": "2026-07-01",
+  "date_precision": "observed",
+  "summary": "Cosmos3-Edge, published 2026-07-01 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Cosmos3-Edge"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Cosmos3-Edge"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Cosmos3-Edge"
+  ]
+}

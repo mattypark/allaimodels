@@ -1,0 +1,29 @@
+{
+  "id": "c4ai-command-r7b-arabic-02-2025",
+  "lab": "cohere",
+  "name": "c4ai-command-r7b-arabic-02-2025",
+  "family": "command",
+  "status": "legacy",
+  "released": "2025-02-27",
+  "date_precision": "observed",
+  "summary": "c4ai-command-r7b-arabic-02-2025, published 2025-02-27 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/c4ai-command-r7b-arabic-02-2025"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/c4ai-command-r7b-arabic-02-2025"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/c4ai-command-r7b-arabic-02-2025"
+  ]
+}

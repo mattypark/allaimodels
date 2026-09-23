@@ -1,0 +1,29 @@
+{
+  "id": "olmo-3-1-32b-instruct",
+  "lab": "ai2",
+  "name": "Olmo-3.1-32B-Instruct",
+  "family": "Olmo",
+  "status": "current",
+  "released": "2025-12-10",
+  "date_precision": "observed",
+  "summary": "Olmo-3.1-32B-Instruct, published 2025-12-10 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Olmo-3.1-32B-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct"
+  ]
+}

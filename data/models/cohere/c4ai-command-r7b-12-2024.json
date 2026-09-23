@@ -1,0 +1,29 @@
+{
+  "id": "c4ai-command-r7b-12-2024",
+  "lab": "cohere",
+  "name": "c4ai-command-r7b-12-2024",
+  "family": "command",
+  "status": "legacy",
+  "released": "2024-12-11",
+  "date_precision": "observed",
+  "summary": "c4ai-command-r7b-12-2024, published 2024-12-11 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/c4ai-command-r7b-12-2024"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "cohere",
+  "name": "Cohere",
+  "tier": 2,
+  "founded": "2019",
+  "hq": "Toronto, Canada",
+  "summary": "Built for enterprises rather than consumers — retrieval, embeddings, and models that can be deployed inside a customer's own environment. Its research arm, Cohere Labs, publishes the Aya multilingual work openly.",
+  "founders": [
+    {
+      "name": "Aidan Gomez",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "A co-author of \"Attention Is All You Need\", the paper the entire transformer era rests on."
+    },
+    {
+      "name": "Nick Frosst",
+      "role": "Co-founder",
+      "bio": "First employee of Geoffrey Hinton's Google Brain group in Toronto."
+    },
+    {
+      "name": "Ivan Zhang",
+      "role": "Co-founder",
+      "bio": "Leads Cohere's applied research and product engineering."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#39594d",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://cohere.com",
+    "docs": "https://docs.cohere.com",
+    "github": "https://github.com/cohere-ai",
+    "huggingface": "https://huggingface.co/CohereLabs"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cohere"
+  ]
+}

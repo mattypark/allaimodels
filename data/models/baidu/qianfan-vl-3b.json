@@ -1,0 +1,30 @@
+{
+  "id": "qianfan-vl-3b",
+  "lab": "baidu",
+  "name": "Qianfan-VL-3B",
+  "family": "Qianfan",
+  "status": "current",
+  "released": "2025-09-16",
+  "date_precision": "observed",
+  "summary": "Qianfan-VL-3B, published 2025-09-16 by baidu on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "baidu/Qianfan-VL-3B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/baidu/Qianfan-VL-3B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/baidu/Qianfan-VL-3B"
+  ]
+}

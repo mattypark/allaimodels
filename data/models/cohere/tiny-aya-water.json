@@ -1,0 +1,29 @@
+{
+  "id": "tiny-aya-water",
+  "lab": "cohere",
+  "name": "tiny-aya-water",
+  "family": "tiny",
+  "status": "current",
+  "released": "2026-02-13",
+  "date_precision": "observed",
+  "summary": "tiny-aya-water, published 2026-02-13 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/tiny-aya-water"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/tiny-aya-water"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/tiny-aya-water"
+  ]
+}

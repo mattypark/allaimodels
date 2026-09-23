@@ -1,0 +1,31 @@
+{
+  "id": "gemma-4-e2b",
+  "lab": "google-deepmind",
+  "name": "gemma-4-E2B",
+  "family": "gemma",
+  "status": "current",
+  "released": "2026-03-02",
+  "date_precision": "observed",
+  "summary": "gemma-4-E2B, published 2026-03-02 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/gemma-4-E2B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "audio"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/gemma-4-E2B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/gemma-4-E2B"
+  ]
+}

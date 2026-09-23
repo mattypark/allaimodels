@@ -1,0 +1,29 @@
+{
+  "id": "gpt2-large",
+  "lab": "openai",
+  "name": "gpt2-large",
+  "family": "large",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "gpt2-large, published 2022-03-02 by openai-community on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "openai-community/gpt2-large"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/openai-community/gpt2-large"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/openai-community/gpt2-large"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kimi-k2-5-nvfp4",
+  "lab": "nvidia",
+  "name": "Kimi-K2.5-NVFP4",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2026-01-30",
+  "date_precision": "observed",
+  "summary": "Kimi-K2.5-NVFP4, published 2026-01-30 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Kimi-K2.5-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Kimi-K2.5-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Kimi-K2.5-NVFP4"
+  ]
+}

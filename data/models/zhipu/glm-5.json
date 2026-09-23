@@ -1,0 +1,29 @@
+{
+  "id": "glm-5",
+  "lab": "zhipu",
+  "name": "GLM-5",
+  "family": "GLM",
+  "status": "current",
+  "released": "2026-02-11",
+  "date_precision": "observed",
+  "summary": "GLM-5, published 2026-02-11 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/GLM-5"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/GLM-5"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/GLM-5"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "qwen3-8-flash-next-nvfp4",
+  "lab": "nvidia",
+  "name": "Qwen3.8-Flash-Next-NVFP4",
+  "family": "Flash",
+  "status": "current",
+  "released": "2026-09-02",
+  "date_precision": "observed",
+  "summary": "Qwen3.8-Flash-Next-NVFP4, published 2026-09-02 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Qwen3.8-Flash-Next-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4"
+  ]
+}

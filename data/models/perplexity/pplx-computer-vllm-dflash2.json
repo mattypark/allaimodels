@@ -1,0 +1,29 @@
+{
+  "id": "pplx-computer-vllm-dflash2",
+  "lab": "perplexity",
+  "name": "pplx-computer-vllm-dflash2",
+  "family": "pplx",
+  "status": "current",
+  "released": "2026-08-20",
+  "date_precision": "observed",
+  "summary": "pplx-computer-vllm-dflash2, published 2026-08-20 by perplexity-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "perplexity-ai/pplx-computer-vllm-dflash2"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/perplexity-ai/pplx-computer-vllm-dflash2"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/perplexity-ai/pplx-computer-vllm-dflash2"
+  ]
+}

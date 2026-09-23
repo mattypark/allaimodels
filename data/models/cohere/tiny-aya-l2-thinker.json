@@ -1,0 +1,29 @@
+{
+  "id": "tiny-aya-l2-thinker",
+  "lab": "cohere",
+  "name": "tiny-aya-l2-thinker",
+  "family": "tiny",
+  "status": "current",
+  "released": "2026-09-02",
+  "date_precision": "observed",
+  "summary": "tiny-aya-l2-thinker, published 2026-09-02 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/tiny-aya-l2-thinker"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/tiny-aya-l2-thinker"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/tiny-aya-l2-thinker"
+  ]
+}

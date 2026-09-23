@@ -1,0 +1,37 @@
+{
+  "slug": "baidu",
+  "name": "Baidu",
+  "tier": 3,
+  "founded": "2000",
+  "hq": "Beijing, China",
+  "summary": "Shipped ERNIE Bot in March 2023, the first large Chinese chatbot to reach the public, and has kept the ERNIE line running since. Recent releases are open weights; the earlier ones were only ever available through Baidu's own cloud.",
+  "founders": [
+    {
+      "name": "Robin Li",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Invented the RankDex link-analysis method before founding Baidu in 2000."
+    },
+    {
+      "name": "Eric Xu",
+      "role": "Co-founder",
+      "bio": "Co-founded Baidu and served as its chairman."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#2932e1",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://yiyan.baidu.com",
+    "docs": "https://ai.baidu.com/ai-doc",
+    "github": "https://github.com/PaddlePaddle",
+    "huggingface": "https://huggingface.co/baidu"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Ernie_Bot"
+  ]
+}

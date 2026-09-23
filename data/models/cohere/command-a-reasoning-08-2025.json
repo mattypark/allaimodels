@@ -1,0 +1,29 @@
+{
+  "id": "command-a-reasoning-08-2025",
+  "lab": "cohere",
+  "name": "command-a-reasoning-08-2025",
+  "family": "command",
+  "status": "current",
+  "released": "2025-08-12",
+  "date_precision": "observed",
+  "summary": "command-a-reasoning-08-2025, published 2025-08-12 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/command-a-reasoning-08-2025"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/command-a-reasoning-08-2025"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/command-a-reasoning-08-2025"
+  ]
+}

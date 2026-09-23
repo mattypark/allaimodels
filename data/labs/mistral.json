@@ -1,0 +1,43 @@
+{
+  "slug": "mistral",
+  "name": "Mistral AI",
+  "tier": 1,
+  "founded": "2023",
+  "hq": "Paris, France",
+  "summary": "Europe's answer to the American frontier labs, founded by three researchers out of DeepMind and Meta. Ships an unusually clean split — small open-weight models anyone can run, larger commercial ones behind an API — and says plainly which is which.",
+  "founders": [
+    {
+      "name": "Arthur Mensch",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Former DeepMind researcher; worked on the Chinchilla scaling results that reset how the field sizes models against data."
+    },
+    {
+      "name": "Guillaume Lample",
+      "role": "Co-founder, Chief Scientist",
+      "bio": "Led the original Llama work at Meta before leaving to start Mistral."
+    },
+    {
+      "name": "Timothée Lacroix",
+      "role": "Co-founder, Chief Technology Officer",
+      "bio": "Also from the Meta Llama team; owns Mistral's training and inference stack."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#fa520f",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://mistral.ai",
+    "docs": "https://docs.mistral.ai",
+    "news": "https://mistral.ai/news",
+    "github": "https://github.com/mistralai",
+    "huggingface": "https://huggingface.co/mistralai"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mistral_AI"
+  ]
+}

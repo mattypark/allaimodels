@@ -1,0 +1,29 @@
+{
+  "id": "pplx-computer-qwen-3-8-27b-dflash2-20260824",
+  "lab": "perplexity",
+  "name": "pplx-computer-qwen-3-8-27b-dflash2-20260824",
+  "family": "pplx",
+  "status": "current",
+  "released": "2026-08-25",
+  "date_precision": "observed",
+  "summary": "pplx-computer-qwen-3-8-27b-dflash2-20260824, published 2026-08-25 by perplexity-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "perplexity-ai/pplx-computer-qwen-3-8-27b-dflash2-20260824"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-8-27b-dflash2-20260824"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-8-27b-dflash2-20260824"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ernie-4-5-vl-28b-a3b-thinking",
+  "lab": "baidu",
+  "name": "ERNIE-4.5-VL-28B-A3B-Thinking",
+  "family": "ERNIE",
+  "status": "current",
+  "released": "2025-11-07",
+  "date_precision": "observed",
+  "summary": "ERNIE-4.5-VL-28B-A3B-Thinking, published 2025-11-07 by baidu on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "baidu/ERNIE-4.5-VL-28B-A3B-Thinking"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/baidu/ERNIE-4.5-VL-28B-A3B-Thinking"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/baidu/ERNIE-4.5-VL-28B-A3B-Thinking"
+  ]
+}

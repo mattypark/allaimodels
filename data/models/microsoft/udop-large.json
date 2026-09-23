@@ -1,0 +1,30 @@
+{
+  "id": "udop-large",
+  "lab": "microsoft",
+  "name": "udop-large",
+  "family": "udop",
+  "status": "legacy",
+  "released": "2024-02-26",
+  "date_precision": "observed",
+  "summary": "udop-large, published 2024-02-26 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/udop-large"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/udop-large"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/udop-large"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "cogvlm2-llama3-chat-19b",
+  "lab": "zhipu",
+  "name": "cogvlm2-llama3-chat-19B",
+  "family": "chat",
+  "status": "legacy",
+  "released": "2024-05-16",
+  "date_precision": "observed",
+  "summary": "cogvlm2-llama3-chat-19B, published 2024-05-16 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/cogvlm2-llama3-chat-19B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/cogvlm2-llama3-chat-19B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/cogvlm2-llama3-chat-19B"
+  ]
+}

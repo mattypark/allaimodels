@@ -1,0 +1,29 @@
+{
+  "id": "tiny-aya-base-32k",
+  "lab": "cohere",
+  "name": "tiny-aya-base-32K",
+  "family": "tiny",
+  "status": "current",
+  "released": "2026-09-08",
+  "date_precision": "observed",
+  "summary": "tiny-aya-base-32K, published 2026-09-08 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/tiny-aya-base-32K"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/tiny-aya-base-32K"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/tiny-aya-base-32K"
+  ]
+}

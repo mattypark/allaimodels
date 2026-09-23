@@ -1,0 +1,29 @@
+{
+  "id": "mobilebert-uncased",
+  "lab": "google-deepmind",
+  "name": "mobilebert-uncased",
+  "family": "mobilebert",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "mobilebert-uncased, published 2022-03-02 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/mobilebert-uncased"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/mobilebert-uncased"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/mobilebert-uncased"
+  ]
+}

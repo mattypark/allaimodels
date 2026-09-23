@@ -1,0 +1,30 @@
+{
+  "id": "llama-4-scout-17b-16e-instruct",
+  "lab": "meta",
+  "name": "Llama-4-Scout-17B-16E-Instruct",
+  "family": "Llama",
+  "status": "current",
+  "released": "2025-04-02",
+  "date_precision": "observed",
+  "summary": "Llama-4-Scout-17B-16E-Instruct, published 2025-04-02 by meta-llama on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
+  ]
+}

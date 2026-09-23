@@ -1,0 +1,29 @@
+{
+  "id": "phi-4",
+  "lab": "microsoft",
+  "name": "phi-4",
+  "family": "phi",
+  "status": "legacy",
+  "released": "2024-12-11",
+  "date_precision": "observed",
+  "summary": "phi-4, published 2024-12-11 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/phi-4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/phi-4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/phi-4"
+  ]
+}

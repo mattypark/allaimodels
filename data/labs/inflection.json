@@ -1,0 +1,41 @@
+{
+  "slug": "inflection",
+  "name": "Inflection AI",
+  "tier": 3,
+  "founded": "2022",
+  "hq": "Palo Alto, California",
+  "summary": "Built Pi and the Inflection models, then lost most of its team to Microsoft in 2024 and turned to enterprise deployment. Kept here because the models it shipped are part of the record, not because it is still setting the frontier.",
+  "founders": [
+    {
+      "name": "Mustafa Suleyman",
+      "role": "Co-founder",
+      "bio": "Co-founded DeepMind, then Inflection; left for Microsoft AI in 2024."
+    },
+    {
+      "name": "Reid Hoffman",
+      "role": "Co-founder",
+      "bio": "Co-founder of LinkedIn and a longtime backer of both DeepMind and OpenAI."
+    },
+    {
+      "name": "Karén Simonyan",
+      "role": "Co-founder, Chief Scientist",
+      "bio": "Led deep learning scaling at DeepMind; now chief scientist at Microsoft AI."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#e86a33",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://inflection.ai",
+    "docs": "https://developers.inflection.ai",
+    "news": "https://inflection.ai/blog"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Inflection_AI"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "autoglm-phone-9b",
+  "lab": "zhipu",
+  "name": "AutoGLM-Phone-9B",
+  "family": "AutoGLM",
+  "status": "current",
+  "released": "2025-12-08",
+  "date_precision": "observed",
+  "summary": "AutoGLM-Phone-9B, published 2025-12-08 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/AutoGLM-Phone-9B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/AutoGLM-Phone-9B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/AutoGLM-Phone-9B"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709",
+  "lab": "perplexity",
+  "name": "pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709",
+  "family": "pplx",
+  "status": "current",
+  "released": "2026-07-09",
+  "date_precision": "observed",
+  "summary": "pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709, published 2026-07-09 by perplexity-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "perplexity-ai/pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/perplexity-ai/pplx-computer-qwen-3-6-35b-a3b-nvfp4-20260709"
+  ]
+}

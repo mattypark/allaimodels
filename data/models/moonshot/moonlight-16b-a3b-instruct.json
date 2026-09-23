@@ -1,0 +1,29 @@
+{
+  "id": "moonlight-16b-a3b-instruct",
+  "lab": "moonshot",
+  "name": "Moonlight-16B-A3B-Instruct",
+  "family": "Moonlight",
+  "status": "legacy",
+  "released": "2025-02-22",
+  "date_precision": "observed",
+  "summary": "Moonlight-16B-A3B-Instruct, published 2025-02-22 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Moonlight-16B-A3B-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Moonlight-16B-A3B-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Moonlight-16B-A3B-Instruct"
+  ]
+}

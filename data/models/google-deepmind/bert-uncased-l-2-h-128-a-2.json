@@ -1,0 +1,29 @@
+{
+  "id": "bert-uncased-l-2-h-128-a-2",
+  "lab": "google-deepmind",
+  "name": "bert_uncased_L-2_H-128_A-2",
+  "family": "bert",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "bert_uncased_L-2_H-128_A-2, published 2022-03-02 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/bert_uncased_L-2_H-128_A-2"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/bert_uncased_L-2_H-128_A-2"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/bert_uncased_L-2_H-128_A-2"
+  ]
+}

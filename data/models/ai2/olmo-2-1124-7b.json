@@ -1,0 +1,29 @@
+{
+  "id": "olmo-2-1124-7b",
+  "lab": "ai2",
+  "name": "OLMo-2-1124-7B",
+  "family": "OLMo",
+  "status": "legacy",
+  "released": "2024-10-29",
+  "date_precision": "observed",
+  "summary": "OLMo-2-1124-7B, published 2024-10-29 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/OLMo-2-1124-7B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/OLMo-2-1124-7B"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "phi-1-5",
+  "lab": "microsoft",
+  "name": "phi-1_5",
+  "family": "phi",
+  "status": "legacy",
+  "released": "2023-09-10",
+  "date_precision": "observed",
+  "summary": "phi-1_5, published 2023-09-10 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/phi-1_5"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/phi-1_5"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/phi-1_5"
+  ]
+}

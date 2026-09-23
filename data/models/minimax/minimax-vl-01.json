@@ -1,0 +1,30 @@
+{
+  "id": "minimax-vl-01",
+  "lab": "minimax",
+  "name": "MiniMax-VL-01",
+  "family": "MiniMax",
+  "status": "legacy",
+  "released": "2025-01-12",
+  "date_precision": "observed",
+  "summary": "MiniMax-VL-01, published 2025-01-12 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/MiniMax-VL-01"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+  ]
+}

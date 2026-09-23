@@ -1,0 +1,30 @@
+{
+  "id": "kosmos-2-5",
+  "lab": "microsoft",
+  "name": "kosmos-2.5",
+  "family": "kosmos",
+  "status": "legacy",
+  "released": "2024-05-13",
+  "date_precision": "observed",
+  "summary": "kosmos-2.5, published 2024-05-13 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/kosmos-2.5"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/kosmos-2.5"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/kosmos-2.5"
+  ]
+}

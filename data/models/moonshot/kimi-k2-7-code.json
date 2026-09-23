@@ -1,0 +1,30 @@
+{
+  "id": "kimi-k2-7-code",
+  "lab": "moonshot",
+  "name": "Kimi-K2.7-Code",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2026-06-11",
+  "date_precision": "observed",
+  "summary": "Kimi-K2.7-Code, published 2026-06-11 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Kimi-K2.7-Code"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+  ]
+}

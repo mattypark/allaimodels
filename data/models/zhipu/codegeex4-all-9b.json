@@ -1,0 +1,29 @@
+{
+  "id": "codegeex4-all-9b",
+  "lab": "zhipu",
+  "name": "codegeex4-all-9b",
+  "family": "all",
+  "status": "legacy",
+  "released": "2024-07-05",
+  "date_precision": "observed",
+  "summary": "codegeex4-all-9b, published 2024-07-05 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/codegeex4-all-9b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/codegeex4-all-9b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/codegeex4-all-9b"
+  ]
+}

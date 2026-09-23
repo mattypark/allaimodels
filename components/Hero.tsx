@@ -92,17 +92,15 @@ export default function Hero({
           {labCount} labs · {modelCount} models · {sourceCount} cited sources
         </p>
 
+        {/* The globe already says "every AI model". Repeating it underneath in
+            48pt serif said the same thing twice and pushed the page below the
+            fold, so the headline is one line and the argument moved to the
+            section that exists to make it. */}
         <h1>
-          <span className="mask"><span data-anim="line">Every AI model,</span></span>
-          <span className="mask"><span data-anim="line">and the source</span></span>
-          <span className="mask"><span data-anim="line">for every number.</span></span>
+          <span className="mask">
+            <span data-anim="line">Every model, and the source.</span>
+          </span>
         </h1>
-
-        <p className="sub" data-anim="sub">
-          Benchmarks, pricing, context windows and launch videos for every frontier lab —
-          each figure stamped with the page it came from, the day it was read, and whether
-          it can honestly be compared with anyone else&rsquo;s.
-        </p>
 
         {latest && (
           <p className="hero__fresh mono" data-anim="sub">

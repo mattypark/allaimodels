@@ -1,0 +1,29 @@
+{
+  "id": "olmo-2-0425-1b-instruct",
+  "lab": "ai2",
+  "name": "OLMo-2-0425-1B-Instruct",
+  "family": "OLMo",
+  "status": "current",
+  "released": "2025-04-29",
+  "date_precision": "observed",
+  "summary": "OLMo-2-0425-1B-Instruct, published 2025-04-29 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/OLMo-2-0425-1B-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/OLMo-2-0425-1B-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/OLMo-2-0425-1B-Instruct"
+  ]
+}

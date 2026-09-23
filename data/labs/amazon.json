@@ -1,0 +1,31 @@
+{
+  "slug": "amazon",
+  "name": "Amazon AGI",
+  "tier": 2,
+  "founded": "2023",
+  "hq": "Seattle, Washington",
+  "summary": "The Nova family, built to be the default on Bedrock rather than to top a leaderboard. Amazon competes on price and on already being integrated with the rest of AWS, and its published benchmark coverage is thinner than its pricing detail.",
+  "founders": [
+    {
+      "name": "Rohit Prasad",
+      "role": "Senior Vice President, Amazon AGI",
+      "bio": "Formerly head scientist for Alexa; leads the group that ships the Nova models."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#ff9900",
+    "accent_ink": "#111111"
+  },
+  "links": {
+    "website": "https://aws.amazon.com/ai/",
+    "docs": "https://docs.aws.amazon.com/nova/",
+    "news": "https://www.aboutamazon.com/news/aws"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Amazon_Web_Services"
+  ]
+}

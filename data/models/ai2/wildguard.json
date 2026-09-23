@@ -1,0 +1,29 @@
+{
+  "id": "wildguard",
+  "lab": "ai2",
+  "name": "wildguard",
+  "family": "wildguard",
+  "status": "legacy",
+  "released": "2024-06-15",
+  "date_precision": "observed",
+  "summary": "wildguard, published 2024-06-15 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/wildguard"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/wildguard"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/wildguard"
+  ]
+}

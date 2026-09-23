@@ -1,0 +1,30 @@
+{
+  "id": "qwen3-6-35b-a3b",
+  "lab": "qwen",
+  "name": "Qwen3.6-35B-A3B",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2026-04-15",
+  "date_precision": "observed",
+  "summary": "Qwen3.6-35B-A3B, published 2026-04-15 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen3.6-35B-A3B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+  ]
+}

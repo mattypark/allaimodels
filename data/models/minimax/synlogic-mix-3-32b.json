@@ -1,0 +1,29 @@
+{
+  "id": "synlogic-mix-3-32b",
+  "lab": "minimax",
+  "name": "SynLogic-Mix-3-32B",
+  "family": "SynLogic",
+  "status": "current",
+  "released": "2025-05-30",
+  "date_precision": "observed",
+  "summary": "SynLogic-Mix-3-32B, published 2025-05-30 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/SynLogic-Mix-3-32B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/SynLogic-Mix-3-32B"
+  ]
+}

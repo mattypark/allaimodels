@@ -1,0 +1,29 @@
+{
+  "id": "glm-4-9b-chat-hf",
+  "lab": "zhipu",
+  "name": "glm-4-9b-chat-hf",
+  "family": "glm",
+  "status": "legacy",
+  "released": "2024-10-23",
+  "date_precision": "observed",
+  "summary": "glm-4-9b-chat-hf, published 2024-10-23 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/glm-4-9b-chat-hf"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/glm-4-9b-chat-hf"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/glm-4-9b-chat-hf"
+  ]
+}

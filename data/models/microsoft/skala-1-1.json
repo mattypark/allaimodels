@@ -1,0 +1,29 @@
+{
+  "id": "skala-1-1",
+  "lab": "microsoft",
+  "name": "skala-1.1",
+  "family": "skala",
+  "status": "current",
+  "released": "2026-04-13",
+  "date_precision": "observed",
+  "summary": "skala-1.1, published 2026-04-13 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/skala-1.1"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/skala-1.1"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/skala-1.1"
+  ]
+}

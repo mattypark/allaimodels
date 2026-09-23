@@ -1,0 +1,29 @@
+{
+  "id": "ministral-8b-instruct-2410",
+  "lab": "mistral",
+  "name": "Ministral-8B-Instruct-2410",
+  "family": "Ministral",
+  "status": "legacy",
+  "released": "2024-10-15",
+  "date_precision": "observed",
+  "summary": "Ministral-8B-Instruct-2410, published 2024-10-15 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Ministral-8B-Instruct-2410"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
+  ]
+}

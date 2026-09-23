@@ -1,0 +1,42 @@
+{
+  "slug": "nvidia",
+  "name": "NVIDIA",
+  "tier": 2,
+  "founded": "1993",
+  "hq": "Santa Clara, California",
+  "summary": "Sells the hardware every other lab here trains on, and also ships its own open models — Nemotron, and a long line of speech and vision work. Its releases exist partly to demonstrate what its chips do, which is worth knowing when reading its benchmark numbers.",
+  "founders": [
+    {
+      "name": "Jensen Huang",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Has run NVIDIA since 1993; made the bet on CUDA that turned a graphics company into the substrate of the field."
+    },
+    {
+      "name": "Chris Malachowsky",
+      "role": "Co-founder",
+      "bio": "Engineering co-founder; still with the company as an NVIDIA Fellow."
+    },
+    {
+      "name": "Curtis Priem",
+      "role": "Co-founder, former Chief Technical Officer",
+      "bio": "Designed NVIDIA's first graphics architecture."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#76b900",
+    "accent_ink": "#111111"
+  },
+  "links": {
+    "website": "https://www.nvidia.com/en-us/ai/",
+    "docs": "https://docs.nvidia.com/nemo/",
+    "github": "https://github.com/NVIDIA",
+    "huggingface": "https://huggingface.co/nvidia"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Nvidia"
+  ]
+}

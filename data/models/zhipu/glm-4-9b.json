@@ -1,0 +1,29 @@
+{
+  "id": "glm-4-9b",
+  "lab": "zhipu",
+  "name": "glm-4-9b",
+  "family": "glm",
+  "status": "legacy",
+  "released": "2024-06-04",
+  "date_precision": "observed",
+  "summary": "glm-4-9b, published 2024-06-04 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/glm-4-9b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/glm-4-9b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/glm-4-9b"
+  ]
+}

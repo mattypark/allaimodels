@@ -1,0 +1,29 @@
+{
+  "id": "aya-101",
+  "lab": "cohere",
+  "name": "aya-101",
+  "family": "aya",
+  "status": "legacy",
+  "released": "2024-02-08",
+  "date_precision": "observed",
+  "summary": "aya-101, published 2024-02-08 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/aya-101"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/aya-101"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/aya-101"
+  ]
+}

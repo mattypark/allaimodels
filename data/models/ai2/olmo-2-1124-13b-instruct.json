@@ -1,0 +1,29 @@
+{
+  "id": "olmo-2-1124-13b-instruct",
+  "lab": "ai2",
+  "name": "OLMo-2-1124-13B-Instruct",
+  "family": "OLMo",
+  "status": "legacy",
+  "released": "2024-12-18",
+  "date_precision": "observed",
+  "summary": "OLMo-2-1124-13B-Instruct, published 2024-12-18 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/OLMo-2-1124-13B-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct"
+  ]
+}

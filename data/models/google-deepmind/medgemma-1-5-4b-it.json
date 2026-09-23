@@ -1,0 +1,30 @@
+{
+  "id": "medgemma-1-5-4b-it",
+  "lab": "google-deepmind",
+  "name": "medgemma-1.5-4b-it",
+  "family": "medgemma",
+  "status": "current",
+  "released": "2026-01-07",
+  "date_precision": "observed",
+  "summary": "medgemma-1.5-4b-it, published 2026-01-07 by google on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "google/medgemma-1.5-4b-it"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/google/medgemma-1.5-4b-it"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/google/medgemma-1.5-4b-it"
+  ]
+}

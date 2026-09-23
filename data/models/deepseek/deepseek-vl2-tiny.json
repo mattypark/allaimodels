@@ -1,0 +1,30 @@
+{
+  "id": "deepseek-vl2-tiny",
+  "lab": "deepseek",
+  "name": "deepseek-vl2-tiny",
+  "family": "deepseek",
+  "status": "legacy",
+  "released": "2024-12-13",
+  "date_precision": "observed",
+  "summary": "deepseek-vl2-tiny, published 2024-12-13 by deepseek-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "deepseek-ai/deepseek-vl2-tiny"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/deepseek-ai/deepseek-vl2-tiny"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/deepseek-ai/deepseek-vl2-tiny"
+  ]
+}

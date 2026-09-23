@@ -1,0 +1,29 @@
+{
+  "id": "layoutxlm-base",
+  "lab": "microsoft",
+  "name": "layoutxlm-base",
+  "family": "layoutxlm",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "layoutxlm-base, published 2022-03-02 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/layoutxlm-base"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/layoutxlm-base"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/layoutxlm-base"
+  ]
+}

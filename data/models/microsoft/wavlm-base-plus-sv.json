@@ -1,0 +1,29 @@
+{
+  "id": "wavlm-base-plus-sv",
+  "lab": "microsoft",
+  "name": "wavlm-base-plus-sv",
+  "family": "wavlm",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "wavlm-base-plus-sv, published 2022-03-02 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/wavlm-base-plus-sv"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/wavlm-base-plus-sv"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/wavlm-base-plus-sv"
+  ]
+}

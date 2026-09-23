@@ -1,0 +1,29 @@
+{
+  "id": "phi-3-medium-128k-instruct",
+  "lab": "microsoft",
+  "name": "Phi-3-medium-128k-instruct",
+  "family": "Phi",
+  "status": "legacy",
+  "released": "2024-05-07",
+  "date_precision": "observed",
+  "summary": "Phi-3-medium-128k-instruct, published 2024-05-07 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/Phi-3-medium-128k-instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/Phi-3-medium-128k-instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/Phi-3-medium-128k-instruct"
+  ]
+}

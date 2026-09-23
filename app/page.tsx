@@ -16,15 +16,16 @@ export default function Home() {
     m.benchmarks.forEach((b) => sources.add(b.source_url));
   }
 
-  // Place every dated release on the hero globe. Latitude is the release date,
-  // longitude is the lab, so the lens reveals one lab at a time in its colour.
-  const times = dated.map((m) => new Date(m.released).getTime());
+  // Every model goes on the globe, not just the exactly-dated ones. A date
+  // read off a listing is precise enough to place a dot; the distinction only
+  // matters where the date is quoted as a fact, which is the timeline.
+  const times = models.map((m) => new Date(m.released).getTime());
   const first = Math.min(...times);
   const span = Math.max(Math.max(...times) - first, 1);
   const accentFor = new Map(labs.map((l) => [l.slug, l.brand.accent]));
   const nameFor = new Map(labs.map((l) => [l.slug, l.name]));
 
-  const points = dated.map((m) => ({
+  const points = models.map((m) => ({
     name: m.name,
     lab: m.lab,
     labName: nameFor.get(m.lab) ?? m.lab,
@@ -37,7 +38,7 @@ export default function Home() {
 
   // The three most recent releases per stat, named under each number. A count
   // on its own reads as marketing; three real names make it checkable.
-  const newest = dated.slice(0, 3).map((m) => m.name);
+  const newest = models.slice(0, 3).map((m) => m.name);
   const biggestLabs = [...labs]
     .map((l) => ({ name: l.name, n: models.filter((m) => m.lab === l.slug).length }))
     .sort((a, b) => b.n - a.n)
@@ -75,7 +76,7 @@ export default function Home() {
         labCount={labs.length}
         modelCount={models.length}
         sourceCount={sources.size}
-        latest={dated[0]?.released ?? ''}
+        latest={models[0]?.released ?? ''}
       />
 
       <section className="section shell">

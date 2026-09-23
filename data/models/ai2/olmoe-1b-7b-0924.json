@@ -1,0 +1,29 @@
+{
+  "id": "olmoe-1b-7b-0924",
+  "lab": "ai2",
+  "name": "OLMoE-1B-7B-0924",
+  "family": "OLMoE",
+  "status": "legacy",
+  "released": "2024-07-20",
+  "date_precision": "observed",
+  "summary": "OLMoE-1B-7B-0924, published 2024-07-20 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/OLMoE-1B-7B-0924"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/OLMoE-1B-7B-0924"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/OLMoE-1B-7B-0924"
+  ]
+}

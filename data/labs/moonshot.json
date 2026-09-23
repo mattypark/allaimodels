@@ -1,0 +1,32 @@
+{
+  "slug": "moonshot",
+  "name": "Moonshot AI",
+  "tier": 2,
+  "founded": "2023",
+  "hq": "Beijing, China",
+  "summary": "Makes Kimi, and got there by going long on context before most of the field did. The recent Kimi releases are open weights at a scale that used to be closed, and they are trained explicitly for agentic tool use rather than for chat.",
+  "founders": [
+    {
+      "name": "Yang Zhilin",
+      "role": "Co-founder, Chief Executive Officer",
+      "bio": "Co-author of Transformer-XL and XLNet, both long-context results, which is visible in what Moonshot ships."
+    }
+  ],
+  "brand": {
+    "scheme": "dark",
+    "bg": "#0d0d12",
+    "ink": "#f2f2f0",
+    "muted": "#8f8f8a",
+    "accent": "#7c6cff",
+    "accent_ink": "#0d0d12"
+  },
+  "links": {
+    "website": "https://www.moonshot.ai",
+    "docs": "https://platform.moonshot.ai/docs",
+    "github": "https://github.com/MoonshotAI",
+    "huggingface": "https://huggingface.co/moonshotai"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Moonshot_AI"
+  ]
+}

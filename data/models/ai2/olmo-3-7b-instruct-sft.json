@@ -1,0 +1,29 @@
+{
+  "id": "olmo-3-7b-instruct-sft",
+  "lab": "ai2",
+  "name": "Olmo-3-7B-Instruct-SFT",
+  "family": "Olmo",
+  "status": "current",
+  "released": "2025-11-17",
+  "date_precision": "observed",
+  "summary": "Olmo-3-7B-Instruct-SFT, published 2025-11-17 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Olmo-3-7B-Instruct-SFT"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Olmo-3-7B-Instruct-SFT"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "llama-guard-3-8b",
+  "lab": "meta",
+  "name": "Llama-Guard-3-8B",
+  "family": "Llama",
+  "status": "legacy",
+  "released": "2024-07-22",
+  "date_precision": "observed",
+  "summary": "Llama-Guard-3-8B, published 2024-07-22 by meta-llama on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "meta-llama/Llama-Guard-3-8B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/meta-llama/Llama-Guard-3-8B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/meta-llama/Llama-Guard-3-8B"
+  ]
+}

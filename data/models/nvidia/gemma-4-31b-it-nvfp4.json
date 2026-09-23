@@ -1,0 +1,29 @@
+{
+  "id": "gemma-4-31b-it-nvfp4",
+  "lab": "nvidia",
+  "name": "Gemma-4-31B-IT-NVFP4",
+  "family": "Gemma",
+  "status": "current",
+  "released": "2026-04-02",
+  "date_precision": "observed",
+  "summary": "Gemma-4-31B-IT-NVFP4, published 2026-04-02 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Gemma-4-31B-IT-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Gemma-4-31B-IT-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Gemma-4-31B-IT-NVFP4"
+  ]
+}

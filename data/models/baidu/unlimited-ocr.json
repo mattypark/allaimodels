@@ -1,0 +1,30 @@
+{
+  "id": "unlimited-ocr",
+  "lab": "baidu",
+  "name": "Unlimited-OCR",
+  "family": "Unlimited",
+  "status": "current",
+  "released": "2026-06-19",
+  "date_precision": "observed",
+  "summary": "Unlimited-OCR, published 2026-06-19 by baidu on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "baidu/Unlimited-OCR"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/baidu/Unlimited-OCR"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/baidu/Unlimited-OCR"
+  ]
+}

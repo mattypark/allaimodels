@@ -1,0 +1,30 @@
+{
+  "id": "ernie-4-5-vl-424b-a47b-pt",
+  "lab": "baidu",
+  "name": "ERNIE-4.5-VL-424B-A47B-PT",
+  "family": "ERNIE",
+  "status": "current",
+  "released": "2025-06-28",
+  "date_precision": "observed",
+  "summary": "ERNIE-4.5-VL-424B-A47B-PT, published 2025-06-28 by baidu on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "baidu/ERNIE-4.5-VL-424B-A47B-PT"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/baidu/ERNIE-4.5-VL-424B-A47B-PT"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/baidu/ERNIE-4.5-VL-424B-A47B-PT"
+  ]
+}

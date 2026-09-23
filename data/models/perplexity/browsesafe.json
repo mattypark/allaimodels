@@ -1,0 +1,29 @@
+{
+  "id": "browsesafe",
+  "lab": "perplexity",
+  "name": "browsesafe",
+  "family": "browsesafe",
+  "status": "current",
+  "released": "2025-11-14",
+  "date_precision": "observed",
+  "summary": "browsesafe, published 2025-11-14 by perplexity-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "perplexity-ai/browsesafe"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/perplexity-ai/browsesafe"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/perplexity-ai/browsesafe"
+  ]
+}

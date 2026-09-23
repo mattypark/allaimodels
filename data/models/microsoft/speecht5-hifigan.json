@@ -1,0 +1,29 @@
+{
+  "id": "speecht5-hifigan",
+  "lab": "microsoft",
+  "name": "speecht5_hifigan",
+  "family": "hifigan",
+  "status": "legacy",
+  "released": "2023-02-02",
+  "date_precision": "observed",
+  "summary": "speecht5_hifigan, published 2023-02-02 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/speecht5_hifigan"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/speecht5_hifigan"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/speecht5_hifigan"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "c4ai-command-r-plus",
+  "lab": "cohere",
+  "name": "c4ai-command-r-plus",
+  "family": "command",
+  "status": "legacy",
+  "released": "2024-04-03",
+  "date_precision": "observed",
+  "summary": "c4ai-command-r-plus, published 2024-04-03 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/c4ai-command-r-plus"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/c4ai-command-r-plus"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/c4ai-command-r-plus"
+  ]
+}

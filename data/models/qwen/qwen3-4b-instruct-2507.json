@@ -1,0 +1,29 @@
+{
+  "id": "qwen3-4b-instruct-2507",
+  "lab": "qwen",
+  "name": "Qwen3-4B-Instruct-2507",
+  "family": "Instruct",
+  "status": "current",
+  "released": "2025-08-05",
+  "date_precision": "observed",
+  "summary": "Qwen3-4B-Instruct-2507, published 2025-08-05 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen3-4B-Instruct-2507"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507"
+  ]
+}

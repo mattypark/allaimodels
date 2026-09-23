@@ -1,0 +1,30 @@
+{
+  "id": "aya-vision-8b",
+  "lab": "cohere",
+  "name": "aya-vision-8b",
+  "family": "aya",
+  "status": "legacy",
+  "released": "2025-03-02",
+  "date_precision": "observed",
+  "summary": "aya-vision-8b, published 2025-03-02 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/aya-vision-8b"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/aya-vision-8b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/aya-vision-8b"
+  ]
+}

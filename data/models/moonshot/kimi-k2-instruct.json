@@ -1,0 +1,29 @@
+{
+  "id": "kimi-k2-instruct",
+  "lab": "moonshot",
+  "name": "Kimi-K2-Instruct",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2025-07-11",
+  "date_precision": "observed",
+  "summary": "Kimi-K2-Instruct, published 2025-07-11 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Kimi-K2-Instruct"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+  ]
+}

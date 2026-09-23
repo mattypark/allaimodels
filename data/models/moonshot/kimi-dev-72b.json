@@ -1,0 +1,29 @@
+{
+  "id": "kimi-dev-72b",
+  "lab": "moonshot",
+  "name": "Kimi-Dev-72B",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2025-06-16",
+  "date_precision": "observed",
+  "summary": "Kimi-Dev-72B, published 2025-06-16 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Kimi-Dev-72B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Kimi-Dev-72B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Kimi-Dev-72B"
+  ]
+}

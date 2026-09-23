@@ -1,0 +1,30 @@
+{
+  "id": "molmo-7b-d-0924",
+  "lab": "ai2",
+  "name": "Molmo-7B-D-0924",
+  "family": "Molmo",
+  "status": "legacy",
+  "released": "2024-09-25",
+  "date_precision": "observed",
+  "summary": "Molmo-7B-D-0924, published 2024-09-25 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Molmo-7B-D-0924"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Molmo-7B-D-0924"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Molmo-7B-D-0924"
+  ]
+}

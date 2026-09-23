@@ -1,0 +1,29 @@
+{
+  "id": "voxtral-mini-3b-2507",
+  "lab": "mistral",
+  "name": "Voxtral-Mini-3B-2507",
+  "family": "Voxtral",
+  "status": "current",
+  "released": "2025-07-01",
+  "date_precision": "observed",
+  "summary": "Voxtral-Mini-3B-2507, published 2025-07-01 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Voxtral-Mini-3B-2507"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507"
+  ]
+}

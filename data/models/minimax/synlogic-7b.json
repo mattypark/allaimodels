@@ -1,0 +1,29 @@
+{
+  "id": "synlogic-7b",
+  "lab": "minimax",
+  "name": "SynLogic-7B",
+  "family": "SynLogic",
+  "status": "current",
+  "released": "2025-06-03",
+  "date_precision": "observed",
+  "summary": "SynLogic-7B, published 2025-06-03 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/SynLogic-7B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/SynLogic-7B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/SynLogic-7B"
+  ]
+}

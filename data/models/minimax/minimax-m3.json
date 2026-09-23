@@ -1,0 +1,30 @@
+{
+  "id": "minimax-m3",
+  "lab": "minimax",
+  "name": "MiniMax-M3",
+  "family": "MiniMax",
+  "status": "current",
+  "released": "2026-06-02",
+  "date_precision": "observed",
+  "summary": "MiniMax-M3, published 2026-06-02 by MiniMaxAI on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "MiniMaxAI/MiniMax-M3"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+  ]
+}

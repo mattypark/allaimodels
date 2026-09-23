@@ -1,0 +1,29 @@
+{
+  "id": "visionreward-video",
+  "lab": "zhipu",
+  "name": "VisionReward-Video",
+  "family": "VisionReward",
+  "status": "legacy",
+  "released": "2024-12-10",
+  "date_precision": "observed",
+  "summary": "VisionReward-Video, published 2024-12-10 by zai-org on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "zai-org/VisionReward-Video"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/zai-org/VisionReward-Video"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/zai-org/VisionReward-Video"
+  ]
+}

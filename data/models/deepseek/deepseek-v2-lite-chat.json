@@ -1,0 +1,29 @@
+{
+  "id": "deepseek-v2-lite-chat",
+  "lab": "deepseek",
+  "name": "DeepSeek-V2-Lite-Chat",
+  "family": "DeepSeek",
+  "status": "legacy",
+  "released": "2024-05-15",
+  "date_precision": "observed",
+  "summary": "DeepSeek-V2-Lite-Chat, published 2024-05-15 by deepseek-ai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "deepseek-ai/DeepSeek-V2-Lite-Chat"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat"
+  ]
+}

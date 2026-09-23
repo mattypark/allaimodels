@@ -1,0 +1,29 @@
+{
+  "id": "nvidia-nemotron-nano-9b-v2",
+  "lab": "nvidia",
+  "name": "NVIDIA-Nemotron-Nano-9B-v2",
+  "family": "NVIDIA",
+  "status": "current",
+  "released": "2025-08-12",
+  "date_precision": "observed",
+  "summary": "NVIDIA-Nemotron-Nano-9B-v2, published 2025-08-12 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/NVIDIA-Nemotron-Nano-9B-v2"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2"
+  ]
+}

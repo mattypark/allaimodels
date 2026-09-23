@@ -1,0 +1,30 @@
+{
+  "id": "kimi-vl-a3b-thinking",
+  "lab": "moonshot",
+  "name": "Kimi-VL-A3B-Thinking",
+  "family": "Kimi",
+  "status": "current",
+  "released": "2025-04-09",
+  "date_precision": "observed",
+  "summary": "Kimi-VL-A3B-Thinking, published 2025-04-09 by moonshotai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "moonshotai/Kimi-VL-A3B-Thinking"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking"
+  ]
+}

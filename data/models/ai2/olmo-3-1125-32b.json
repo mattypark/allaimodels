@@ -1,0 +1,29 @@
+{
+  "id": "olmo-3-1125-32b",
+  "lab": "ai2",
+  "name": "Olmo-3-1125-32B",
+  "family": "Olmo",
+  "status": "current",
+  "released": "2025-11-04",
+  "date_precision": "observed",
+  "summary": "Olmo-3-1125-32B, published 2025-11-04 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Olmo-3-1125-32B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Olmo-3-1125-32B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Olmo-3-1125-32B"
+  ]
+}

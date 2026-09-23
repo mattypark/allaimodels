@@ -1,0 +1,29 @@
+{
+  "id": "qwen3-4b",
+  "lab": "qwen",
+  "name": "Qwen3-4B",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2025-04-27",
+  "date_precision": "observed",
+  "summary": "Qwen3-4B, published 2025-04-27 by Qwen on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "Qwen/Qwen3-4B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/Qwen/Qwen3-4B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3-4B"
+  ]
+}

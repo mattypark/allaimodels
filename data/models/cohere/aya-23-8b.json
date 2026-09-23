@@ -1,0 +1,29 @@
+{
+  "id": "aya-23-8b",
+  "lab": "cohere",
+  "name": "aya-23-8B",
+  "family": "aya",
+  "status": "legacy",
+  "released": "2024-05-19",
+  "date_precision": "observed",
+  "summary": "aya-23-8B, published 2024-05-19 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/aya-23-8B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/aya-23-8B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/aya-23-8B"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aya-expanse-32b",
+  "lab": "cohere",
+  "name": "aya-expanse-32b",
+  "family": "aya",
+  "status": "legacy",
+  "released": "2024-10-23",
+  "date_precision": "observed",
+  "summary": "aya-expanse-32b, published 2024-10-23 by CohereLabs on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "CohereLabs/aya-expanse-32b"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/CohereLabs/aya-expanse-32b"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/CohereLabs/aya-expanse-32b"
+  ]
+}

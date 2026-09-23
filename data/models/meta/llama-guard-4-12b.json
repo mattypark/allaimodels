@@ -1,0 +1,30 @@
+{
+  "id": "llama-guard-4-12b",
+  "lab": "meta",
+  "name": "Llama-Guard-4-12B",
+  "family": "Llama",
+  "status": "current",
+  "released": "2025-04-23",
+  "date_precision": "observed",
+  "summary": "Llama-Guard-4-12B, published 2025-04-23 by meta-llama on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "meta-llama/Llama-Guard-4-12B"
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/meta-llama/Llama-Guard-4-12B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/meta-llama/Llama-Guard-4-12B"
+  ]
+}

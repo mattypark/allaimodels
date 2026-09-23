@@ -1,0 +1,29 @@
+{
+  "id": "ernie-4-5-300b-a47b-2bits-tp4-paddle",
+  "lab": "baidu",
+  "name": "ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle",
+  "family": "ERNIE",
+  "status": "current",
+  "released": "2025-07-08",
+  "date_precision": "observed",
+  "summary": "ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle, published 2025-07-08 by baidu on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle"
+  ]
+}

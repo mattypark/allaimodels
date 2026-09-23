@@ -1,0 +1,29 @@
+{
+  "id": "llama-3-1-8b",
+  "lab": "meta",
+  "name": "Llama-3.1-8B",
+  "family": "Llama",
+  "status": "legacy",
+  "released": "2024-07-14",
+  "date_precision": "observed",
+  "summary": "Llama-3.1-8B, published 2024-07-14 by meta-llama on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "meta-llama/Llama-3.1-8B"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/meta-llama/Llama-3.1-8B"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/meta-llama/Llama-3.1-8B"
+  ]
+}

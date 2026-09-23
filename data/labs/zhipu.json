@@ -1,0 +1,37 @@
+{
+  "slug": "zhipu",
+  "name": "Z.ai",
+  "tier": 2,
+  "founded": "2019",
+  "hq": "Beijing, China",
+  "summary": "Spun out of Tsinghua University as Zhipu AI and now trading as Z.ai. The GLM family is open weights across text, vision and code, and the lab publishes its evaluation setups in more detail than most of its peers.",
+  "founders": [
+    {
+      "name": "Tang Jie",
+      "role": "Co-founder",
+      "bio": "Tsinghua professor; led the GLM pre-training work the company was founded on."
+    },
+    {
+      "name": "Li Juanzi",
+      "role": "Co-founder",
+      "bio": "Tsinghua professor of knowledge engineering, co-founder of the Zhipu spin-out."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#3859ff",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://z.ai",
+    "docs": "https://docs.z.ai",
+    "github": "https://github.com/zai-org",
+    "huggingface": "https://huggingface.co/zai-org"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Zhipu_AI"
+  ]
+}

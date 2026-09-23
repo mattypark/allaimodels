@@ -1,0 +1,29 @@
+{
+  "id": "layoutlm-base-uncased",
+  "lab": "microsoft",
+  "name": "layoutlm-base-uncased",
+  "family": "layoutlm",
+  "status": "legacy",
+  "released": "2022-03-02",
+  "date_precision": "observed",
+  "summary": "layoutlm-base-uncased, published 2022-03-02 by microsoft on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "microsoft/layoutlm-base-uncased"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/microsoft/layoutlm-base-uncased"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/microsoft/layoutlm-base-uncased"
+  ]
+}

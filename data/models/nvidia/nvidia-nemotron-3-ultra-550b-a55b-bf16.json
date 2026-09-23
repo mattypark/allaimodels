@@ -1,0 +1,29 @@
+{
+  "id": "nvidia-nemotron-3-ultra-550b-a55b-bf16",
+  "lab": "nvidia",
+  "name": "NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+  "family": "NVIDIA",
+  "status": "current",
+  "released": "2026-06-03",
+  "date_precision": "observed",
+  "summary": "NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16, published 2026-06-03 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+  ]
+}

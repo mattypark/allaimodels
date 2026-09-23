@@ -1,0 +1,29 @@
+{
+  "id": "qwen3-8b-nvfp4",
+  "lab": "nvidia",
+  "name": "Qwen3-8B-NVFP4",
+  "family": "Qwen3",
+  "status": "current",
+  "released": "2025-09-09",
+  "date_precision": "observed",
+  "summary": "Qwen3-8B-NVFP4, published 2025-09-09 by nvidia on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "nvidia/Qwen3-8B-NVFP4"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/nvidia/Qwen3-8B-NVFP4"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/nvidia/Qwen3-8B-NVFP4"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "mistral-7b-v0-1",
+  "lab": "mistral",
+  "name": "Mistral-7B-v0.1",
+  "family": "Mistral",
+  "status": "legacy",
+  "released": "2023-09-20",
+  "date_precision": "observed",
+  "summary": "Mistral-7B-v0.1, published 2023-09-20 by mistralai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "mistralai/Mistral-7B-v0.1"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+  ]
+}

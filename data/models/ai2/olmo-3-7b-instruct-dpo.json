@@ -1,0 +1,29 @@
+{
+  "id": "olmo-3-7b-instruct-dpo",
+  "lab": "ai2",
+  "name": "Olmo-3-7B-Instruct-DPO",
+  "family": "Olmo",
+  "status": "current",
+  "released": "2025-11-19",
+  "date_precision": "observed",
+  "summary": "Olmo-3-7B-Instruct-DPO, published 2025-11-19 by allenai on Hugging Face. Open weights. Specs beyond the release date are not yet sourced.",
+  "api_ids": {
+    "huggingface": "allenai/Olmo-3-7B-Instruct-DPO"
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "open_weights": true,
+  "links": {
+    "weights": "https://huggingface.co/allenai/Olmo-3-7B-Instruct-DPO"
+  },
+  "benchmarks": [],
+  "sources": [
+    "https://huggingface.co/allenai/Olmo-3-7B-Instruct-DPO"
+  ]
+}

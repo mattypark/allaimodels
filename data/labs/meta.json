@@ -1,0 +1,38 @@
+{
+  "slug": "meta",
+  "name": "Meta AI",
+  "tier": 1,
+  "founded": "2013",
+  "hq": "Menlo Park, California",
+  "summary": "The lab that made open weights a frontier strategy. Llama was not the first model anyone could download, but it was the first one worth downloading, and most of the open ecosystem dates itself from that release. Meta publishes weights and licences freely, and benchmark methodology sparingly.",
+  "founders": [
+    {
+      "name": "Yann LeCun",
+      "role": "Founding Director, FAIR",
+      "bio": "Turing Award laureate for convolutional networks; set up Facebook AI Research in 2013 and shaped its open-publication stance."
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "role": "Chief Executive Officer, Meta",
+      "bio": "Chose to release Llama weights publicly, the decision most of the open-weights field is downstream of."
+    }
+  ],
+  "brand": {
+    "scheme": "light",
+    "bg": "#ffffff",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "accent": "#0064e0",
+    "accent_ink": "#ffffff"
+  },
+  "links": {
+    "website": "https://ai.meta.com",
+    "docs": "https://www.llama.com/docs/overview",
+    "news": "https://ai.meta.com/blog/",
+    "github": "https://github.com/meta-llama",
+    "huggingface": "https://huggingface.co/meta-llama"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Meta_AI"
+  ]
+}
