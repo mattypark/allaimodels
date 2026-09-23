@@ -1709,3 +1709,129 @@ li[data-comparable='false'] .bench__fill {
 .lab-card__mark .mark--monogram {
   width: 2.6rem;
 }
+
+/* ===========================================================================
+   Lab orbit
+
+   The labs as circular marks. The lens from the globe, applied to DOM nodes:
+   --e is proximity to the cursor (0..1, cubic) and --tx/--ty is the push away
+   from it, both written by LabOrbit in one rAF pass. Everything here reads
+   those two properties and nothing else, so the browser only ever composites.
+   =========================================================================== */
+
+.orbit {
+  --hover-accent: var(--accent);
+  position: relative;
+  padding-block: clamp(2rem, 5vw, 4rem);
+  transition: background-color var(--dur) var(--ease-out);
+}
+
+/* A wash of the hovered lab's colour behind the whole grid, so whose mark it
+   is registers before the name does. Kept very low — it sits under 20 marks
+   that each need to stay legible. */
+.orbit[data-lit] {
+  background:
+    radial-gradient(
+      60% 70% at 50% 45%,
+      color-mix(in srgb, var(--hover-accent) 14%, transparent),
+      transparent 70%
+    );
+}
+
+.orbit__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+  place-items: center;
+}
+
+.orbit__tile {
+  --e: 0;
+  --tx: 0px;
+  --ty: 0px;
+
+  display: grid;
+  place-items: center;
+  inline-size: clamp(4.25rem, 7vw, 5.75rem);
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+
+  /* Scale and lift both ride --e, so one number drives the whole response. */
+  transform: translate3d(var(--tx), var(--ty), 0) scale(calc(1 + var(--e) * 0.34));
+
+  /* No transition on transform: --e is already updated every frame, and a
+     transition on top of that lags the pointer. The colour properties do
+     transition, because they only change when a tile becomes the active one. */
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+
+  will-change: transform;
+}
+
+/* The glow. Two shadows: a tight ring in the lab's accent that reads as an
+   edge, and a wide soft one that reads as light coming off the mark. Both
+   scale with --e, so an untouched tile paints no shadow at all. */
+.orbit__tile {
+  box-shadow:
+    0 0 0 calc(var(--e) * 2px) color-mix(in srgb, var(--accent) calc(var(--e) * 70%), transparent),
+    0 calc(var(--e) * 10px) calc(var(--e) * 34px)
+      color-mix(in srgb, var(--accent) calc(var(--e) * 45%), transparent);
+}
+
+.orbit__tile:hover,
+.orbit__tile:focus-visible {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+/* Keyboard users get the same emphasis without a pointer ever moving. */
+.orbit__tile:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.orbit__tile .mark {
+  inline-size: auto;
+  max-inline-size: 56%;
+  block-size: 42%;
+}
+
+.orbit__tile .mark--monogram {
+  inline-size: 42%;
+}
+
+.orbit__caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  /* Reserved height: the caption changes on every hover, and letting it size
+     itself made the whole grid jump each time a name was longer. */
+  min-block-size: 3.25rem;
+  margin-block-start: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+.orbit__caption-name {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+}
+
+.orbit__caption-meta {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit__tile {
+    transform: none;
+    box-shadow: none;
+  }
+}
