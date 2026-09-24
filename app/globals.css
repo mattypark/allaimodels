@@ -424,15 +424,27 @@ footer .legal p {
   padding-block: var(--rhythm);
 }
 
+/**
+ * The split header.
+ *
+ * The reference sets every page the same way: an enormous headline pushed to
+ * the right half, and the supporting sentence small in the bottom left, with a
+ * wide gap of nothing between them. The emptiness is the composition — the two
+ * blocks only read as a pair because there is so much space holding them
+ * apart, which is also why the headline can be this large without shouting.
+ *
+ * Below 64rem there is no room for two columns and it stacks, headline first.
+ */
 .section__head {
   display: grid;
   gap: 1rem;
   margin-block-end: clamp(1.8rem, 1rem + 3vw, 3.5rem);
-  max-width: 62rem;
 }
 
 .section__head h2 {
   font-size: var(--step-3);
+  letter-spacing: -0.035em;
+  line-height: 0.94;
 }
 
 .section__head p {
@@ -440,6 +452,49 @@ footer .legal p {
   font-size: var(--step-1);
   line-height: 1.45;
   max-width: 54ch;
+}
+
+@media (min-width: 64rem) {
+  .section__head {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 9fr);
+    grid-template-areas:
+      '.       title'
+      'support title';
+    align-items: end;
+    column-gap: clamp(2rem, 5vw, 6rem);
+    row-gap: clamp(2rem, 4vw, 4rem);
+    margin-block: clamp(2rem, 5vw, 5rem) clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .section__head h2 {
+    grid-area: title;
+    /* Its own scale, not the body step — the whole effect is the size jump. */
+    font-size: clamp(3.4rem, 8.4vw, 9.5rem);
+    letter-spacing: -0.045em;
+    line-height: 0.88;
+    text-align: right;
+    text-wrap: balance;
+  }
+
+  .section__head .eyebrow {
+    grid-area: support;
+    align-self: start;
+  }
+
+  /* The eyebrow and the sentence share the left column and stack there. */
+  .section__head .eyebrow + p,
+  .section__head p {
+    grid-area: support;
+    align-self: end;
+    max-width: 34ch;
+    color: var(--ink);
+  }
+
+  /* When both exist the eyebrow sits above the sentence rather than on it. */
+  .section__head:has(.eyebrow + p) .eyebrow {
+    align-self: start;
+    margin-block-end: auto;
+  }
 }
 
 /* ===========================================================================
@@ -1350,131 +1405,168 @@ li[data-comparable='false'] .bench__fill {
    =========================================================================== */
 
 .nav-wrap {
-  position: fixed;
-  inset-block-start: calc(env(safe-area-inset-top, 0px) + 0.9rem);
-  inset-inline: 0;
+  /* Sticky, not floating. The old capsule hovered over the page and had to
+     invent its own contrast at every scroll position; a bar with a hairline
+     under it never has that problem. */
+  position: sticky;
+  inset-block-start: 0;
   z-index: 100;
-  display: flex;
-  justify-content: center;
-  padding-inline: var(--gutter);
-  pointer-events: none;
+  background: var(--bg);
+  border-block-end: 1px solid var(--line);
 }
 
 .navbar {
-  pointer-events: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+  min-block-size: 5rem;
+}
+
+/* ── Wordmark ─────────────────────────────────────────────────────────── */
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  padding-inline: var(--gutter);
+  border-inline-end: 1px solid transparent;
+}
+
+.wordmark__name {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  /* The tracking pushes the block right; pull the optical edge back. */
+  margin-inline-end: -0.34em;
+}
+
+.wordmark__sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Links ────────────────────────────────────────────────────────────── */
+
+.tabs {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  max-inline-size: 100%;
+  gap: clamp(1rem, 2.6vw, 2.4rem);
 }
 
-/* ── Liquid glass ─────────────────────────────────────────────────────────
-   Apple's material, as far as the platform allows: a translucent body that
-   samples and saturates what is behind it, a bright hairline along the top
-   edge where light would catch, and a soft shadow underneath so it reads as
-   floating rather than printed. The organic border-radius is what stops it
-   being a pill — eight radii, each on its own sine, written by Nav. */
-
-.blob {
-  --gone: 0;
-  --stretch: 1;
-  --pinch: 1;
-  --r1: 50%; --r2: 50%; --r3: 50%; --r4: 50%;
-  --r5: 50%; --r6: 50%; --r7: 50%; --r8: 50%;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.62rem 1.15rem;
-  white-space: nowrap;
-  font-size: 0.86rem;
+.tabs a {
+  position: relative;
+  display: block;
+  padding-block: 1.8rem;
+  font-size: 1.02rem;
   color: var(--ink);
-
-  border-radius: var(--r1) var(--r2) var(--r3) var(--r4) /
-    var(--r5) var(--r6) var(--r7) var(--r8);
-
-  background: color-mix(in srgb, var(--paper) 62%, transparent);
-  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
-  /* Unprefixed only. Writing the -webkit- twin alongside it made Lightning
-     CSS collapse the pair and keep the prefixed one, so the standard property
-     never reached the browser and the glass computed to `none`. The build
-     adds the prefix itself. */
-  backdrop-filter: blur(18px) saturate(180%);
-  box-shadow:
-    /* the lit top edge */
-    inset 0 1px 0 rgb(255 255 255 / 0.75),
-    /* the body's own weight */
-    0 6px 20px color-mix(in srgb, var(--ink) 11%, transparent),
-    0 1px 2px color-mix(in srgb, var(--ink) 8%, transparent);
-
-  transform:
-    translate3d(0, calc(var(--gone) * -190%), 0)
-    scaleX(var(--pinch))
-    scaleY(var(--stretch));
-  opacity: calc(1 - var(--gone) * 0.9);
-
-  /* No transition on transform or border-radius: both are already rewritten
-     every frame, and a transition chasing a per-frame value lags the scroll. */
-  transition:
-    background-color var(--dur) var(--ease-out),
-    color var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-fast) var(--ease-out);
-  will-change: transform, border-radius;
 }
 
-.blob:hover {
-  background: color-mix(in srgb, var(--paper) 85%, transparent);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.9),
-    0 10px 28px color-mix(in srgb, var(--ink) 16%, transparent);
+/* The underline draws from the left rather than fading in, so the hover has a
+   direction. scaleX on a pseudo-element, so nothing reflows. */
+.tabs a::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: calc(50% - 0.95em);
+  block-size: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease-out);
 }
 
-.blob:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
+.tabs a:hover::after,
+.tabs a:focus-visible::after,
+.tabs a[aria-current='page']::after {
+  transform: scaleX(1);
 }
 
-.blob[aria-current='page'] {
-  background: color-mix(in srgb, var(--ink) 92%, transparent);
-  color: var(--bg);
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--ink) 22%, transparent);
-}
-
-.blob--mark {
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.74rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.blob--mark .dot {
-  inline-size: 0.42rem;
-  block-size: 0.42rem;
+/* The dot sits above the label and is the only colour in the chrome. It rises
+   into place rather than appearing, which is what makes it feel deliberate. */
+.tabs__dot {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 1.05rem;
+  inline-size: 5px;
+  block-size: 5px;
+  margin-inline-start: -2.5px;
   border-radius: 50%;
-  /* The one piece of colour in the chrome. */
   background: var(--spark);
+  opacity: 0;
+  transform: translateY(4px) scale(0.6);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur) var(--ease-out);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .blob {
-    transform: none;
-    opacity: 1;
-    border-radius: 999px;
-  }
+.tabs a:hover .tabs__dot,
+.tabs a:focus-visible .tabs__dot,
+.tabs a[aria-current='page'] .tabs__dot {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-/* Under ~52rem the five blobs stop fitting on one line. They keep their
-   shapes and wrap, rather than shrinking into unreadable pills. */
-@media (max-width: 52rem) {
+/* ── Right end ────────────────────────────────────────────────────────── */
+
+.navbar__end {
+  display: flex;
+  align-items: stretch;
+}
+
+.navbar__meta {
+  display: grid;
+  place-items: center;
+  padding-inline: clamp(1rem, 2vw, 2rem);
+  border-inline-start: 1px solid var(--line);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Flush to the corner, full height, no radius — the block the reference ends
+   its bar with, and the one place ink and paper swap. */
+.navbar__cta {
+  display: grid;
+  place-items: center;
+  padding-inline: clamp(1.2rem, 2.6vw, 2.6rem);
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.94rem;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.navbar__cta:hover {
+  background: color-mix(in srgb, var(--ink) 82%, var(--bg));
+}
+
+@media (max-width: 64rem) {
   .navbar {
-    flex-wrap: wrap;
-    gap: 0.4rem;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'mark end' 'tabs tabs';
+    min-block-size: 0;
   }
-  .blob {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.78rem;
+  .wordmark { grid-area: mark; padding-block: 1rem; }
+  .navbar__end { grid-area: end; }
+  .navbar__meta { display: none; }
+  .tabs {
+    grid-area: tabs;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-inline: var(--gutter);
+    border-block-start: 1px solid var(--line);
   }
+  .tabs a { padding-block: 0.9rem; font-size: 0.92rem; }
+  .tabs__dot { inset-block-start: 0.28rem; }
 }
 
 /* ===========================================================================
@@ -2072,7 +2164,7 @@ li[data-comparable='false'] .bench__fill {
 ::view-transition-group(.page-rise) {
   /* Both snapshots share the stacking context, so z-index below decides which
      page is on top rather than document order. */
-  animation-duration: 520ms;
+  animation-duration: 620ms;
 }
 
 ::view-transition-old(.page-rise),
@@ -2082,36 +2174,56 @@ li[data-comparable='false'] .bench__fill {
 }
 
 ::view-transition-old(.page-rise) {
-  animation: page-leave-up 520ms cubic-bezier(0.83, 0, 0.17, 1) both;
+  animation: page-leave-up 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
   /* The outgoing page sits under the incoming one, so the new page reads as
      arriving over it rather than the old one tearing away. */
   z-index: 0;
 }
 
 ::view-transition-new(.page-rise) {
-  animation: page-enter-up 520ms cubic-bezier(0.83, 0, 0.17, 1) both;
+  animation: page-enter-up 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
   z-index: 1;
+  /* Scaling from the bottom edge, so the panel grows upward into place
+     instead of expanding around its middle. */
+  transform-origin: 50% 100%;
 }
 
 @keyframes page-leave-up {
   to {
-    /* Less than a full height: the old page drifting slightly slower than the
-       new one arriving is what gives the pair a sense of depth. */
-    transform: translateY(-28%);
-    opacity: 0.6;
+    /* Less than a full height, and dimmed. The old page drifting slower than
+       the new one arrives is what gives the pair depth, and staying partly
+       visible is what makes it read as being covered rather than replaced. */
+    transform: translateY(-16%);
+    opacity: 0.45;
   }
 }
 
+/**
+ * The arriving page is an inset panel, not a full-bleed sheet.
+ *
+ * In the reference this is the whole effect: the new page rides up narrower
+ * than the viewport, so its own edges are visible against the old page still
+ * showing at the sides, and only widens to fill once it has landed. Without
+ * the inset there is no outline, and without an outline a white page sliding
+ * over a white page is invisible — which is exactly how this looked before.
+ */
 @keyframes page-enter-up {
   from {
-    transform: translateY(100%);
-    /* A hairline of shadow on the leading edge, so the arriving page has a
-       visible top rather than blending into whatever it covers. */
-    box-shadow: 0 -18px 40px color-mix(in srgb, var(--ink) 18%, transparent);
+    transform: translateY(100%) scale(0.94);
+    box-shadow:
+      0 -1px 0 color-mix(in srgb, var(--ink) 24%, transparent),
+      0 -24px 60px color-mix(in srgb, var(--ink) 26%, transparent);
+  }
+  70% {
+    /* Holds the inset most of the way up, so the edge is on screen long
+       enough to be seen, then opens out over the last third. */
+    transform: translateY(12%) scale(0.965);
   }
   to {
-    transform: translateY(0);
-    box-shadow: 0 -18px 40px transparent;
+    transform: translateY(0) scale(1);
+    box-shadow:
+      0 -1px 0 transparent,
+      0 -24px 60px transparent;
   }
 }
 
