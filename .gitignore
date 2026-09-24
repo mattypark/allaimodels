@@ -11,3 +11,5 @@ dist/
 public/fonts/licensed/
 .cache/
 refresh-report.md
+docs/refs/transition/
+docs/refs/*.mov

@@ -1,28 +1,28 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, ViewTransition } from 'react';
 import { useReducedMotion } from 'framer-motion';
 import gsap from 'gsap';
 
 /**
  * Every navigation makes the new page arrive.
  *
- * Built to what the Tresmares reference measurably does, which took three
- * passes to pin down. There is no exit animation — the outgoing page holds
- * opacity 1 until the browser replaces it, and the pause before the URL
- * changes is network. And the arrival is not a slide: sampling #app every 60ms
- * through a fresh load gives 0.215, 0.53, 0.74, 0.90, 0.97, 1 over about
- * 360ms, with transform and clip-path both staying `none` the whole way.
+ * The page itself travels in a ViewTransition, which is the only mechanism
+ * that can move the outgoing page as well as the incoming one — React only
+ * ever has one page mounted, so everything written here before could produce
+ * an entrance and nothing else.
  *
- * The clip-path wipe that used to be here was a mistake for a second reason.
- * It was written while the site was dark, where a rising edge against
- * near-black is obvious. On the cream palette it was cream revealing over
- * cream — the animation ran correctly and was invisible, which is why it kept
- * reading as "the transition isn't firing".
+ * Finding that took four passes. Three rounds of DOM probing on the reference
+ * said there was no exit animation at all: its outgoing page holds opacity 1
+ * and transform none the whole way through, every time. A screen recording
+ * showed the truth immediately — the old page slides up and off while the new
+ * one rises from below, both on screen at once. That animation lives in the
+ * compositor, where getComputedStyle cannot see it. The DOM was the wrong
+ * instrument, not the wrong reading.
  *
- * So: a deep fade carries the arrival, a short lift gives it direction, and
- * the first sections settle in just behind. The lift is what makes it read as
- * coming from below without needing a wipe to prove it.
+ * What stays here is the second half: once the new page has arrived, its first
+ * sections settle in behind a short fade. That part is genuinely in the DOM on
+ * the reference, measured at 0.215, 0.53, 0.74, 0.90, 0.97, 1 over about 360ms.
  *
  * Reveals animate *from* a visible resting state rather than *to* one. The
  * reference parks elements at opacity 0.0001, which is GSAP's way of keeping
@@ -46,17 +46,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      // Matches the reference's depth and duration. Starting at 0.4, as this
-      // did, is below the threshold where a fade reads as motion at all.
-      tl.fromTo(
-        el,
-        { autoAlpha: 0.15, y: 34 },
-        { autoAlpha: 1, y: 0, duration: 0.5, clearProps: 'transform,opacity,visibility' },
-      );
-
-      // Then the pieces settle just behind it. Only the first few: a stagger
-      // that runs down a long page animates sections the reader cannot see
-      // yet, and they are already past by the time they scroll into view.
+      // The page's own arrival is the view transition's job now. What is left
+      // is the settle: the first sections easing in once it has landed. Only
+      // the first few — a stagger that runs down a long page animates sections
+      // the reader cannot see, and they have finished by the time they scroll
+      // into view.
       if (pieces.length) {
         tl.from(
           pieces.slice(0, 4),
@@ -67,7 +61,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
             stagger: 0.075,
             clearProps: 'transform,opacity,visibility',
           },
-          0.08,
+          0.1,
         );
       }
     }, el);
@@ -75,5 +69,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
     return () => ctx.revert();
   }, [reduced]);
 
-  return <div ref={root}>{children}</div>;
+  return (
+    // A template remounts per navigation, unlike a layout, so enter and exit
+    // both fire here and every route gets the transition without each page
+    // having to opt in.
+    <ViewTransition enter="page-rise" exit="page-rise">
+      <div ref={root}>{children}</div>
+    </ViewTransition>
+  );
 }

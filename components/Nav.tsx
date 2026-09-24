@@ -12,24 +12,40 @@ const LINKS = [
 ];
 
 /**
- * The floating capsule, and the one piece of the page that behaves like a
- * liquid.
+ * The nav, as a handful of separate liquid bodies.
  *
- * It leaves on the way down and returns on the way up, but the interesting
- * part is what happens in between. Three custom properties are written every
- * frame: how far it has travelled, how much it is stretched, and how far its
- * corners have melted. Scroll velocity drives all three, so a flick sends it
- * away long and thin and a nudge barely deforms it — the body reads as
- * something with surface tension rather than a box being hidden.
+ * It used to be one capsule that translated away on scroll, which read as a
+ * box being hidden. Each item is now its own blob with its own surface, and
+ * three things make them behave like liquid rather than like rounded
+ * rectangles:
  *
- * Velocity is smoothed towards the raw value rather than used directly. Raw
- * per-frame deltas are noisy enough on a trackpad that the capsule jitters,
- * and a spring that chases a jittery target looks broken rather than fluid.
+ *   Shape. A CSS border-radius takes eight values — four horizontal radii and
+ *   four vertical — and driving all eight independently is what produces an
+ *   organic outline rather than a pill. Each blob gets its own set, each on
+ *   its own sine, and the frequencies are deliberately irrational multiples of
+ *   each other so the eight never come back into phase. The outline therefore
+ *   never repeats, which is the difference between something that looks alive
+ *   and something that looks like a loop.
  *
- * It also sits over a pale hero at rest and over content once you scroll, so
- * it carries its own contrast rather than inheriting the page's — otherwise
- * the labels vanish at exactly the wrong scroll position.
+ *   Difference. Every blob is seeded from its index, so no two share a phase
+ *   and the row never pulses in unison.
+ *
+ *   Response. Scroll velocity feeds the amplitude, so the blobs are nearly
+ *   still when the page is and go visibly wobbly when it moves — surface
+ *   tension being disturbed. They leave on the way down and return on the way
+ *   up, each on a slightly different delay so the row breaks up rather than
+ *   sliding away as a unit.
+ *
+ * All of it is border-radius, transform and opacity, written to custom
+ * properties in one rAF pass. None of those trigger layout.
  */
+
+/** Per-blob phase offsets. Irrational-ish so the eight radii never re-align. */
+const FREQ = [0.00041, 0.00053, 0.00037, 0.00061, 0.00047, 0.00059, 0.00043, 0.00067];
+
+/** Irregular gaps between blobs. Ten pixels is the floor, not the average. */
+const GAPS = [26, 12, 38, 17, 30];
+
 export default function Nav() {
   const pathname = usePathname();
   const [lifted, setLifted] = useState(false);
@@ -38,64 +54,60 @@ export default function Nav() {
   useEffect(() => {
     const el = wrap.current;
     if (!el) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const blobs = [...el.querySelectorAll<HTMLElement>('[data-blob]')];
 
     let last = window.scrollY;
     let velocity = 0;
-    let hidden = 0; // 0 = fully present, 1 = fully gone
+    let hidden = 0; // 0 = present, 1 = gone
     let raf = 0;
-    let queued = false;
 
-    function frame() {
-      raf = 0;
+    function frame(now: number) {
       const y = window.scrollY;
       const delta = y - last;
       last = y;
 
       setLifted(y > 24);
 
-      if (reduced) return;
-
       // Chase the raw delta rather than take it. Trackpad deltas are noisy
-      // enough that a direct read makes the capsule shiver.
+      // enough that reading them directly makes the blobs shiver.
       velocity += (delta - velocity) * 0.18;
 
-      // Past the hero it hides on the way down and returns on the way up. The
-      // top of the page always shows it, whatever the direction.
       const target = y < 120 ? 0 : velocity > 0.4 ? 1 : velocity < -0.4 ? 0 : hidden;
-      hidden += (target - hidden) * 0.12;
+      hidden += (target - hidden) * 0.1;
 
-      const speed = Math.min(Math.abs(velocity) / 34, 1);
+      const speed = Math.min(Math.abs(velocity) / 30, 1);
+      // A resting wobble so the row is never quite still, plus whatever the
+      // scroll is adding.
+      const amp = 6 + speed * 16;
 
-      el!.style.setProperty('--gone', hidden.toFixed(3));
-      // Stretched along its travel and pinched across it — the shape a falling
-      // droplet takes. Both ease out with speed.
-      el!.style.setProperty('--stretch', (1 + speed * 0.14).toFixed(3));
-      el!.style.setProperty('--pinch', (1 - speed * 0.07).toFixed(3));
-      // Corners melt from a pill towards a blob as it moves.
-      el!.style.setProperty('--melt', `${(50 - speed * 22).toFixed(1)}%`);
+      blobs.forEach((blob, i) => {
+        const seed = i * 1.7;
 
-      // Keep running while anything is still settling.
-      if (Math.abs(velocity) > 0.05 || Math.abs(target - hidden) > 0.002) schedule();
+        // Eight radii, each on its own sine. Centred near 50% — a blob, not a
+        // rectangle with rounded corners.
+        for (let k = 0; k < 8; k += 1) {
+          const v = 50 + Math.sin(now * FREQ[k] + seed + k * 0.9) * amp;
+          blob.style.setProperty(`--r${k + 1}`, `${v.toFixed(1)}%`);
+        }
+
+        // Each blob leaves on its own delay, so the row breaks apart.
+        const lag = 1 - i * 0.07;
+        const gone = Math.max(0, Math.min(1, hidden * lag));
+        blob.style.setProperty('--gone', gone.toFixed(3));
+        blob.style.setProperty('--stretch', (1 + speed * 0.1 * lag).toFixed(3));
+        blob.style.setProperty('--pinch', (1 - speed * 0.05).toFixed(3));
+      });
+
+      raf = requestAnimationFrame(frame);
     }
 
-    function schedule() {
-      if (!raf) raf = requestAnimationFrame(frame);
-    }
-
-    function onScroll() {
-      if (!queued) {
-        queued = true;
-        requestAnimationFrame(() => {
-          queued = false;
-        });
-      }
-      schedule();
-    }
-
+    raf = requestAnimationFrame(frame);
+    const onScroll = () => setLifted(window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('scroll', onScroll);
@@ -104,30 +116,29 @@ export default function Nav() {
 
   return (
     <header className="nav-wrap" data-lifted={lifted} ref={wrap}>
-      <nav className="capsule" aria-label="Primary">
-        <Link href="/" className="wordmark">
+      {/* One row, and no duplicate Compare — the tab and the button were the
+          same destination twice. Gaps are set per item rather than by a single
+          `gap`, so the row is unevenly spaced the way a set of separate bodies
+          would be, with 10px as the floor. */}
+      <nav className="navbar" aria-label="Primary">
+        <Link href="/" className="blob blob--mark" data-blob>
           <span className="dot" aria-hidden="true" />
           <span className="name">AAM</span>
         </Link>
 
-        <ul className="tabs">
-          {LINKS.map((l) => (
-            <li key={l.href}>
-              <Link
-                href={l.href}
-                aria-current={pathname.startsWith(l.href) ? 'page' : undefined}
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <Link href="/compare" className="cta nav-cta">
-          Compare
-        </Link>
+        {LINKS.map((l, i) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="blob"
+            data-blob
+            style={{ marginInlineStart: `${GAPS[i % GAPS.length]}px` }}
+            aria-current={pathname.startsWith(l.href) ? 'page' : undefined}
+          >
+            {l.label}
+          </Link>
+        ))}
       </nav>
-
     </header>
   );
 }

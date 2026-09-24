@@ -11,12 +11,23 @@
    =========================================================================== */
 
 :root {
-  --bg: #f0eee6;
-  --paper: #faf9f5;
-  --ink: #141413;
-  --muted: #6b6862;
-  --accent: #d97757;
+  /* Black and white, because the site is about nineteen labs and should not
+     wear any one of their palettes. It used to be Claude's cream and coral,
+     which quietly framed the whole comparison as Anthropic's. Neutral chrome
+     also gives every lab accent somewhere to land: a coral highlight reads as
+     Anthropic's on white and as nothing at all on cream. */
+  --bg: #ffffff;
+  --paper: #fafafa;
+  --ink: #0a0a0a;
+  --muted: #6e6e6e;
+
+  /* The site's own accent is its ink. Colour on this site means a lab, not a
+     brand — a red button would be one more hue competing with nineteen. */
+  --accent: #0a0a0a;
   --accent-ink: #ffffff;
+
+  /* The one exception, and it is four pixels wide: the dot in the wordmark. */
+  --spark: #e5352b;
   /* Solid-fill controls only.
      White on any lab's brand accent fails WCAG AA for small text — Claude
      coral lands at 3.12:1, OpenAI green at 3.20, Google blue at 3.56, all
@@ -25,7 +36,10 @@
      bright accent stays for dots, bars, rules and links, where it sits on the
      page background rather than under white text. */
   --accent-strong: color-mix(in srgb, var(--accent) 65%, #000);
-  --line: rgb(20 20 19 / 0.12);
+  /* A lab's own accent, whatever the surface. Set to --accent by default so a
+     component can tint by it without knowing whether a lab is in scope. */
+  --lab-accent: var(--accent);
+  --line: rgb(10 10 10 / 0.11);
   /* A true near-black ground, kept for lab themes that ask for one — xAI and
      Moonshot both ship dark. No shared surface uses it any more: the hero,
      footer and timeline follow the palette like everything else. */
@@ -67,10 +81,12 @@
    choice rather than a system default, so what ships is what was designed. */
 
 :root[data-theme='dark'] {
-  --bg: #0d0d0c;
-  --paper: #171715;
-  --ink: #f5f3ee;
-  --muted: #96938c;
+  --bg: #0a0a0a;
+  --paper: #141414;
+  --ink: #f5f5f5;
+  --muted: #8f8f8f;
+  --accent: #f5f5f5;
+  --accent-ink: #0a0a0a;
   --line: color-mix(in srgb, var(--ink) 14%, transparent);
   color-scheme: dark;
 }
@@ -86,6 +102,9 @@
   /* Recomputed here: a custom property resolves var() against the element it
      is declared on, so the :root definition would keep the default accent. */
   --accent-strong: color-mix(in srgb, var(--accent) 65%, #000);
+  /* A lab's own accent, whatever the surface. Set to --accent by default so a
+     component can tint by it without knowing whether a lab is in scope. */
+  --lab-accent: var(--accent);
   background: var(--bg);
   color: var(--ink);
   transition:
@@ -1341,112 +1360,120 @@ li[data-comparable='false'] .bench__fill {
   pointer-events: none;
 }
 
-/* Liquid scroll. --gone, --stretch, --pinch and --melt are written by Nav on
-   every frame; nothing else reads them, and all four feed transform and
-   border-radius only, so the capsule never causes layout. */
-.capsule {
+.navbar {
   pointer-events: auto;
-  transform:
-    translateY(calc(var(--gone, 0) * -180%))
-    scaleX(var(--pinch, 1))
-    scaleY(var(--stretch, 1));
-  opacity: calc(1 - var(--gone, 0) * 0.85);
   display: flex;
   align-items: center;
-  gap: clamp(0.5rem, 2vw, 2rem);
-  width: 100%;
-  max-width: 62rem;
-  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
-  border-radius: var(--melt, 50%) / 50%;
-  background: color-mix(in srgb, var(--paper) 86%, transparent);
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--ink) 10%, transparent);
-  backdrop-filter: blur(20px) saturate(1.6);
+  justify-content: center;
+  flex-wrap: nowrap;
+  max-inline-size: 100%;
+}
+
+/* ── Liquid glass ─────────────────────────────────────────────────────────
+   Apple's material, as far as the platform allows: a translucent body that
+   samples and saturates what is behind it, a bright hairline along the top
+   edge where light would catch, and a soft shadow underneath so it reads as
+   floating rather than printed. The organic border-radius is what stops it
+   being a pill — eight radii, each on its own sine, written by Nav. */
+
+.blob {
+  --gone: 0;
+  --stretch: 1;
+  --pinch: 1;
+  --r1: 50%; --r2: 50%; --r3: 50%; --r4: 50%;
+  --r5: 50%; --r6: 50%; --r7: 50%; --r8: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.62rem 1.15rem;
+  white-space: nowrap;
+  font-size: 0.86rem;
   color: var(--ink);
-  /* No transition on transform or border-radius: those are already rewritten
+
+  border-radius: var(--r1) var(--r2) var(--r3) var(--r4) /
+    var(--r5) var(--r6) var(--r7) var(--r8);
+
+  background: color-mix(in srgb, var(--paper) 62%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+  /* Unprefixed only. Writing the -webkit- twin alongside it made Lightning
+     CSS collapse the pair and keep the prefixed one, so the standard property
+     never reached the browser and the glass computed to `none`. The build
+     adds the prefix itself. */
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow:
+    /* the lit top edge */
+    inset 0 1px 0 rgb(255 255 255 / 0.75),
+    /* the body's own weight */
+    0 6px 20px color-mix(in srgb, var(--ink) 11%, transparent),
+    0 1px 2px color-mix(in srgb, var(--ink) 8%, transparent);
+
+  transform:
+    translate3d(0, calc(var(--gone) * -190%), 0)
+    scaleX(var(--pinch))
+    scaleY(var(--stretch));
+  opacity: calc(1 - var(--gone) * 0.9);
+
+  /* No transition on transform or border-radius: both are already rewritten
      every frame, and a transition chasing a per-frame value lags the scroll. */
   transition:
     background-color var(--dur) var(--ease-out),
-    box-shadow var(--dur) var(--ease-out);
-  will-change: transform;
+    color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+  will-change: transform, border-radius;
+}
+
+.blob:hover {
+  background: color-mix(in srgb, var(--paper) 85%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.9),
+    0 10px 28px color-mix(in srgb, var(--ink) 16%, transparent);
+}
+
+.blob:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.blob[aria-current='page'] {
+  background: color-mix(in srgb, var(--ink) 92%, transparent);
+  color: var(--bg);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--ink) 22%, transparent);
+}
+
+.blob--mark {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blob--mark .dot {
+  inline-size: 0.42rem;
+  block-size: 0.42rem;
+  border-radius: 50%;
+  /* The one piece of colour in the chrome. */
+  background: var(--spark);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .capsule {
+  .blob {
     transform: none;
     opacity: 1;
     border-radius: 999px;
   }
 }
 
-.nav-wrap[data-lifted='true'] .capsule {
-  background: color-mix(in srgb, var(--paper) 97%, transparent);
-  box-shadow: 0 4px 18px color-mix(in srgb, var(--ink) 14%, transparent);
-}
-
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.wordmark .dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: #d97757;
-}
-
-.tabs {
-  display: flex;
-  align-items: center;
-  gap: 0.15rem;
-  list-style: none;
-  margin: 0 0 0 auto;
-  padding: 0;
-}
-
-.tabs a {
-  display: block;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.82rem;
-  white-space: nowrap;
-  transition: background-color var(--dur-fast) var(--ease-out);
-}
-.tabs a:hover {
-  background: rgb(20 20 19 / 0.07);
-}
-.tabs a[aria-current='page'] {
-  background: rgb(20 20 19 / 0.1);
-}
-
-.nav-cta {
-  padding: 0.6rem 1rem;
-  border-radius: 999px;
-}
-
-@media (max-width: 40rem) {
-  .nav-cta {
-    display: none;
+/* Under ~52rem the five blobs stop fitting on one line. They keep their
+   shapes and wrap, rather than shrinking into unreadable pills. */
+@media (max-width: 52rem) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.4rem;
   }
-  .capsule {
-    padding-inline: 0.9rem 0.4rem;
-  }
-  .tabs a {
-    padding-inline: 0.55rem;
+  .blob {
+    padding: 0.5rem 0.85rem;
     font-size: 0.78rem;
-  }
-}
-
-@media (max-width: 24rem) {
-  .wordmark .name {
-    display: none;
   }
 }
 
@@ -2026,4 +2053,71 @@ li[data-comparable='false'] .bench__fill {
   font-size: var(--step-0);
   line-height: 1.6;
   color: var(--ink);
+}
+
+
+/* ===========================================================================
+   Page transition
+
+   Both pages exist at once during a navigation: the browser snapshots the
+   outgoing one, swaps the DOM, and animates the two snapshots. That is the
+   only way to get an outgoing page that moves — a React tree only ever has one
+   page mounted, which is why every attempt to animate this from inside the app
+   produced an entrance and nothing else.
+
+   Matched to the reference, read off a screen recording rather than the DOM:
+   the old page travels up and off while the new one arrives from below.
+   =========================================================================== */
+
+::view-transition-group(.page-rise) {
+  /* Both snapshots share the stacking context, so z-index below decides which
+     page is on top rather than document order. */
+  animation-duration: 520ms;
+}
+
+::view-transition-old(.page-rise),
+::view-transition-new(.page-rise) {
+  /* The default cross-fade would run underneath these and muddy both. */
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(.page-rise) {
+  animation: page-leave-up 520ms cubic-bezier(0.83, 0, 0.17, 1) both;
+  /* The outgoing page sits under the incoming one, so the new page reads as
+     arriving over it rather than the old one tearing away. */
+  z-index: 0;
+}
+
+::view-transition-new(.page-rise) {
+  animation: page-enter-up 520ms cubic-bezier(0.83, 0, 0.17, 1) both;
+  z-index: 1;
+}
+
+@keyframes page-leave-up {
+  to {
+    /* Less than a full height: the old page drifting slightly slower than the
+       new one arriving is what gives the pair a sense of depth. */
+    transform: translateY(-28%);
+    opacity: 0.6;
+  }
+}
+
+@keyframes page-enter-up {
+  from {
+    transform: translateY(100%);
+    /* A hairline of shadow on the leading edge, so the arriving page has a
+       visible top rather than blending into whatever it covers. */
+    box-shadow: 0 -18px 40px color-mix(in srgb, var(--ink) 18%, transparent);
+  }
+  to {
+    transform: translateY(0);
+    box-shadow: 0 -18px 40px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(.page-rise),
+  ::view-transition-new(.page-rise) {
+    animation: none;
+  }
 }
