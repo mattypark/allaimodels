@@ -75,17 +75,15 @@ export default function CostBoard({ cheapest, roomiest, priced, total, scored }:
         <article className="board__panel">
           <header>
             <h3>Cheapest to run</h3>
-            <p className="board__rule mono">$ per 1M in + 1M out</p>
+            <p className="board__rule mono">
+              $ per 1M in + 1M out · {priced} of {total} priced
+            </p>
           </header>
           <ol>
             {cheapest.map((r) => (
               <Row key={`${r.lab}/${r.id}`} row={r} value={fmt(r.blended)} />
             ))}
           </ol>
-          <footer className="board__note">
-            Ranked across {priced} of {total} models — the rest carry no sourced price. An
-            open-weight model has none from its lab at all; you pay for the machine instead.
-          </footer>
         </article>
 
         <article className="board__panel">
@@ -106,10 +104,6 @@ export default function CostBoard({ cheapest, roomiest, priced, total, scored }:
               />
             ))}
           </ol>
-          <footer className="board__note">
-            Window size divided by blended price. It measures what you can put in front of a
-            model for a dollar, not how well it reads any of it.
-          </footer>
         </article>
 
         <article className="board__panel board__panel--empty">

@@ -76,36 +76,11 @@ export default function Home() {
     m.benchmarks.some((b) => b.comparable),
   ).length;
 
-  // The three most recent releases per stat, named under each number. A count
-  // on its own reads as marketing; three real names make it checkable.
-  const newest = models.slice(0, 3).map((m) => m.name);
-  const biggestLabs = [...labs]
-    .map((l) => ({ name: l.name, n: models.filter((m) => m.lab === l.slug).length }))
-    .sort((a, b) => b.n - a.n)
-    .slice(0, 3)
-    .map((l) => l.name);
-  const scoredSuites = [
-    ...new Set(models.flatMap((m) => m.benchmarks.map((b) => b.suite))),
-  ]
-    .map((slug) => suites.find((s) => s.slug === slug)?.name)
-    .filter((n): n is string => Boolean(n))
-    .slice(0, 3);
-  const sourceHosts = [...sources]
-    .map((u) => {
-      try {
-        return new URL(u).hostname.replace(/^www\./, '');
-      } catch {
-        return null;
-      }
-    })
-    .filter((h): h is string => Boolean(h));
-  const topHosts = [...new Set(sourceHosts)].slice(0, 3);
-
   const stats = [
-    { value: models.length, label: 'models indexed', examples: newest },
-    { value: labs.length, label: 'labs covered', examples: biggestLabs },
-    { value: benchmarkCount, label: 'sourced results', examples: scoredSuites },
-    { value: sources.size, label: 'cited pages', examples: topHosts },
+    { value: models.length, label: 'models indexed' },
+    { value: labs.length, label: 'labs covered' },
+    { value: benchmarkCount, label: 'sourced results' },
+    { value: sources.size, label: 'cited pages' },
   ];
 
   return (

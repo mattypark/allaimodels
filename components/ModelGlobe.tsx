@@ -47,17 +47,29 @@ const DOT_LENS = 5.6;
 const BULGE = 15;
 const SPIN = 0.00022; // radians per ms — one turn is about eight minutes
 
+/** Height reserved at the bottom of the stage for the read-out. */
+const READOUT = 96;
+
 type Placed = GlobePoint & { x: number; y: number; z: number };
 
 /**
  * Where each model sits.
  *
- * Latitude is the release date — the newest models ride the top of the sphere.
- * Longitude is the lab: each lab owns a wedge, and its models fill that wedge
- * on a golden-angle walk so a prolific lab reads as a populated band rather
- * than a stack. A wedge is 88% of its share, leaving a visible gap between
- * labs; with three labs that is three broad regions, with twenty it is a
- * near-continuous shell, and the lens tells them apart either way.
+ * Latitude is release order and longitude is the lab, but latitude is taken
+ * from a model's *rank* in the ordering rather than from its date directly.
+ * Mapping the date straight to an angle piled two thirds of the index onto
+ * the bottom third of the sphere, because releases are not spread evenly
+ * through time — there are far more models from the last two years than from
+ * the three before them. The sphere came out bottom-heavy and looked broken.
+ *
+ * Ranking instead, through the inverse-cosine that makes a uniform sphere,
+ * gives every band the same area: newest at the top, oldest at the bottom,
+ * and an even shell in between. The ordering still reads exactly the same;
+ * only the spacing is fixed.
+ *
+ * Longitude gives each lab a wedge, filled on a golden-angle walk so a
+ * prolific lab reads as a populated band rather than a stack. A wedge is 88%
+ * of its share, leaving a visible gap between labs.
  *
  * Deterministic throughout. Random placement would move every dot on each
  * render, and a sphere that reshuffles is decoration, not a chart.
@@ -70,19 +82,26 @@ function place(points: GlobePoint[]): Placed[] {
   const base = new Map(labs.map((lab, i) => [lab, (i / labs.length) * Math.PI * 2]));
   const seen = new Map<string, number>();
 
+  // Newest first, so rank 0 is the top of the sphere.
+  const order = [...points]
+    .sort((a, b) => b.t - a.t)
+    .reduce((m, p, i) => m.set(p, i), new Map<GlobePoint, number>());
+  const n = Math.max(points.length, 1);
+
   return points.map((p) => {
-    const n = seen.get(p.lab) ?? 0;
-    seen.set(p.lab, n + 1);
+    const k = seen.get(p.lab) ?? 0;
+    seen.set(p.lab, k + 1);
 
     // Golden angle wrapped into the lab's wedge: successive models land far
     // apart inside the band instead of clumping.
-    const within = ((n * GOLDEN) % wedge) - wedge / 2;
+    const within = ((k * GOLDEN) % wedge) - wedge / 2;
     const theta = (base.get(p.lab) ?? 0) + within;
 
-    // Latitude from the release date, clamped off the poles, then nudged by
-    // the same walk so two same-day releases don't overlap exactly.
-    const drift = (((n * GOLDEN) % 1) - 0.5) * 0.07;
-    const phi = Math.min(0.94, Math.max(0.06, 0.1 + (1 - p.t) * 0.8 + drift)) * Math.PI;
+    // Equal-area latitude from the rank, kept just off both poles so the caps
+    // do not become a single stacked point.
+    const rank = order.get(p) ?? 0;
+    const y = 1 - (2 * (rank + 0.5)) / n;
+    const phi = Math.acos(Math.max(-0.985, Math.min(0.985, y)));
 
     return {
       ...p,
@@ -151,8 +170,11 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
       if (!reduced) angle += dt * SPIN;
 
       const cx = w / 2;
-      const cy = h / 2;
-      const r = Math.min(w, h) * 0.5;
+      // The read-out occupies the bottom of the stage. Centring on the full
+      // height pushed the sphere down onto it; centring on the height above
+      // the caption keeps the sphere optically in the middle of its own space.
+      const cy = (h - READOUT) / 2;
+      const r = Math.min(w, h - READOUT) * 0.46;
       ctx!.clearRect(0, 0, w, h);
 
       const cos = Math.cos(angle);

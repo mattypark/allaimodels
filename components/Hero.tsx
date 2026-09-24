@@ -5,7 +5,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import ModelGlobe, { type GlobePoint } from './ModelGlobe';
 
-export type HeroStat = { value: number; label: string; examples: string[] };
+export type HeroStat = { value: number; label: string };
 
 /**
  * The hero background is the dataset.
@@ -16,9 +16,10 @@ export type HeroStat = { value: number; label: string; examples: string[] };
  * sphere by release date and lab. It can never be stock, and it is accurate by
  * construction — if a model is missing from the data it is missing from here.
  *
- * Four stat cards float around it rather than sitting in a row, each naming
- * three real examples under its number so the count can be checked rather than
- * believed.
+ * Four stat cards float around it rather than sitting in a row. They carry a
+ * number and a label and nothing else — the three example names that used to
+ * sit under each one made every card a different height and turned the orbit
+ * into four paragraphs competing with the globe.
  */
 export default function Hero({
   points,
@@ -76,13 +77,6 @@ export default function Hero({
           <figure className={`stat stat--${i + 1}`} key={s.label} data-stat>
             <span className="stat__value">{s.value.toLocaleString()}</span>
             <figcaption className="stat__label">{s.label}</figcaption>
-            {s.examples.length > 0 && (
-              <ul className="stat__eg">
-                {s.examples.map((e) => (
-                  <li key={e}>{e}</li>
-                ))}
-              </ul>
-            )}
           </figure>
         ))}
       </div>

@@ -1482,12 +1482,15 @@ li[data-comparable='false'] .bench__fill {
 .globe__read {
   position: absolute;
   inset-inline: 0;
-  inset-block-end: 0;
+  /* The canvas reserves 96px at the bottom of the stage for this. Sitting the
+     caption inside that band keeps it off the sphere instead of under its rim. */
+  inset-block-end: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
-  min-height: 2.6rem;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  min-height: 4rem;
   text-align: center;
   pointer-events: none;
 }
@@ -1507,14 +1510,36 @@ li[data-comparable='false'] .bench__fill {
   position: absolute;
   z-index: 1;
   margin: 0;
-  padding: 0.85rem 1.1rem;
+  padding: 0.9rem 1.15rem;
   border: 1px solid rgb(245 243 238 / 0.1);
   border-radius: 0.9rem;
   background: rgb(245 243 238 / 0.04);
   /* No blur: a backdrop-filter over a canvas that repaints every frame forces
      the whole stage to recomposite, and the globe drops frames on a laptop. */
   backdrop-filter: none;
-  pointer-events: none;
+  transition:
+    transform var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out),
+    background-color var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+/* The cards sit over the globe, so they must not swallow the lens. Only the
+   card's own box takes the pointer; the gaps between them stay transparent to
+   the canvas underneath. */
+.stat:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgb(245 243 238 / 0.32);
+  background: rgb(245 243 238 / 0.08);
+  box-shadow:
+    0 0 0 1px rgb(245 243 238 / 0.14),
+    0 10px 34px rgb(245 243 238 / 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat:hover {
+    transform: none;
+  }
 }
 
 .stat__value {
@@ -1546,7 +1571,7 @@ li[data-comparable='false'] .bench__fill {
 
 /* Asymmetric on purpose — four corners of a rectangle would read as a table,
    and the point is that the numbers orbit the thing they describe. */
-.stat { max-width: 13.5rem; }
+.stat { max-width: 11rem; }
 
 /* Pulled in off the page edges so the four numbers orbit the globe instead of
    pinning the corners of the viewport. The inline offsets are percentages of
