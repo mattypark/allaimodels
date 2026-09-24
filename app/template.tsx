@@ -15,9 +15,12 @@ import gsap from 'gsap';
  * that in a stagger. It reads as fast precisely because nothing waits on the
  * page being left.
  *
- * So this replaces the clip-path wipe that was here. A wipe is one gesture
- * applied to a rectangle; this is the page putting itself together, which is
- * the thing worth having.
+ * The rise is kept on top of that, because it is the part Matthew asked for
+ * and the reference's fade alone reads as a page that simply appeared. It is
+ * a clip-path wipe from the bottom edge plus a short lift, not a translate of
+ * a whole viewport height: sliding the full height would briefly make the
+ * document taller than itself, which fights Lenis and flickers the scrollbar.
+ * Clipping changes no layout at all.
  *
  * Reveals animate *from* a visible resting state rather than *to* one. Starting
  * hidden — the reference parks elements at opacity 0.0001 — means a failed
@@ -40,8 +43,20 @@ export default function Template({ children }: { children: React.ReactNode }) {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      // The whole page carries the arrival.
-      tl.fromTo(el, { autoAlpha: 0.45 }, { autoAlpha: 1, duration: 0.26, ease: 'power1.out' });
+      // The page rises into place and fades up at the same time.
+      tl.fromTo(
+        el,
+        { clipPath: 'inset(100% 0 0 0)', y: 44, autoAlpha: 0.4 },
+        {
+          clipPath: 'inset(0% 0 0 0)',
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.58,
+          // The fade finishes early so the page is readable while the last of
+          // the wipe is still travelling.
+          onStart: () => gsap.to(el, { autoAlpha: 1, duration: 0.26, ease: 'power1.out' }),
+        },
+      );
 
       // Then the pieces settle just behind it. Only the first few: a stagger
       // that runs down a long page animates sections the reader cannot see
@@ -50,7 +65,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         tl.from(
           pieces.slice(0, 4),
           { y: 26, autoAlpha: 0, duration: 0.55, stagger: 0.07, clearProps: 'transform,opacity,visibility' },
-          0.06,
+          0.12,
         );
       }
     }, el);

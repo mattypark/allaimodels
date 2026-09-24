@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import LabCard from '@/components/LabCard';
+import LabOrbit from '@/components/LabOrbit';
 import CostBoard, { type CostRow } from '@/components/CostBoard';
 import { getLabs, getModels, datedModels, getSuites } from '@/lib/data';
 
@@ -76,6 +76,20 @@ export default function Home() {
     m.benchmarks.some((b) => b.comparable),
   ).length;
 
+  // The same shape /labs builds, so one component serves both.
+  const orbit = labs.map((lab) => {
+    const mine = models.filter((m) => m.lab === lab.slug);
+    const newest = [...mine].sort((a, b) => b.released.localeCompare(a.released))[0];
+    return {
+      slug: lab.slug,
+      name: lab.name,
+      accent: lab.brand.accent,
+      current: mine.filter((m) => m.status === 'current' || m.status === 'preview').length,
+      total: mine.length,
+      latest: newest ? { name: newest.name, released: newest.released } : undefined,
+    };
+  });
+
   const stats = [
     { value: models.length, label: 'models indexed' },
     { value: labs.length, label: 'labs covered' },
@@ -108,19 +122,11 @@ export default function Home() {
           <h2>Who is actually building the frontier.</h2>
           <p>
             {labs.length} labs, every model each one shipped, and the source behind every
-            figure. Hover a card and the page takes that lab&rsquo;s own colours and type.
+            figure. Hover a mark and the page takes that lab&rsquo;s own colour.
           </p>
         </div>
 
-        <div className="lab-grid">
-          {labs.map((lab) => (
-            <LabCard
-              key={lab.slug}
-              lab={lab}
-              models={models.filter((m) => m.lab === lab.slug)}
-            />
-          ))}
-        </div>
+        <LabOrbit labs={orbit} />
       </section>
 
       <section className="section shell">

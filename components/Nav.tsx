@@ -34,7 +34,7 @@ export default function Nav() {
       <nav className="capsule" aria-label="Primary">
         <Link href="/" className="wordmark">
           <span className="dot" aria-hidden="true" />
-          <span className="name">allaimodels</span>
+          <span className="name">AAM</span>
         </Link>
 
         <ul className="tabs">

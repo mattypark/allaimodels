@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: lab.name,
     description: lab.summary,
-    openGraph: { title: `${lab.name} — allaimodels`, description: lab.summary },
+    openGraph: { title: `${lab.name} — AAM`, description: lab.summary },
   };
 }
 

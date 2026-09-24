@@ -153,10 +153,14 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
     let nearest: GlobePoint | null = null;
 
     function size() {
-      const r = host!.getBoundingClientRect();
+      // clientWidth/Height, not getBoundingClientRect. The hero entrance
+      // animates this element from scale 0.92, and a bounding rect reports the
+      // *transformed* box — so the first measurement baked a canvas 110px
+      // narrower than its host, which then drew the sphere 55px left of
+      // centre for the rest of the visit. Layout size is transform-independent.
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = Math.max(1, Math.round(r.width));
-      h = Math.max(1, Math.round(r.height));
+      w = Math.max(1, host!.clientWidth);
+      h = Math.max(1, host!.clientHeight);
       cv!.width = Math.round(w * dpr);
       cv!.height = Math.round(h * dpr);
       cv!.style.width = `${w}px`;

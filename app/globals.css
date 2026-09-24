@@ -26,6 +26,9 @@
      page background rather than under white text. */
   --accent-strong: color-mix(in srgb, var(--accent) 65%, #000);
   --line: rgb(20 20 19 / 0.12);
+  /* A true near-black ground, kept for lab themes that ask for one — xAI and
+     Moonshot both ship dark. No shared surface uses it any more: the hero,
+     footer and timeline follow the palette like everything else. */
   --void: #0d0d0c;
   --void-ink: #f5f3ee;
 
@@ -54,24 +57,17 @@
   color-scheme: light;
 }
 
-/* System default: dark OS preference wins unless the viewer chose light. */
-:root:not([data-theme='light']) {
-  @media (prefers-color-scheme: dark) {
-    --bg: #0d0d0c;
-    --paper: #171715;
-    --ink: #f5f3ee;
-    --muted: #96938c;
-    --line: rgb(245 243 238 / 0.14);
-    color-scheme: dark;
-  }
-}
+/* The site is light. It used to follow the OS, which meant most visitors —
+   and the person who commissioned it — only ever saw the dark palette, and
+   every surface had been hand-tuned for that one case. Dark is now an explicit
+   choice rather than a system default, so what ships is what was designed. */
 
 :root[data-theme='dark'] {
   --bg: #0d0d0c;
   --paper: #171715;
   --ink: #f5f3ee;
   --muted: #96938c;
-  --line: rgb(245 243 238 / 0.14);
+  --line: color-mix(in srgb, var(--ink) 14%, transparent);
   color-scheme: dark;
 }
 
@@ -236,8 +232,9 @@ img {
    =========================================================================== */
 
 footer {
-  background: var(--void);
-  color: var(--void-ink);
+  background: var(--paper);
+  color: var(--ink);
+  border-block-start: 1px solid var(--line);
   padding-block: var(--rhythm) 2.5rem;
   margin-block-start: var(--rhythm);
 }
@@ -259,7 +256,7 @@ footer .claim {
   margin-block-start: 0.9rem;
   max-width: 44ch;
   font-size: var(--step-0);
-  color: rgb(245 243 238 / 0.72);
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
 }
 
 footer nav ul {
@@ -272,24 +269,24 @@ footer nav ul {
 
 footer nav a {
   font-size: var(--step-0);
-  color: rgb(245 243 238 / 0.72);
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
   transition: color var(--dur-fast) var(--ease-out);
 }
 footer nav a:hover {
-  color: var(--void-ink);
+  color: var(--ink);
 }
 
 footer .legal {
   margin-block-start: 3.5rem;
   padding-block-start: 1.5rem;
-  border-block-start: 1px solid rgb(245 243 238 / 0.14);
+  border-block-start: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 2rem;
   justify-content: space-between;
   align-items: baseline;
   font-size: var(--step--1);
-  color: rgb(245 243 238 / 0.5);
+  color: color-mix(in srgb, var(--ink) 50%, transparent);
 }
 footer .legal p {
   max-width: 62ch;
@@ -891,8 +888,8 @@ li[data-comparable='false'] .bench__fill {
    =========================================================================== */
 
 .tl {
-  background: var(--void);
-  color: var(--void-ink);
+  background: var(--paper);
+  color: var(--ink);
   overflow: hidden;
 }
 
@@ -934,7 +931,7 @@ li[data-comparable='false'] .bench__fill {
 
 .tl__lede,
 .tl__end p:last-child {
-  color: rgb(245 243 238 / 0.66);
+  color: color-mix(in srgb, var(--ink) 66%, transparent);
   font-size: var(--step-0);
   line-height: 1.5;
   max-width: 34ch;
@@ -944,13 +941,13 @@ li[data-comparable='false'] .bench__fill {
   flex: 0 0 auto;
   position: relative;
   padding-block-start: 2rem;
-  border-block-start: 1px solid rgb(245 243 238 / 0.18);
+  border-block-start: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
 }
 
 @media (min-width: 60rem) {
   .tl__year {
     border-block-start: 0;
-    border-inline-start: 1px solid rgb(245 243 238 / 0.18);
+    border-inline-start: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
     padding: 0 0 0 2rem;
     align-self: stretch;
     display: flex;
@@ -963,7 +960,7 @@ li[data-comparable='false'] .bench__fill {
   font-family: var(--font-mono), monospace;
   font-size: 0.68rem;
   letter-spacing: 0.24em;
-  color: rgb(245 243 238 / 0.45);
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
   margin-block-end: 1.2rem;
 }
 
@@ -993,12 +990,12 @@ li[data-comparable='false'] .bench__fill {
   transition: background-color var(--dur-fast) var(--ease-out);
 }
 .tl__list a:hover {
-  background: rgb(245 243 238 / 0.07);
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
 }
 
 .tl__list time {
   font-size: 0.6rem;
-  color: rgb(245 243 238 / 0.42);
+  color: color-mix(in srgb, var(--ink) 42%, transparent);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1020,7 +1017,7 @@ li[data-comparable='false'] .bench__fill {
 .tl__lab {
   display: none;
   font-size: 0.56rem;
-  color: rgb(245 243 238 / 0.4);
+  color: color-mix(in srgb, var(--ink) 40%, transparent);
 }
 
 @media (min-width: 60rem) {
@@ -1349,19 +1346,19 @@ li[data-comparable='false'] .bench__fill {
   max-width: 62rem;
   padding: 0.5rem 0.5rem 0.5rem 1.1rem;
   border-radius: 999px;
-  background: rgb(245 243 238 / 0.82);
-  border: 1px solid rgb(255 255 255 / 0.5);
-  box-shadow: 0 10px 40px rgb(0 0 0 / 0.16);
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--ink) 10%, transparent);
   backdrop-filter: blur(20px) saturate(1.6);
-  color: #141413;
+  color: var(--ink);
   transition:
     background-color var(--dur) var(--ease-out),
     box-shadow var(--dur) var(--ease-out);
 }
 
 .nav-wrap[data-lifted='true'] .capsule {
-  background: rgb(245 243 238 / 0.94);
-  box-shadow: 0 6px 24px rgb(0 0 0 / 0.1);
+  background: color-mix(in srgb, var(--paper) 97%, transparent);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--ink) 14%, transparent);
 }
 
 .wordmark {
@@ -1441,8 +1438,8 @@ li[data-comparable='false'] .bench__fill {
 
 .hero {
   position: relative;
-  background: var(--void);
-  color: var(--void-ink);
+  background: var(--bg);
+  color: var(--ink);
   /* Viewport-driven, never content-driven: while the content was taller than
      this, any reflow inside the hero — a webfont swapping, a line rewrapping —
      moved the whole page below it. */
@@ -1503,7 +1500,7 @@ li[data-comparable='false'] .bench__fill {
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgb(245 243 238 / 0.5);
+  color: color-mix(in srgb, var(--ink) 50%, transparent);
 }
 
 .stat {
@@ -1511,9 +1508,9 @@ li[data-comparable='false'] .bench__fill {
   z-index: 1;
   margin: 0;
   padding: 0.9rem 1.15rem;
-  border: 1px solid rgb(245 243 238 / 0.1);
+  border: 1px solid var(--line);
   border-radius: 0.9rem;
-  background: rgb(245 243 238 / 0.04);
+  background: var(--paper);
   /* No blur: a backdrop-filter over a canvas that repaints every frame forces
      the whole stage to recomposite, and the globe drops frames on a laptop. */
   backdrop-filter: none;
@@ -1529,11 +1526,10 @@ li[data-comparable='false'] .bench__fill {
    the canvas underneath. */
 .stat:hover {
   transform: translateY(-4px) scale(1.03);
-  border-color: rgb(245 243 238 / 0.32);
-  background: rgb(245 243 238 / 0.08);
+  border-color: color-mix(in srgb, var(--ink) 28%, transparent);
   box-shadow:
-    0 0 0 1px rgb(245 243 238 / 0.14),
-    0 10px 34px rgb(245 243 238 / 0.12);
+    0 0 0 1px color-mix(in srgb, var(--ink) 10%, transparent),
+    0 12px 34px color-mix(in srgb, var(--ink) 16%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1556,17 +1552,17 @@ li[data-comparable='false'] .bench__fill {
   font-size: 0.62rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgb(245 243 238 / 0.62);
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
   margin-block-start: 0.35rem;
 }
 
 .stat__eg {
   margin-block-start: 0.55rem;
   padding-block-start: 0.5rem;
-  border-block-start: 1px solid rgb(245 243 238 / 0.08);
+  border-block-start: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
   font-size: 0.72rem;
   line-height: 1.5;
-  color: rgb(245 243 238 / 0.42);
+  color: color-mix(in srgb, var(--ink) 42%, transparent);
 }
 
 /* Asymmetric on purpose — four corners of a rectangle would read as a table,
@@ -1625,11 +1621,11 @@ li[data-comparable='false'] .bench__fill {
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgb(245 243 238 / 0.45);
+  color: color-mix(in srgb, var(--ink) 45%, transparent);
 }
 
 .hero .content .eyebrow {
-  color: rgb(245 243 238 / 0.55);
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
 }
 
 .hero h1 {
@@ -1656,7 +1652,7 @@ li[data-comparable='false'] .bench__fill {
   max-width: 52ch;
   font-size: var(--step-1);
   line-height: 1.45;
-  color: rgb(245 243 238 / 0.74);
+  color: color-mix(in srgb, var(--ink) 74%, transparent);
 }
 
 .hero .actions {
@@ -1672,13 +1668,13 @@ li[data-comparable='false'] .bench__fill {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgb(245 243 238 / 0.7);
-  border-block-end: 1px solid rgb(245 243 238 / 0.3);
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+  border-block-end: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
   padding-block-end: 0.3rem;
   transition: color var(--dur-fast) var(--ease-out);
 }
 .hero .ghost:hover {
-  color: var(--void-ink);
+  color: var(--ink);
 }
 
 

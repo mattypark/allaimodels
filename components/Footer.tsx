@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="shell inner">
         <div>
-          <p className="eyebrow">allaimodels</p>
+          <p className="eyebrow">AAM</p>
           <p className="claim">
             Every number on this site carries the page it came from and the date it was
             read. Where two labs measure the same benchmark differently, we say so
