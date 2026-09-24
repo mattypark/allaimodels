@@ -224,3 +224,39 @@ globe centre, right column of small leaderboard cards with inline bar fills, a b
 of entity chips each carrying its logo, and an "Ask" panel that searches by meaning. The
 counts beside every facet are the detail worth stealing — they turn a filter list into a
 second dataset view.
+
+---
+
+## tresmarescapital.com — the page transition, measured
+
+Matthew pointed at this site for its navigation animation. Driven, not watched: clicked
+between Portfolio and Team repeatedly while sampling the DOM every 55ms.
+
+**The finding is that there is no exit animation.** This is a WordPress site with ordinary
+full-page navigation, no SPA router. Through the whole click-to-navigate window `#app` holds
+`opacity: 1` and `transform: none`, nothing is inserted over it, and no element takes a
+z-index above the content. The ~330ms gap before the URL changes is network, not animation.
+The only overlaid elements found were the cookie-consent modal.
+
+So everything Matthew is reacting to happens on the **incoming** page:
+
+| Element | Measured |
+| --- | --- |
+| The page as a whole | Fades in: opacity **0.53 → 0.886 → 1** across roughly 250ms |
+| `.mask` wrappers | Start at `opacity: 0.0001` — GSAP `autoAlpha`, a masked line reveal |
+| Hero images | Sit at `scale(1.1)` and settle to `1` |
+| Nav underline | `scaleX(0) → 1` |
+| Menu items | Translated in, e.g. `translateX(-255px)` settling to 0 |
+
+Stack: GSAP + Lenis + Three.js, a custom cursor at `#cursor` (`position: fixed`,
+`z-index: 1080`), and PP Neue Montreal with PP Fragment Serif.
+
+**What to copy.** The feel is a page that *assembles* rather than one that slides. A short
+whole-page fade carries the arrival, then individual pieces settle in a stagger just behind
+it — headline, then supporting text, then the grid. Nothing waits on the old page, which is
+why it feels fast despite the reveal being about 700ms end to end.
+
+**What not to copy.** The 0.0001 opacity trick is GSAP's way of keeping an element
+measurable while invisible. It also means a reader with JavaScript off, or a failed script,
+gets a blank page. Reveals here start from a visible state and are animated *from* it, so a
+broken script leaves the page readable.
