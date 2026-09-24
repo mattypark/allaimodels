@@ -195,8 +195,11 @@ export default function ModelGlobe({ points }: { points: GlobePoint[] }) {
         let sy = cy + p.y * r;
 
         // Depth drives base alpha, so the far hemisphere reads as behind.
+        // Near hemisphere close to solid, far hemisphere still clearly present.
+        // The old floor of 0.22 left half the sphere reading as grey haze on
+        // paper, where there is far less contrast to spend than on black.
         const depth = (z + 1) / 2;
-        let alpha = 0.22 + depth * 0.58;
+        let alpha = 0.42 + depth * 0.58;
         let size = DOT;
         let colour = inkRgb;
 

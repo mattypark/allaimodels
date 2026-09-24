@@ -30,7 +30,33 @@ export type OrbitLab = {
 
 const LENS = 260;
 const LIFT = 26;
-const GROW = 0.34;
+
+/**
+ * Where each mark sits inside the disc.
+ *
+ * Phyllotaxis — the packing a sunflower head uses. Ring r grows as the square
+ * root of the index so every ring holds the same area, and the golden angle
+ * between successive marks means no two ever line up into a spoke. A grid put
+ * the labs in rows, which read as a table of contents; packed into a disc they
+ * read as one object, which is what the lens then acts on.
+ *
+ * Positions are percentages of a square container, so the whole arrangement
+ * scales with the viewport and never needs a second set of breakpoints.
+ */
+const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+const SPREAD = 0.42;
+
+function disc(i: number, n: number) {
+  const r = Math.sqrt((i + 0.5) / n) * SPREAD;
+  const a = i * GOLDEN_ANGLE;
+  // Fixed precision, not the raw float. React serialises these to a style
+  // string on the server and re-serialises on the client, and the two rounded
+  // 20.5252836748686 differently — a genuine hydration mismatch that React
+  // logged and refused to patch. Four decimals is well below a pixel at any
+  // size this disc is rendered.
+  const pct = (v: number) => `${(v * 100).toFixed(4)}%`;
+  return { left: pct(0.5 + r * Math.cos(a)), top: pct(0.5 + r * Math.sin(a)) };
+}
 
 export default function LabOrbit({ labs }: { labs: OrbitLab[] }) {
   const grid = useRef<HTMLUListElement>(null);
@@ -133,9 +159,9 @@ export default function LabOrbit({ labs }: { labs: OrbitLab[] }) {
       style={active ? ({ '--hover-accent': active.accent } as React.CSSProperties) : undefined}
       data-lit={active ? '' : undefined}
     >
-      <ul className="orbit__grid" ref={grid}>
-        {labs.map((lab) => (
-          <li key={lab.slug}>
+      <ul className="orbit__disc" ref={grid}>
+        {labs.map((lab, i) => (
+          <li key={lab.slug} style={disc(i, labs.length)}>
             <Link
               href={`/labs/${lab.slug}`}
               className="orbit__tile"

@@ -1,4 +1,6 @@
 import {
+  Geist,
+  Geist_Mono,
   Inter,
   Newsreader,
   JetBrains_Mono,
@@ -35,8 +37,17 @@ import {
 // these at build time and cannot evaluate a spread or a shared constant. So
 // each declaration is written out in full. Only the base stack preloads.
 
-// ── Base system — the global rule's stack, and the only preloaded faces ──
-export const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+// ── Base system — the only preloaded faces ──
+//
+// Geist is the interface face. Matthew asked for the SF Pro / OpenAI Sans
+// feel; both of those are licensed and cannot ship from a public repo, and
+// Geist is the closest thing that can — a neo-grotesk cut for screens, under
+// the SIL Open Font License. next/font self-hosts it at build time, so there
+// is no request to Google at runtime and no layout shift when it lands.
+export const geist = Geist({ subsets: ['latin'], display: 'swap', variable: '--font-geist' });
+export const geistMono = Geist_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-geist-mono' });
+
+export const inter = Inter({ subsets: ['latin'], display: 'swap', preload: false, variable: '--font-inter' });
 export const jetbrains = JetBrains_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-jetbrains' });
 export const newsreader = Newsreader({ subsets: ['latin'], display: 'swap', variable: '--font-newsreader' });
 
@@ -54,7 +65,7 @@ export const figtree = Figtree({ subsets: ['latin'], display: 'swap', preload: f
 
 /** Every font variable, for the <html> className. */
 export const allFontVariables = [
-  inter, jetbrains, newsreader, interTight, plexMono, instrument,
+  geist, geistMono, inter, jetbrains, newsreader, interTight, plexMono, instrument,
   archivo, spaceGrotesk, spaceMono, outfit, manrope, jakarta, figtree,
 ]
   .map((f) => f.variable)

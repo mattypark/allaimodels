@@ -108,14 +108,6 @@ export default function Home() {
         latest={models[0]?.released ?? ''}
       />
 
-      <CostBoard
-        cheapest={cheapest}
-        roomiest={roomiest}
-        priced={costRows.length}
-        total={models.length}
-        scored={comparable}
-      />
-
       <section className="section shell">
         <div className="section__head">
           <p className="eyebrow">The labs</p>
@@ -128,6 +120,14 @@ export default function Home() {
 
         <LabOrbit labs={orbit} />
       </section>
+
+      <CostBoard
+        cheapest={cheapest}
+        roomiest={roomiest}
+        priced={costRows.length}
+        total={models.length}
+        scored={comparable}
+      />
 
       <section className="section shell">
         <div className="section__head">

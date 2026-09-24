@@ -32,9 +32,13 @@
   --void: #0d0d0c;
   --void-ink: #f5f3ee;
 
+  /* Geist carries the interface, Newsreader the headlines. The pairing is the
+     one the field itself uses — a screen grotesk for chrome and data, a serif
+     for the argument — and both are free to ship, unlike the faces they stand
+     in for. */
   --font-display: var(--font-newsreader);
-  --font-body: var(--font-inter);
-  --font-mono: var(--font-jetbrains);
+  --font-body: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 
   /* Motion. One easing family so everything feels like one hand made it. */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1337,23 +1341,42 @@ li[data-comparable='false'] .bench__fill {
   pointer-events: none;
 }
 
+/* Liquid scroll. --gone, --stretch, --pinch and --melt are written by Nav on
+   every frame; nothing else reads them, and all four feed transform and
+   border-radius only, so the capsule never causes layout. */
 .capsule {
   pointer-events: auto;
+  transform:
+    translateY(calc(var(--gone, 0) * -180%))
+    scaleX(var(--pinch, 1))
+    scaleY(var(--stretch, 1));
+  opacity: calc(1 - var(--gone, 0) * 0.85);
   display: flex;
   align-items: center;
   gap: clamp(0.5rem, 2vw, 2rem);
   width: 100%;
   max-width: 62rem;
   padding: 0.5rem 0.5rem 0.5rem 1.1rem;
-  border-radius: 999px;
+  border-radius: var(--melt, 50%) / 50%;
   background: color-mix(in srgb, var(--paper) 86%, transparent);
   border: 1px solid var(--line);
   box-shadow: 0 8px 30px color-mix(in srgb, var(--ink) 10%, transparent);
   backdrop-filter: blur(20px) saturate(1.6);
   color: var(--ink);
+  /* No transition on transform or border-radius: those are already rewritten
+     every frame, and a transition chasing a per-frame value lags the scroll. */
   transition:
     background-color var(--dur) var(--ease-out),
     box-shadow var(--dur) var(--ease-out);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capsule {
+    transform: none;
+    opacity: 1;
+    border-radius: 999px;
+  }
 }
 
 .nav-wrap[data-lifted='true'] .capsule {
@@ -1365,7 +1388,7 @@ li[data-comparable='false'] .bench__fill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1496,7 +1519,7 @@ li[data-comparable='false'] .bench__fill {
   font-weight: 500;
 }
 .globe__read-meta {
-  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1548,7 +1571,7 @@ li[data-comparable='false'] .bench__fill {
 }
 
 .stat__label {
-  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 0.62rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1664,7 +1687,7 @@ li[data-comparable='false'] .bench__fill {
 }
 
 .hero .ghost {
-  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1742,6 +1765,7 @@ li[data-comparable='false'] .bench__fill {
 
 .orbit {
   --hover-accent: var(--accent);
+  container-type: inline-size;
   position: relative;
   padding-block: clamp(2rem, 5vw, 4rem);
   transition: background-color var(--dur) var(--ease-out);
@@ -1759,11 +1783,20 @@ li[data-comparable='false'] .bench__fill {
     );
 }
 
-.orbit__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
-  gap: clamp(0.75rem, 2vw, 1.75rem);
-  place-items: center;
+/* A square stage the marks are packed into. Square so the phyllotaxis disc
+   stays a disc — in a wide box it would stretch into an ellipse. */
+.orbit__disc {
+  position: relative;
+  inline-size: min(100%, 42rem);
+  margin-inline: auto;
+  aspect-ratio: 1;
+}
+
+.orbit__disc > li {
+  position: absolute;
+  /* left/top from the packing place the tile's centre, so the translate here
+     is what actually centres it on that point. */
+  transform: translate(-50%, -50%);
 }
 
 .orbit__tile {
@@ -1773,7 +1806,7 @@ li[data-comparable='false'] .bench__fill {
 
   display: grid;
   place-items: center;
-  inline-size: clamp(4.25rem, 7vw, 5.75rem);
+  inline-size: clamp(3.4rem, 8cqi, 5.25rem);
   aspect-ratio: 1;
   border: 1px solid var(--line);
   border-radius: 50%;
